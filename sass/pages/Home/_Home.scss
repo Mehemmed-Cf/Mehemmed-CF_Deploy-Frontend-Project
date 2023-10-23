@@ -2,6 +2,10 @@ body {
   background-color: var(--BackGround);
 }
 
+html {
+  color: var(--White);
+}
+
 .Container {
   width: 1050px;
 }
@@ -30,7 +34,6 @@ body {
       text-align: center;
       @include text-formatter(Work Sans, 16px, 600, 140%);
       text-decoration: none;
-      color: white;
       @include Flexed(flex, center, center);
       padding: 0px 20px;
       gap: 12px;
@@ -39,13 +42,7 @@ body {
 
     button {
       @include Flexed(flex, center, center);
-      height: 60px;
-      padding: 0px 30px;
-      background-color: var(--CallToAction);
-      gap: 12px;
-      border-radius: 20px;
-      border: none;
-      transition: 0.3s;
+      @include Button(60px, 0px 30px, 12px);
 
       p {
         color: var(--White);
@@ -55,6 +52,115 @@ body {
 
       &:hover {
         transform: scale(0.95);
+      }
+    }
+  }
+}
+
+#Hero_Section {
+  @include Flexed(flex, center, center);
+  padding: 80px 195px;
+  gap: 30px;
+
+  .Hero_Frame {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    .Frame_TextAndButtons {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+
+      .HeadlineAndSubhead {
+        display: flex;
+        width: 510px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {
+          @include Flexed(flex, center);
+          @include text-formatter(Work Sans, 67px, 600, 110%);
+          text-transform: capitalize;
+          flex-direction: column;
+        }
+
+        p {
+          align-self: stretch;
+          @include text-formatter(Work Sans, 22px, 400, 160%, capitalize);
+        }
+      }
+
+      button {
+        @include Flexed(flex, center, center);
+        @include Button(60px, 0px 50px, 12px);
+
+        p {
+          color: var(--White);
+          text-align: center;
+          @include text-formatter(Work Sans, 16px, 600, 140%);
+        }
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+
+      .AdditionalInfo {
+        width: 510px;
+        height: 77px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 30px;
+        border-radius: 20px;
+
+        .TotalSale {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          border-radius: 20px;
+
+          h1 {
+            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+          }
+
+          p {
+            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+          }
+        }
+
+        .Auctions {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          border-radius: 20px;
+
+          h1 {
+            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+          }
+
+          p {
+            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+          }
+        }
+
+        .Artists {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          border-radius: 20px;
+
+          h1 {
+            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+          }
+
+          p {
+            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+          }
+        }
       }
     }
   }
