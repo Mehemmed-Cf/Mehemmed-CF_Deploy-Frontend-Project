@@ -157,6 +157,10 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   padding: 20px 50px;
 }
 .Navigation .Logo {
@@ -171,6 +175,7 @@ table {
 .Navigation .Logo #MarketPlace-Name {
   padding-left: 5px;
   padding-top: 5px;
+  cursor: pointer;
 }
 .Navigation .Navigation_Menu {
   display: -webkit-box;
@@ -182,10 +187,15 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   gap: 10px;
 }
 .Navigation .Navigation_Menu a {
   height: 46px;
+  color: var(--White);
   text-align: center;
   font-family: Work Sans;
   font-size: 16px;
@@ -193,7 +203,7 @@ table {
   line-height: 140%;
   font-style: normal;
   letter-spacing: normal;
-  text-transform: normal;
+  text-transform: capitalize;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,46 +214,22 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   padding: 0px 20px;
   gap: 12px;
   border-radius: 20px;
-}
-.Navigation .Navigation_Menu button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  padding: 0px 30px;
-  background-color: var(--CallToAction);
-  gap: 12px;
-  border-radius: 20px;
-  border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.Navigation .Navigation_Menu button p {
-  color: var(--White);
-  text-align: center;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 140%;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: normal;
-}
-.Navigation .Navigation_Menu button:hover {
+.Navigation .Navigation_Menu a:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
 
-button {
+.SignUp-Btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,16 +239,21 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   height: 60px;
   padding: 0px 30px;
-  background-color: var(--CallToAction);
-  gap: 12px;
+  background-color: 12px;
+  gap: normal;
   border-radius: 20px;
   border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: var(--CallToAction);
 }
-button p {
+.SignUp-Btn p {
   color: var(--White);
   text-align: center;
   font-family: Work Sans;
@@ -271,9 +262,88 @@ button p {
   line-height: 140%;
   font-style: normal;
   letter-spacing: normal;
-  text-transform: normal;
+  text-transform: capitalize;
 }
-button:hover {
+.SignUp-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.GetStarted-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--CallToAction);
+}
+.GetStarted-Btn p {
+  color: var(--White);
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.GetStarted-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.AdditionalNumber-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+  padding: 32px 15px;
+  background-color: 10px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--CallToAction);
+}
+.AdditionalNumber-Btn p {
+  color: var(--White);
+  font-family: Space Mono;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+.AdditionalNumber-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -290,102 +360,6 @@ html {
   width: 1050px;
 }
 
-.Navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 50px;
-}
-.Navigation .Logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
-.Navigation .Logo #MarketPlace-Name {
-  padding-left: 5px;
-  padding-top: 5px;
-}
-.Navigation .Navigation_Menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
-.Navigation .Navigation_Menu a {
-  height: 46px;
-  text-align: center;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 140%;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: normal;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0px 20px;
-  gap: 12px;
-  border-radius: 20px;
-}
-.Navigation .Navigation_Menu button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  padding: 0px 30px;
-  background-color: var(--CallToAction);
-  gap: 12px;
-  border-radius: 20px;
-  border: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.Navigation .Navigation_Menu button p {
-  color: var(--White);
-  text-align: center;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 140%;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: normal;
-}
-.Navigation .Navigation_Menu button:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
 #Hero_Section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +370,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   padding: 80px 195px;
   gap: 30px;
 }
@@ -445,18 +423,20 @@ html {
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   font-family: Work Sans;
   font-size: 67px;
   font-weight: 600;
   line-height: 110%;
   font-style: normal;
   letter-spacing: normal;
-  text-transform: normal;
   text-transform: capitalize;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  text-transform: capitalize;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead p {
   -ms-flex-item-align: stretch;
@@ -467,5 +447,343 @@ html {
   line-height: 160%;
   font-style: normal;
   letter-spacing: capitalize;
-  text-transform: normal;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo {
+  width: 510px;
+  height: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+  border-radius: 20px;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale p {
+  font-family: Space Mono;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions p {
+  font-family: Space Mono;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists p {
+  font-family: Space Mono;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .HighlightedNFT {
+  height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 109px;
+  width: 510px;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--BackGround-Secondary);
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame .Artist-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame .Artist-Card p {
+  cursor: pointer;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+#TrendingCollection_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+  padding: 80px 0px;
+  background-color: var(--BackGround);
+}
+#TrendingCollection_Section .Section-Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#TrendingCollection_Section .Section-Headline .Heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#TrendingCollection_Section .Section-Headline .Heading h1 {
+  font-family: Work Sans;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#TrendingCollection_Section .Section-Headline .Subhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#TrendingCollection_Section .Section-Headline .Subhead p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: capitalize;
+  text-transform: capitalize;
+}
+#TrendingCollection_Section .CardCollection-Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  width: 330px;
+  gap: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional img:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional .AdditionalFrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo h1 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo .Artist-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo .Artist-Card p {
+  cursor: pointer;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }

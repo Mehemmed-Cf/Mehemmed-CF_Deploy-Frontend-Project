@@ -10,53 +10,6 @@ html {
   width: 1050px;
 }
 
-.Navigation {
-  @include Flexed(flex, space-between, center);
-  padding: 20px 50px;
-
-  .Logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    #MarketPlace-Name {
-      padding-left: 5px;
-      padding-top: 5px;
-    }
-  }
-
-  .Navigation_Menu {
-    @include Flexed(flex, flex-end, center);
-    gap: 10px;
-
-    a {
-      height: 46px;
-      text-align: center;
-      @include text-formatter(Work Sans, 16px, 600, 140%);
-      text-decoration: none;
-      @include Flexed(flex, center, center);
-      padding: 0px 20px;
-      gap: 12px;
-      border-radius: 20px;
-    }
-
-    button {
-      @include Flexed(flex, center, center);
-      @include Button(60px, 0px 30px, 12px);
-
-      p {
-        color: var(--White);
-        text-align: center;
-        @include text-formatter(Work Sans, 16px, 600, 140%);
-      }
-
-      &:hover {
-        transform: scale(0.95);
-      }
-    }
-  }
-}
-
 #Hero_Section {
   @include Flexed(flex, center, center);
   padding: 80px 195px;
@@ -90,21 +43,6 @@ html {
         p {
           align-self: stretch;
           @include text-formatter(Work Sans, 22px, 400, 160%, capitalize);
-        }
-      }
-
-      button {
-        @include Flexed(flex, center, center);
-        @include Button(60px, 0px 50px, 12px);
-
-        p {
-          color: var(--White);
-          text-align: center;
-          @include text-formatter(Work Sans, 16px, 600, 140%);
-        }
-
-        &:hover {
-          transform: scale(0.95);
         }
       }
 
@@ -159,6 +97,123 @@ html {
 
           p {
             @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+          }
+        }
+      }
+    }
+
+    .HighlightedNFT {
+      height: 510px;
+      @include Flex-ItemsAndPosition(flex, center, column);
+
+      .NFTFrame {
+        @include Flexed(flex, center, flex-start, column);
+        height: 109px;
+        width: 510px;
+        padding: 20px;
+        gap: 10px;
+        border-radius: 0px 0px 20px 20px;
+        background-color: var(--BackGround-Secondary);
+
+        p {
+          @include text-formatter(Work Sans, 22px, 600, 140%);
+        }
+
+        .Artist-Card {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+
+          p {
+            cursor: pointer;
+            @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#TrendingCollection_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  gap: 60px;
+  padding: 80px 0px;
+  background-color: var(--BackGround);
+
+  .Section-Headline {
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
+    gap: 10px;
+
+    .Heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      h1 {
+        @include text-formatter(Work Sans, 38px, 600, 120%, capitalize);
+      }
+    }
+
+    .Subhead {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      p {
+        @include text-formatter(Work Sans, 22px, 400, 160%, capitalize);
+      }
+    }
+  }
+
+  .CardCollection-Row {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+
+    .CollectionCard {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      border-radius: 20px;
+      width: 330px;
+      gap: 15px;
+      flex-shrink: 0;
+
+      .PhotosAndAdditional {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 15px;
+
+        img {
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+
+        .AdditionalFrame {
+          display: flex;
+          align-items: flex-start;
+          gap: 15px;
+        }
+      }
+
+      .CollectionInfo {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 10px;
+
+        h1 {
+          @include text-formatter(Work Sans, 22px, 600, 140%);
+        }
+
+        .Artist-Card {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+
+          p {
+            cursor: pointer;
+            @include text-formatter(Work Sans, 16px, 400, 140%);
           }
         }
       }

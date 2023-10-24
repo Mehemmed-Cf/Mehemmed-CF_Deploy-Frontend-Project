@@ -1,0 +1,46 @@
+.SignUp-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 30px, 12px);
+  background-color: var(--CallToAction);
+
+  p {
+    color: var(--White);
+    text-align: center;
+    @include text-formatter(Work Sans, 16px, 600, 140%);
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.GetStarted-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 50px, 12px);
+  background-color: var(--CallToAction);
+
+  p {
+    color: var(--White);
+    text-align: center;
+    @include text-formatter(Work Sans, 16px, 600, 140%);
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.AdditionalNumber-Btn {
+  @include Flexed(flex, center, center, column);
+  @include Button(100px, 32px 15px, 10px);
+  background-color: var(--CallToAction);
+
+  p {
+    color: var(--White);
+    @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}

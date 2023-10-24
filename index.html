@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>NFT Market</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <a href="#">Marketplace</a>
         <a href="#">Rankings</a>
         <a href="#">Connect a wallet</a>
-        <button>
+        <button class="SignUp-Btn">
           <img src="./assets/icons/User.svg" />
           <p>Sign Up</p>
         </button>
@@ -31,73 +31,99 @@
             <h1>Discover digital art & Collect NFTs</h1>
             <p>NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</p>
           </div>
-          <button>
+          <button class="GetStarted-Btn">
             <img src="./assets/icons/RocketIcon.svg" />
            <p>Get Started</p>
           </button>
-          <div style="display: flex;
-        align-items: flex-start;
-        flex-direction: row;
-        gap: 30px;
-        border-radius: 20px;"
-        
-          class="AdditionalInfo">
-            <div style="
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          border-radius: 20px;
-            " class="TotalSale">
-              <h1 style="
-              font-family: Space Mono;
-              font-size: 28px;
-              font-weight: 700;
-              line-height: 140%;
-              ">240k+ </h1>
-              <p style="
-              font-family: Space Mono;
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 140%;
-              ">Total Sale</p>
+          <div class="AdditionalInfo">
+            <div class="TotalSale">
+              <h1>240k+ </h1>
+              <p>Total Sale</p>
             </div>
-            <div style="
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          border-radius: 20px;
-            " class="Auctions">
-              <h1 style="
-              font-family: Space Mono;
-              font-size: 28px;
-              font-weight: 700;
-              line-height: 140%;
-                ">100k+ </h1>
-              <p style="
-              font-family: Space Mono;
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 140%;
-              ">Auctions</p>
+            <div class="Auctions">
+              <h1>100k+ </h1>
+              <p>Auctions</p>
             </div>
-            <div style="
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          border-radius: 20px;
-            " class="Artists">
-              <h1 style="
-              font-family: Space Mono;
-              font-size: 28px;
-              font-weight: 700;
-              line-height: 140%;
-                ">240k+ </h1>
-              <p style="
-              font-family: Space Mono;
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 140%;
-              ">Artists</p>
+            <div class="Artists">
+              <h1>240k+ </h1>
+              <p>Artists</p>
+            </div>
+          </div>
+        </div>
+        <div class="HighlightedNFT">
+          <img src="./assets/images/HighlightedNFT.png" />
+          <div class="NFTFrame">
+            <p>Space Walking</p>
+            <div class="Artist-Card">
+              <img src="./assets/images/AvatarAnimaKid.png" />
+              <p>Animakid</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="TrendingCollection_Section">
+      <div class="Section-Headline Container">
+        <div class="Heading">
+          <h1>Trending Collection</h1>
+        </div>
+        <div class="Subhead">
+          <p>Checkout our weekly updated trending collection.</p>
+        </div>
+      </div>
+      <div class="CardCollection-Row Container">
+        <div class="CollectionCard">
+          <div class="PhotosAndAdditional">
+            <img src="./assets/images/PrimaryPhoto-DSGN-Animals.png" />
+            <div class="AdditionalFrame">
+              <img src="./assets/images/SecondaryPhoto-Animal.png" />
+              <img src="./assets/images/SecondaryPhoto-MagicMashroom2.png" />
+              <button class="AdditionalNumber-Btn">
+                <p>1025+</p>
+              </button>
+            </div>
+          </div>
+          <div class="CollectionInfo">
+            <h1>DSGN Animals</h1>
+            <div class="Artist-Card">
+              <img src="./assets/images/AvatarMrFox.png" />
+              <p>MrFox</p>
+            </div>
+          </div>
+        </div>
+        <div class="CollectionCard">
+          <div class="PhotosAndAdditional">
+            <img src="./assets/images/PrimaryPhoto-Mushroom.png" />
+            <div class="AdditionalFrame">
+              <img src="./assets/images/SecondaryPhoto-MagicMashroom.png" />
+              <img src="./assets/images/SecondaryPhoto-MagicMashroom2.png" />
+              <button class="AdditionalNumber-Btn">
+                <p>1025+</p>
+              </button>
+          </div>
+          <div class="CollectionInfo">
+            <h1>Magic Mushrooms</h1>
+            <div class="Artist-Card">
+              <img src="./assets/images/AvatarShroomie.png" />
+              <p>Shroomie</p>
+            </div>
+          </div>
+        </div>
+        <div class="CollectionCard">
+          <div class="PhotosAndAdditional">
+            <img src="./assets/images/PrimaryPhoto-DiscoMachine.png" />
+            <div class="AdditionalFrame">
+              <img src="./assets/images/SecondaryPhoto-DiscoMachines.png" />
+              <img src="./assets/images/SecondaryPhoto-DiscoMachines-2.png" />
+              <button class="AdditionalNumber-Btn">
+                <p>1025+</p>
+              </button>
+          </div>
+          <div class="CollectionInfo">
+            <h1>Disco Machines</h1>
+            <div class="Artist-Card">
+              <img src="./assets/images/AvatarMrFox.png" />
+              <p>BeKind2Robots</p>
             </div>
           </div>
         </div>
