@@ -29,10 +29,18 @@ html {
     padding: 80px 0px;
   }
 
+  @include for-size(phone) {
+    padding: 40px 0px;
+  }
+
   .Hero_Frame {
     display: flex;
     align-items: flex-start;
     gap: 30px;
+
+    @include for-size(phone) {
+      @include Flex-ItemsAndPosition(flex, center, column);
+    }
 
     .Frame_TextAndButtons {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -41,6 +49,10 @@ html {
       @include for-size(tablet) {
         width: 330px;
         gap: 20px;
+      }
+
+      @include for-size(phone) {
+        gap: 40px;
       }
 
       .HeadlineAndSubhead {
@@ -52,6 +64,10 @@ html {
           width: 330px;
         }
 
+        @include for-size(phone) {
+          gap: 10px;
+        }
+
         h1 {
           @include Flexed(flex, center);
           @include text-formatter(Work Sans, 67px, 600, 110%);
@@ -59,6 +75,10 @@ html {
 
           @include for-size(tablet) {
             @include text-formatter(Work Sans, 38px, 600, 120%);
+          }
+
+          @include for-size(phone) {
+            @include text-formatter(Work Sans, 28px, 600, 140%);
           }
         }
 
@@ -79,23 +99,29 @@ html {
         border-radius: 20px;
         @include Flex-ItemsAndPosition(flex, flex-start, row);
 
+        @include for-size(tablet) {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: initial;
+        }
+
         .TotalSale {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
           border-radius: 20px;
 
           h1 {
-            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 28px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+              @include text-formatter(Space Mono, 22px, 700, 160%);
             }
           }
 
           p {
-            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 24px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+              @include text-formatter(Space Mono, 16px, 400, 140%);
             }
           }
         }
@@ -107,18 +133,18 @@ html {
           border-radius: 20px;
 
           h1 {
-            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 28px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+              @include text-formatter(Space Mono, 22px, 700, 160%);
             }
           }
 
           p {
-            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 24px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+              @include text-formatter(Space Mono, 16px, 400, 140%);
             }
           }
         }
@@ -130,18 +156,18 @@ html {
           border-radius: 20px;
 
           h1 {
-            @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 28px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+              @include text-formatter(Space Mono, 22px, 700, 160%);
             }
           }
 
           p {
-            @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+            @include text-formatter(Space Mono, 24px, 700, 140%);
 
             @include for-size(tablet) {
-              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+              @include text-formatter(Space Mono, 16px, 400, 140%);
             }
           }
         }
@@ -156,6 +182,10 @@ html {
         height: 330px;
       }
 
+      @include for-size(phone) {
+        height: 315px;
+      }
+
       .HighlightedNFT-Img {
         display: initial;
         img {
@@ -168,7 +198,23 @@ html {
       .HighlightedNFT-Tablet-Img {
         img {
           display: none;
+
           @include for-size(tablet) {
+            display: initial;
+            border-radius: 20px 20px 0px 0px;
+
+            @include for-size(phone) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .HighlightedNFT-Phone-Img {
+        img {
+          display: none;
+
+          @include for-size(phone) {
             display: initial;
             border-radius: 20px 20px 0px 0px;
           }
@@ -187,6 +233,10 @@ html {
         @include for-size(tablet) {
           @include Flexed(flex, flex-end, center, column);
           width: 330px;
+        }
+
+        @include for-size(phone) {
+          width: 315px;
         }
 
         p {

@@ -467,6 +467,11 @@ html {
     padding: 80px 0px;
   }
 }
+@media (max-width: 690px) {
+  #Hero_Section {
+    padding: 40px 0px;
+  }
+}
 #Hero_Section .Hero_Frame {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -475,6 +480,20 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons {
   display: -webkit-box;
@@ -495,6 +514,11 @@ html {
     gap: 20px;
   }
 }
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons {
+    gap: 40px;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead {
   width: 510px;
   display: -webkit-box;
@@ -512,6 +536,11 @@ html {
 @media (max-width: 1050px) {
   #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead {
     width: 330px;
+  }
+}
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead {
+    gap: 10px;
   }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead h1 {
@@ -544,6 +573,17 @@ html {
     font-size: 38px;
     font-weight: 600;
     line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
     font-style: normal;
     letter-spacing: normal;
     text-transform: capitalize;
@@ -587,6 +627,20 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -606,7 +660,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -616,7 +670,7 @@ html {
     font-weight: 700;
     line-height: 160%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -626,7 +680,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -636,7 +690,7 @@ html {
     font-weight: 400;
     line-height: 140%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -659,7 +713,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -669,7 +723,7 @@ html {
     font-weight: 700;
     line-height: 160%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -679,7 +733,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -689,7 +743,7 @@ html {
     font-weight: 400;
     line-height: 140%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -712,7 +766,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -722,7 +776,7 @@ html {
     font-weight: 700;
     line-height: 160%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -732,7 +786,7 @@ html {
   font-weight: 700;
   line-height: 140%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
@@ -742,7 +796,7 @@ html {
     font-weight: 400;
     line-height: 140%;
     font-style: normal;
-    letter-spacing: capitalize;
+    letter-spacing: normal;
     text-transform: capitalize;
   }
 }
@@ -764,6 +818,11 @@ html {
     height: 330px;
   }
 }
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT {
+    height: 315px;
+  }
+}
 #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Img {
   display: initial;
 }
@@ -777,6 +836,20 @@ html {
 }
 @media (max-width: 1050px) {
   #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Tablet-Img img {
+    display: initial;
+    border-radius: 20px 20px 0px 0px;
+  }
+}
+@media (max-width: 1050px) and (max-width: 690px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Tablet-Img img {
+    display: none;
+  }
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Phone-Img img {
+  display: none;
+}
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Phone-Img img {
     display: initial;
     border-radius: 20px 20px 0px 0px;
   }
@@ -818,6 +891,11 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 330px;
+  }
+}
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame {
+    width: 315px;
   }
 }
 #Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame p {
