@@ -38,6 +38,10 @@ html {
     align-items: flex-start;
     gap: 30px;
 
+    @include for-size(tablet) {
+      margin-left: 50px;
+    }
+
     @include for-size(phone) {
       @include Flex-ItemsAndPosition(flex, center, column);
     }
@@ -264,6 +268,12 @@ html {
   padding: 80px 0px;
   background-color: var(--BackGround);
 
+  @include for-size(tablet) {
+    margin-left: 400px;
+    padding: 40px 0px;
+    gap: 40px;
+  }
+
   .Section-Headline {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
@@ -274,7 +284,11 @@ html {
       gap: 10px;
 
       h1 {
-        @include text-formatter(Work Sans, 38px, 600, 120%, capitalize);
+        @include text-formatter(Work Sans, 38px, 600, 120%);
+
+        @include for-size(tablet) {
+          @include text-formatter(Work Sans, 28px, 600, 140%);
+        }
       }
     }
 
@@ -284,17 +298,20 @@ html {
       gap: 10px;
 
       p {
-        @include text-formatter(Work Sans, 22px, 400, 160%, capitalize);
+        @include text-formatter(Work Sans, 22px, 400, 160%);
+
+        @include for-size(phone) {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+        }
       }
     }
   }
 
   .CardCollection-Row {
     display: flex;
-    height: auto;
-    flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 10px;
+    flex-direction: row;
+    gap: 30px;
 
     .CollectionCard {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -306,6 +323,13 @@ html {
       .PhotosAndAdditional {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 15px;
+        border-radius: 20px;
+
+        > img {
+          @include for-size(phone) {
+            height: 315px;
+          }
+        }
 
         img {
           transition: 0.3s;
@@ -319,6 +343,24 @@ html {
           display: flex;
           align-items: flex-start;
           gap: 15px;
+        }
+      }
+
+      .SecondCard {
+        @include for-size(phone) {
+          display: none;
+        }
+      }
+
+      .ThirdCard {
+        transform: translate(350px, -538px);
+
+        @include for-size(tablet) {
+          display: none;
+        }
+
+        @include for-size(phone) {
+          display: none;
         }
       }
 

@@ -180,7 +180,7 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .Navigation .Logo #MarketPlace-Name {
   padding-left: 5px;
@@ -480,6 +480,11 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame {
+    margin-left: 50px;
+  }
 }
 @media (max-width: 690px) {
   #Hero_Section .Hero_Frame {
@@ -942,6 +947,13 @@ html {
   padding: 80px 0px;
   background-color: var(--BackGround);
 }
+@media (max-width: 1050px) {
+  #TrendingCollection_Section {
+    margin-left: 400px;
+    padding: 40px 0px;
+    gap: 40px;
+  }
+}
 #TrendingCollection_Section .Section-Headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -970,8 +982,19 @@ html {
   font-weight: 600;
   line-height: 120%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #TrendingCollection_Section .Section-Headline .Heading h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #TrendingCollection_Section .Section-Headline .Subhead {
   display: -webkit-box;
@@ -988,20 +1011,32 @@ html {
   font-weight: 400;
   line-height: 160%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .Section-Headline .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #TrendingCollection_Section .CardCollection-Row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard {
   display: -webkit-box;
@@ -1032,6 +1067,12 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
+  border-radius: 20px;
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional > img {
+    height: 315px;
+  }
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional img {
   -webkit-transition: 0.3s;
@@ -1049,6 +1090,25 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .SecondCard {
+    display: none;
+  }
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
+  -webkit-transform: translate(350px, -538px);
+          transform: translate(350px, -538px);
+}
+@media (max-width: 1050px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
+    display: none;
+  }
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo {
   display: -webkit-box;
