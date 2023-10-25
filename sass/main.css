@@ -163,6 +163,16 @@ table {
           flex-direction: normal;
   padding: 20px 50px;
 }
+@media (max-width: 1050px) {
+  .Navigation {
+    padding: 15px 50px;
+  }
+}
+@media (max-width: 690px) {
+  .Navigation {
+    padding: 15px 30px;
+  }
+}
 .Navigation .Logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,6 +202,19 @@ table {
       -ms-flex-direction: normal;
           flex-direction: normal;
   gap: 10px;
+}
+@media (max-width: 1050px) {
+  .Navigation .Navigation_Menu {
+    gap: 20px;
+  }
+}
+.Navigation .Navigation_Menu #Bars_Btn {
+  display: none;
+}
+@media (max-width: 1050px) {
+  .Navigation .Navigation_Menu #Bars_Btn {
+    display: initial;
+  }
 }
 .Navigation .Navigation_Menu a {
   height: 46px;
@@ -224,6 +247,11 @@ table {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media (max-width: 1050px) {
+  .Navigation .Navigation_Menu a {
+    display: none;
+  }
+}
 .Navigation .Navigation_Menu a:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -252,6 +280,11 @@ table {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: var(--CallToAction);
+}
+@media (max-width: 1050px) {
+  .SignUp-Btn {
+    display: none;
+  }
 }
 .SignUp-Btn p {
   color: var(--White);
@@ -348,6 +381,48 @@ table {
           transform: scale(0.95);
 }
 
+.ViewRankings-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent !important;
+  border: 1px solid var(--CallToAction);
+  gap: 10px;
+}
+.ViewRankings-Btn p {
+  font-family: 16px;
+  font-size: 600;
+  font-weight: 140%;
+  line-height: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+}
+.ViewRankings-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 body {
   background-color: var(--BackGround);
 }
@@ -358,6 +433,16 @@ html {
 
 .Container {
   width: 1050px;
+}
+@media (max-width: 1050px) {
+  .Container .Container {
+    width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  .Container .Container {
+    width: 315px;
+  }
 }
 
 #Hero_Section {
@@ -376,6 +461,11 @@ html {
           flex-direction: normal;
   padding: 80px 195px;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #Hero_Section {
+    padding: 80px 0px;
+  }
 }
 #Hero_Section .Hero_Frame {
   display: -webkit-box;
@@ -399,11 +489,17 @@ html {
           flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons {
+    width: 330px;
+    gap: 20px;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead {
+  width: 510px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 510px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -412,6 +508,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead {
+    width: 330px;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead h1 {
   display: -webkit-box;
@@ -434,9 +535,19 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
-  text-transform: capitalize;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead h1 {
+    font-family: Work Sans;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead p {
   -ms-flex-item-align: stretch;
@@ -446,12 +557,25 @@ html {
   font-weight: 400;
   line-height: 160%;
   font-style: normal;
-  letter-spacing: capitalize;
+  letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo {
   width: 510px;
   height: 77px;
+  gap: 30px;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,8 +586,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 30px;
-  border-radius: 20px;
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale {
   display: -webkit-box;
@@ -487,6 +609,17 @@ html {
   letter-spacing: capitalize;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale h1 {
+    font-family: Space Mono;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 160%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale p {
   font-family: Space Mono;
   font-size: 24px;
@@ -495,6 +628,17 @@ html {
   font-style: normal;
   letter-spacing: capitalize;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .TotalSale p {
+    font-family: Space Mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions {
   display: -webkit-box;
@@ -518,6 +662,17 @@ html {
   letter-spacing: capitalize;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions h1 {
+    font-family: Space Mono;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 160%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions p {
   font-family: Space Mono;
   font-size: 24px;
@@ -526,6 +681,17 @@ html {
   font-style: normal;
   letter-spacing: capitalize;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Auctions p {
+    font-family: Space Mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
 }
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists {
   display: -webkit-box;
@@ -549,6 +715,17 @@ html {
   letter-spacing: capitalize;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists h1 {
+    font-family: Space Mono;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 160%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists p {
   font-family: Space Mono;
   font-size: 24px;
@@ -558,8 +735,18 @@ html {
   letter-spacing: capitalize;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo .Artists p {
+    font-family: Space Mono;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: capitalize;
+    text-transform: capitalize;
+  }
+}
 #Hero_Section .Hero_Frame .HighlightedNFT {
-  height: 510px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,6 +757,29 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 510px;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT {
+    height: 330px;
+  }
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Img {
+  display: initial;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Img img {
+    display: none;
+  }
+}
+#Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Tablet-Img img {
+  display: none;
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .HighlightedNFT-Tablet-Img img {
+    display: initial;
+    border-radius: 20px 20px 0px 0px;
+  }
 }
 #Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame {
   display: -webkit-box;
@@ -591,6 +801,24 @@ html {
   gap: 10px;
   border-radius: 0px 0px 20px 20px;
   background-color: var(--BackGround-Secondary);
+}
+@media (max-width: 1050px) {
+  #Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 330px;
+  }
 }
 #Hero_Section .Hero_Frame .HighlightedNFT .NFTFrame p {
   font-family: Work Sans;
@@ -690,14 +918,12 @@ html {
   display: -ms-flexbox;
   display: flex;
   height: auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 30px;
+  gap: 10px;
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard {
   display: -webkit-box;
@@ -778,8 +1004,245 @@ html {
   gap: 12px;
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo .Artist-Card p {
-  cursor: pointer;
   font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo .Artist-Card img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo .Artist-Card img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#TopRatedArtists_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 195px;
+  gap: 60px;
+  background-color: var(--BackGround);
+}
+#TopRatedArtists_Section .Section_Headline_And_Button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 100px;
+}
+#TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 703px;
+  gap: 10px;
+}
+#TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading h1 {
+  font-family: Work Sans;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Subhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Subhead p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TopRatedArtists_Section .Artist-Card-Grids {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--BackGround-Secondary);
+  position: relative;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 100px;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info h1 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
+  color: var(--CaptionAndLabelText);
+  text-align: right;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30px;
+  height: 30px;
+  gap: 10px;
+  border-radius: 20px;
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  background-color: var(--BackGround);
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number .position-left-change {
+  left: 6px !important;
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number p {
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  color: var(--CaptionAndLabelText);
+  text-align: center;
+  font-family: Space Mono;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;

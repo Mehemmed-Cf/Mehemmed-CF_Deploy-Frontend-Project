@@ -2,6 +2,14 @@
   @include Flexed(flex, space-between, center);
   padding: 20px 50px;
 
+  @include for-size(tablet) {
+    padding: 15px 50px;
+  }
+
+  @include for-size(phone) {
+    padding: 15px 30px;
+  }
+
   .Logo {
     display: flex;
     align-items: center;
@@ -18,6 +26,18 @@
     @include Flexed(flex, flex-end, center);
     gap: 10px;
 
+    @include for-size(tablet) {
+      gap: 20px;
+    }
+
+    #Bars_Btn {
+      display: none;
+
+      @include for-size(tablet) {
+        display: initial;
+      }
+    }
+
     a {
       height: 46px;
       color: var(--White);
@@ -29,6 +49,10 @@
       gap: 12px;
       border-radius: 20px;
       transition: 0.3s;
+
+      @include for-size(tablet) {
+        display: none;
+      }
 
       &:hover {
         transform: scale(0.95);

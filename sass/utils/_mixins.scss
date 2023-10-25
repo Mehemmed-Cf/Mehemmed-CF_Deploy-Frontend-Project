@@ -16,6 +16,12 @@
   text-transform: $text-transform;
 }
 
+$media: (
+  "xm": 315px,
+  "sm": 690px,
+  "md": 1050px,
+);
+
 @mixin for-size($size) {
   @if $size == mini-phone {
     @media (max-width: map-get($media, "xs")) {
@@ -26,7 +32,7 @@
       @content;
     }
   } @else if $size == tablet {
-    @media (min-width: map-get($media, "md")) {
+    @media (max-width: map-get($media, "md")) {
       @content;
     }
   } @else if $size == laptop {

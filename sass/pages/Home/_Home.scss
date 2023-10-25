@@ -8,6 +8,16 @@ html {
 
 .Container {
   width: 1050px;
+  @include for-size(tablet) {
+    .Container {
+      width: 690px;
+    }
+  }
+  @include for-size(phone) {
+    .Container {
+      width: 315px;
+    }
+  }
 }
 
 #Hero_Section {
@@ -15,58 +25,78 @@ html {
   padding: 80px 195px;
   gap: 30px;
 
+  @include for-size(tablet) {
+    padding: 80px 0px;
+  }
+
   .Hero_Frame {
     display: flex;
     align-items: flex-start;
     gap: 30px;
 
     .Frame_TextAndButtons {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
       gap: 30px;
 
-      .HeadlineAndSubhead {
-        display: flex;
-        width: 510px;
-        align-items: flex-start;
-        flex-direction: column;
+      @include for-size(tablet) {
+        width: 330px;
         gap: 20px;
+      }
+
+      .HeadlineAndSubhead {
+        width: 510px;
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+
+        @include for-size(tablet) {
+          width: 330px;
+        }
 
         h1 {
           @include Flexed(flex, center);
           @include text-formatter(Work Sans, 67px, 600, 110%);
-          text-transform: capitalize;
           flex-direction: column;
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 38px, 600, 120%);
+          }
         }
 
         p {
           align-self: stretch;
-          @include text-formatter(Work Sans, 22px, 400, 160%, capitalize);
+          @include text-formatter(Work Sans, 22px, 400, 160%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
         }
       }
 
       .AdditionalInfo {
         width: 510px;
         height: 77px;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row;
         gap: 30px;
         border-radius: 20px;
+        @include Flex-ItemsAndPosition(flex, flex-start, row);
 
         .TotalSale {
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
           border-radius: 20px;
 
           h1 {
             @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+            }
           }
 
           p {
             @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+            }
           }
         }
 
@@ -78,10 +108,18 @@ html {
 
           h1 {
             @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+            }
           }
 
           p {
             @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+            }
           }
         }
 
@@ -93,18 +131,49 @@ html {
 
           h1 {
             @include text-formatter(Space Mono, 28px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 22px, 700, 160%, capitalize);
+            }
           }
 
           p {
             @include text-formatter(Space Mono, 24px, 700, 140%, capitalize);
+
+            @include for-size(tablet) {
+              @include text-formatter(Space Mono, 16px, 400, 140%, capitalize);
+            }
           }
         }
       }
     }
 
     .HighlightedNFT {
-      height: 510px;
       @include Flex-ItemsAndPosition(flex, center, column);
+      height: 510px;
+
+      @include for-size(tablet) {
+        height: 330px;
+      }
+
+      .HighlightedNFT-Img {
+        display: initial;
+        img {
+          @include for-size(tablet) {
+            display: none;
+          }
+        }
+      }
+
+      .HighlightedNFT-Tablet-Img {
+        img {
+          display: none;
+          @include for-size(tablet) {
+            display: initial;
+            border-radius: 20px 20px 0px 0px;
+          }
+        }
+      }
 
       .NFTFrame {
         @include Flexed(flex, center, flex-start, column);
@@ -114,6 +183,11 @@ html {
         gap: 10px;
         border-radius: 0px 0px 20px 20px;
         background-color: var(--BackGround-Secondary);
+
+        @include for-size(tablet) {
+          @include Flexed(flex, flex-end, center, column);
+          width: 330px;
+        }
 
         p {
           @include text-formatter(Work Sans, 22px, 600, 140%);
@@ -168,9 +242,9 @@ html {
   .CardCollection-Row {
     display: flex;
     height: auto;
-    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 30px;
+    gap: 10px;
 
     .CollectionCard {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -212,8 +286,138 @@ html {
           gap: 12px;
 
           p {
-            cursor: pointer;
             @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
+
+          img {
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#TopRatedArtists_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  padding: 80px 195px;
+  gap: 60px;
+  background-color: var(--BackGround);
+
+  .Section_Headline_And_Button {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+
+    .Section_Headline {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      width: 703px;
+      gap: 10px;
+
+      .Heading {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        h1 {
+          @include text-formatter(Work Sans, 38px, 600, 120%);
+        }
+      }
+
+      .Subhead {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        p {
+          @include text-formatter(Work Sans, 22px, 400, 160%);
+        }
+      }
+    }
+  }
+
+  .Artist-Card-Grids {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    .Artist-Cards-Row {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+
+      .Artist-Card {
+        @include Flex-ItemsAndPosition(flex, center, column);
+        padding: 20px;
+        gap: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: var(--BackGround-Secondary);
+        position: relative;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+
+        .Artist-Avatar {
+          @include Flex-ItemsAndPosition(flex, flex-end, column);
+          border-radius: 100px;
+        }
+
+        .Artist-Info {
+          @include Flexed(flex, center, center, column);
+          gap: 5px;
+
+          h1 {
+            @include text-formatter(Work Sans, 22px, 600, 140%);
+          }
+
+          .Sales-Info {
+            @include Flex-ItemsAndPosition(flex, center, row);
+            gap: 10px;
+
+            .Sales-Info_Key {
+              color: var(--CaptionAndLabelText);
+              text-align: right;
+              @include text-formatter(Work Sans, 16px, 400, 140%);
+            }
+
+            .Sales-Info_Value {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
+          }
+        }
+
+        .Ranking-Number {
+          @include Flex-ItemsAndPosition(flex, flex-start);
+          width: 30px;
+          height: 30px;
+          gap: 10px;
+          border-radius: 20px;
+          position: absolute;
+          left: 20px;
+          top: 18px;
+          background-color: var(--BackGround);
+
+          .position-left-change {
+            left: 6px !important;
+          }
+
+          p {
+            position: absolute;
+            left: 10px;
+            top: 4px;
+            color: var(--CaptionAndLabelText);
+
+            text-align: center;
+            @include text-formatter(Space Mono, 16px, 400, 140%);
           }
         }
       }
