@@ -404,7 +404,7 @@ table {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: transparent !important;
-  border: 1px solid var(--CallToAction);
+  border: 2px solid var(--CallToAction);
   gap: 10px;
 }
 .ViewRankings-Btn p {
@@ -1091,22 +1091,13 @@ html {
           align-items: flex-start;
   gap: 15px;
 }
-@media (max-width: 690px) {
-  #TrendingCollection_Section .CardCollection-Row .CollectionCard .SecondCard {
-    display: none;
-  }
-}
-#TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
-  -webkit-transform: translate(350px, -538px);
-          transform: translate(350px, -538px);
-}
 @media (max-width: 1050px) {
-  #TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .Removable {
     display: none;
   }
 }
 @media (max-width: 690px) {
-  #TrendingCollection_Section .CardCollection-Row .CollectionCard .ThirdCard {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard .Removable {
     display: none;
   }
 }
@@ -1175,6 +1166,12 @@ html {
   gap: 60px;
   background-color: var(--BackGround);
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section {
+    padding: 40px 195px;
+    gap: 40px;
+  }
+}
 #TopRatedArtists_Section .Section_Headline_And_Button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1183,6 +1180,11 @@ html {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 100px;
+}
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button {
+    width: 690px;
+  }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
   display: -webkit-box;
@@ -1216,6 +1218,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Subhead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1233,6 +1246,17 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids {
   display: -webkit-box;
@@ -1276,6 +1300,36 @@ html {
   background-color: var(--BackGround-Secondary);
   position: relative;
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Removable {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Removable {
+    display: none;
+  }
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Third {
+  display: none;
+}
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: normal;
+            flex-direction: normal;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -1309,6 +1363,23 @@ html {
           flex-direction: column;
   gap: 5px;
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info h1 {
   font-family: Work Sans;
   font-size: 22px;
@@ -1330,6 +1401,11 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 10px;
+}
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+    gap: 5px;
+  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
   color: var(--CaptionAndLabelText);
@@ -1371,6 +1447,12 @@ html {
   top: 18px;
   background-color: var(--BackGround);
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number {
+    left: 12px;
+    top: 13px;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number .position-left-change {
   left: 6px !important;
 }
@@ -1387,4 +1469,136 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+
+#BrowseCategories_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+  padding: 80px 195px;
+}
+@media (max-width: 1050px) {
+  #BrowseCategories_Section {
+    gap: 40px;
+    padding: 40px 0px;
+  }
+}
+#BrowseCategories_Section .Section-Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#BrowseCategories_Section .Section-Headline h1 {
+  font-family: Work Sans;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .Section-Headline h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #BrowseCategories_Section .Section-Headline h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+#BrowseCategories_Section .CategoryCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+#BrowseCategories_Section .CategoryCards .CategoryCards-Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+#BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--BackGround-Secondary);
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard .Collection-Name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px 25px 30px;
+  gap: 25px;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
