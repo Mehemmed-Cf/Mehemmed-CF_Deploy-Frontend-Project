@@ -1,0 +1,9 @@
+.Subscribe-Form {
+  @include Flex-ItemsAndPosition(flex, center, row);
+  position: relative;
+
+  input {
+    @include Input();
+    @include text-formatter(Work Sans, 16px, 400, 140%);
+  }
+}

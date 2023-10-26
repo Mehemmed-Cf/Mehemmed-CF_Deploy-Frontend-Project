@@ -257,6 +257,169 @@ table {
           transform: scale(0.95);
 }
 
+.Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 195px;
+  gap: 30px;
+}
+.Footer .Footer-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  gap: 30px;
+  margin-left: 100px;
+}
+.Footer .Footer-Info .NFT-Marketplace-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 327.414px;
+  padding-right: 0px;
+  gap: 30px;
+}
+.Footer .Footer-Info .NFT-Marketplace-Info .Additional-Info {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+.Footer .Footer-Info .NFT-Marketplace-Info .Community-Info {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+.Footer .Footer-Info .NFT-Marketplace-Info .Community-Info img {
+  cursor: pointer;
+}
+.Footer .Footer-Info .Explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 240px;
+  gap: 25px;
+  margin-left: 20px;
+}
+.Footer .Footer-Info .Explore h1 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Footer .Footer-Info .Explore .Pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.Footer .Footer-Info .Explore .Pages a {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--CaptionAndLabelText);
+}
+.Footer .Footer-Info .Subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+.Footer .Footer-Info .Subscribe h1 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Footer .Footer-Info .Subscribe .Subscribe-FormAndInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.Footer .Footer-Info .Subscribe .Subscribe-FormAndInfo p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+
 .SignUp-Btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,6 +584,119 @@ table {
 .ViewRankings-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.SeeAll-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent !important;
+  border: 2px solid var(--CallToAction);
+  gap: 10px;
+}
+.SeeAll-Btn p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+}
+.SeeAll-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.Subscribe-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--CallToAction);
+  position: absolute;
+  gap: 10px;
+  right: 0;
+}
+.Subscribe-Btn p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  text-align: center;
+  color: white !important;
+}
+.Subscribe-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.Subscribe-Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+.Subscribe-Form input {
+  width: 420px;
+  height: 28px;
+  padding: 16px 0px 16px 20px;
+  gap: 12px;
+  border-radius: 20px;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }
 
 body {
@@ -1036,6 +1312,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 530px;
   gap: 30px;
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard {
@@ -1090,6 +1367,10 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
+}
+#TrendingCollection_Section .CardCollection-Row .CollectionCard .Third {
+  -webkit-transform: translate(360px, -537px);
+          transform: translate(360px, -537px);
 }
 @media (max-width: 1050px) {
   #TrendingCollection_Section .CardCollection-Row .CollectionCard .Removable {
@@ -1309,9 +1590,6 @@ html {
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Removable {
     display: none;
   }
-}
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Third {
-  display: none;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {

@@ -1,0 +1,73 @@
+.Footer {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  padding: 40px 195px;
+  gap: 30px;
+
+  .Footer-Info {
+    @include Flexed(flex, center, flex-start);
+    gap: 30px;
+    margin-left: 100px;
+
+    .NFT-Marketplace-Info {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      width: 327.414px;
+      padding-right: 0px;
+      gap: 30px;
+
+      .Additional-Info {
+        @include text-formatter(Work Sans, 16px, 400, 140%);
+        color: var(--CaptionAndLabelText);
+      }
+
+      .Community-Info {
+        @include text-formatter(Work Sans, 16px, 400, 140%);
+        color: var(--CaptionAndLabelText);
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .Explore {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      width: 240px;
+      gap: 25px;
+      margin-left: 20px;
+
+      h1 {
+        @include text-formatter(Space Mono, 22px, 700, 160%);
+      }
+
+      .Pages {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+
+        a {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+          text-decoration: none;
+          color: var(--CaptionAndLabelText);
+        }
+      }
+    }
+
+    .Subscribe {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      gap: 25px;
+
+      h1 {
+        @include text-formatter(Space Mono, 22px, 700, 160%);
+      }
+
+      .Subscribe-FormAndInfo {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+
+        p {
+          @include text-formatter(Space Mono, 16px, 400, 140%);
+          color: var(--CaptionAndLabelText);
+        }
+      }
+    }
+  }
+}

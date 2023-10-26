@@ -76,6 +76,20 @@ $media: (
   transition: $transition;
 }
 
+@mixin Input(
+  $width: 420px,
+  $height: 28px,
+  $padding: 16px 0px 16px 20px,
+  $gap: 12px,
+  $border-radius: 20px
+) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  gap: $gap;
+  border-radius: $border-radius;
+}
+
 @mixin Flex-ItemsAndPosition(
   $display: flex,
   $align-items: normal,

@@ -311,6 +311,7 @@ html {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
+    height: 530px;
     gap: 30px;
 
     .CollectionCard {
@@ -344,6 +345,10 @@ html {
           align-items: flex-start;
           gap: 15px;
         }
+      }
+
+      .Third {
+        transform: translate(360px, -537px);
       }
 
       .Removable {
@@ -471,10 +476,6 @@ html {
           @include for-size(phone) {
             display: none;
           }
-        }
-
-        .Third {
-          display: none;
         }
 
         @include for-size(tablet) {
