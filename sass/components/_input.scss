@@ -5,5 +5,14 @@
   input {
     @include Input();
     @include text-formatter(Work Sans, 16px, 400, 140%);
+    border: 1px solid var(--CaptionAndLabelText);
+
+    @include for-size(tablet) {
+      @include Input(420px, 60px, 16px 0px 16px 20px, 12px);
+    }
+
+    @include for-size(phone) {
+      @include Input(275px, 14px, 16px 20px, 12px);
+    }
   }
 }

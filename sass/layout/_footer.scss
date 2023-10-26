@@ -3,10 +3,29 @@
   padding: 40px 195px;
   gap: 30px;
 
+  @include for-size(tablet) {
+    padding: 40px 195px;
+    gap: 49px;
+  }
+
+  @include for-size(phone) {
+    gap: 30px;
+  }
+
   .Footer-Info {
     @include Flexed(flex, center, flex-start);
     gap: 30px;
     margin-left: 100px;
+
+    @include for-size(tablet) {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      gap: 30px;
+    }
+
+    @include for-size(phone) {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      gap: 30px;
+    }
 
     .NFT-Marketplace-Info {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -14,14 +33,37 @@
       padding-right: 0px;
       gap: 30px;
 
+      @include for-size(tablet) {
+        gap: 20px;
+      }
+
       .Additional-Info {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
         @include text-formatter(Work Sans, 16px, 400, 140%);
         color: var(--CaptionAndLabelText);
+        gap: 20px;
+
+        @include for-size(tablet) {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          gap: 20px;
+        }
       }
 
       .Community-Info {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
         @include text-formatter(Work Sans, 16px, 400, 140%);
         color: var(--CaptionAndLabelText);
+        gap: 15px;
+
+        @include for-size(tablet) {
+          gap: 15px;
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+        }
+
+        @include for-size(phone) {
+          gap: 15px;
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+        }
 
         img {
           cursor: pointer;
@@ -34,6 +76,16 @@
       width: 240px;
       gap: 25px;
       margin-left: 20px;
+
+      @include for-size(tablet) {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+      }
+
+      @include for-size(phone) {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+      }
 
       h1 {
         @include text-formatter(Space Mono, 22px, 700, 160%);
@@ -55,6 +107,11 @@
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       gap: 25px;
 
+      @include for-size(tablet) {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 20px;
+      }
+
       h1 {
         @include text-formatter(Space Mono, 22px, 700, 160%);
       }
@@ -68,6 +125,21 @@
           color: var(--CaptionAndLabelText);
         }
       }
+    }
+  }
+
+  .Footer-Frame {
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
+    gap: 20px;
+
+    .Divider {
+      height: 1px;
+      background-color: var(--CaptionAndLabelText);
+    }
+
+    p {
+      @include text-formatter(Work Sans, 12px, 400, 110%);
+      color: #ccc;
     }
   }
 }

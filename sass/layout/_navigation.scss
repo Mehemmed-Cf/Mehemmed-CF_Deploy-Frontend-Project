@@ -30,21 +30,29 @@
       gap: 20px;
     }
 
-    #Bars_Btn {
+    .Bars_Btn {
+      @include Flexed(flex, flex-end, center);
       display: none;
+      border: none;
+      gap: 20px;
+      background-color: var(--BackGround-Secondary);
 
       @include for-size(tablet) {
+        display: initial;
+      }
+
+      @include for-size(phone) {
         display: initial;
       }
     }
 
     a {
+      @include Flexed(flex, center, center);
+      @include text-formatter(Work Sans, 16px, 600, 140%);
       height: 46px;
       color: var(--White);
       text-align: center;
-      @include text-formatter(Work Sans, 16px, 600, 140%);
       text-decoration: none;
-      @include Flexed(flex, center, center);
       padding: 0px 20px;
       gap: 12px;
       border-radius: 20px;

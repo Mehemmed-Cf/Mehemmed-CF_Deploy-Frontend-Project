@@ -93,6 +93,12 @@
   gap: 10px;
   right: 0;
 
+  @include for-size(phone) {
+    @include Button(46px, 0px 50px, 12px);
+    width: 315px;
+    bottom: -50px;
+  }
+
   p {
     @include text-formatter(Work Sans, 16px, 600, 140%);
     text-align: center;

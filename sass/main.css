@@ -208,26 +208,36 @@ table {
     gap: 20px;
   }
 }
-.Navigation .Navigation_Menu #Bars_Btn {
+.Navigation .Navigation_Menu .Bars_Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
   display: none;
+  border: none;
+  gap: 20px;
+  background-color: var(--BackGround-Secondary);
 }
 @media (max-width: 1050px) {
-  .Navigation .Navigation_Menu #Bars_Btn {
+  .Navigation .Navigation_Menu .Bars_Btn {
+    display: initial;
+  }
+}
+@media (max-width: 690px) {
+  .Navigation .Navigation_Menu .Bars_Btn {
     display: initial;
   }
 }
 .Navigation .Navigation_Menu a {
-  height: 46px;
-  color: var(--White);
-  text-align: center;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 140%;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: capitalize;
-  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,6 +251,17 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: normal;
           flex-direction: normal;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  height: 46px;
+  color: var(--White);
+  text-align: center;
+  text-decoration: none;
   padding: 0px 20px;
   gap: 12px;
   border-radius: 20px;
@@ -271,6 +292,17 @@ table {
   padding: 40px 195px;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  .Footer {
+    padding: 40px 195px;
+    gap: 49px;
+  }
+}
+@media (max-width: 690px) {
+  .Footer {
+    gap: 30px;
+  }
+}
 .Footer .Footer-Info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +320,36 @@ table {
   gap: 30px;
   margin-left: 100px;
 }
+@media (max-width: 1050px) {
+  .Footer .Footer-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 690px) {
+  .Footer .Footer-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
 .Footer .Footer-Info .NFT-Marketplace-Info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,7 +365,22 @@ table {
   padding-right: 0px;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  .Footer .Footer-Info .NFT-Marketplace-Info {
+    gap: 20px;
+  }
+}
 .Footer .Footer-Info .NFT-Marketplace-Info .Additional-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 400;
@@ -312,8 +389,34 @@ table {
   letter-spacing: normal;
   text-transform: capitalize;
   color: var(--CaptionAndLabelText);
+  gap: 20px;
+}
+@media (max-width: 1050px) {
+  .Footer .Footer-Info .NFT-Marketplace-Info .Additional-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
 }
 .Footer .Footer-Info .NFT-Marketplace-Info .Community-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 400;
@@ -322,6 +425,37 @@ table {
   letter-spacing: normal;
   text-transform: capitalize;
   color: var(--CaptionAndLabelText);
+  gap: 15px;
+}
+@media (max-width: 1050px) {
+  .Footer .Footer-Info .NFT-Marketplace-Info .Community-Info {
+    gap: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 690px) {
+  .Footer .Footer-Info .NFT-Marketplace-Info .Community-Info {
+    gap: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .Footer .Footer-Info .NFT-Marketplace-Info .Community-Info img {
   cursor: pointer;
@@ -340,6 +474,36 @@ table {
   width: 240px;
   gap: 25px;
   margin-left: 20px;
+}
+@media (max-width: 1050px) {
+  .Footer .Footer-Info .Explore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 690px) {
+  .Footer .Footer-Info .Explore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
 }
 .Footer .Footer-Info .Explore h1 {
   font-family: Space Mono;
@@ -387,6 +551,21 @@ table {
           flex-direction: column;
   gap: 25px;
 }
+@media (max-width: 1050px) {
+  .Footer .Footer-Info .Subscribe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
 .Footer .Footer-Info .Subscribe h1 {
   font-family: Space Mono;
   font-size: 22px;
@@ -418,6 +597,33 @@ table {
   letter-spacing: normal;
   text-transform: capitalize;
   color: var(--CaptionAndLabelText);
+}
+.Footer .Footer-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.Footer .Footer-Frame .Divider {
+  height: 1px;
+  background-color: var(--CaptionAndLabelText);
+}
+.Footer .Footer-Frame p {
+  font-family: Work Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: #ccc;
 }
 
 .SignUp-Btn {
@@ -655,6 +861,20 @@ table {
   gap: 10px;
   right: 0;
 }
+@media (max-width: 690px) {
+  .Subscribe-Btn {
+    height: 46px;
+    padding: 0px 50px;
+    background-color: 12px;
+    gap: normal;
+    border-radius: 20px;
+    border: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 315px;
+    bottom: -50px;
+  }
+}
 .Subscribe-Btn p {
   font-family: Work Sans;
   font-size: 16px;
@@ -697,6 +917,25 @@ table {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+  border: 1px solid var(--CaptionAndLabelText);
+}
+@media (max-width: 1050px) {
+  .Subscribe-Form input {
+    width: 420px;
+    height: 60px;
+    padding: 16px 0px 16px 20px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 690px) {
+  .Subscribe-Form input {
+    width: 275px;
+    height: 14px;
+    padding: 16px 20px;
+    gap: 12px;
+    border-radius: 20px;
+  }
 }
 
 body {
