@@ -30,7 +30,7 @@ html {
   }
 
   @include for-size(phone) {
-    padding: 40px 0px;
+    padding: 40px 200px;
   }
 
   .Hero_Frame {
@@ -274,6 +274,12 @@ html {
     gap: 40px;
   }
 
+  @include for-size(phone) {
+    margin-left: 600px;
+    padding: 40px 0px;
+    gap: 40px;
+  }
+
   .Section-Headline {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
@@ -314,6 +320,12 @@ html {
     height: 530px;
     gap: 30px;
 
+    @include for-size(phone) {
+      .CollectionCard:nth-child(2) {
+        display: none;
+      }
+    }
+
     .CollectionCard {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       border-radius: 20px;
@@ -349,16 +361,6 @@ html {
 
       .Third {
         transform: translate(360px, -537px);
-      }
-
-      .Removable {
-        @include for-size(tablet) {
-          display: none;
-        }
-
-        @include for-size(phone) {
-          display: none;
-        }
       }
 
       .CollectionInfo {

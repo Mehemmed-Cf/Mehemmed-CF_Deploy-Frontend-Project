@@ -170,7 +170,7 @@ table {
 }
 @media (max-width: 690px) {
   .Navigation {
-    padding: 15px 30px;
+    padding: 15px 50px;
   }
 }
 .Navigation .Logo {
@@ -234,6 +234,7 @@ table {
 }
 @media (max-width: 690px) {
   .Navigation .Navigation_Menu .Bars_Btn {
+    margin-left: 30px;
     display: initial;
   }
 }
@@ -612,9 +613,25 @@ table {
           flex-direction: column;
   gap: 20px;
 }
+@media (max-width: 690px) {
+  .Footer .Footer-Frame {
+    -webkit-transform: translate(420px, 70px);
+            transform: translate(420px, 70px);
+  }
+}
 .Footer .Footer-Frame .Divider {
   height: 1px;
   background-color: var(--CaptionAndLabelText);
+}
+@media (max-width: 1050px) {
+  .Footer .Footer-Frame .Divider {
+    width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  .Footer .Footer-Frame .Divider {
+    width: 300px;
+  }
 }
 .Footer .Footer-Frame p {
   font-family: Work Sans;
@@ -625,6 +642,16 @@ table {
   letter-spacing: normal;
   text-transform: capitalize;
   color: #ccc;
+}
+@media (max-width: 1050px) {
+  .Footer .Footer-Frame p {
+    width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  .Footer .Footer-Frame p {
+    width: 315px;
+  }
 }
 
 .SignUp-Btn {
@@ -985,7 +1012,7 @@ html {
 }
 @media (max-width: 690px) {
   #Hero_Section {
-    padding: 40px 0px;
+    padding: 40px 200px;
   }
 }
 #Hero_Section .Hero_Frame {
@@ -1470,6 +1497,13 @@ html {
     gap: 40px;
   }
 }
+@media (max-width: 690px) {
+  #TrendingCollection_Section {
+    margin-left: 600px;
+    padding: 40px 0px;
+    gap: 40px;
+  }
+}
 #TrendingCollection_Section .Section-Headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1555,6 +1589,11 @@ html {
   height: 530px;
   gap: 30px;
 }
+@media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(2) {
+    display: none;
+  }
+}
 #TrendingCollection_Section .CardCollection-Row .CollectionCard {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1611,16 +1650,6 @@ html {
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .Third {
   -webkit-transform: translate(360px, -537px);
           transform: translate(360px, -537px);
-}
-@media (max-width: 1050px) {
-  #TrendingCollection_Section .CardCollection-Row .CollectionCard .Removable {
-    display: none;
-  }
-}
-@media (max-width: 690px) {
-  #TrendingCollection_Section .CardCollection-Row .CollectionCard .Removable {
-    display: none;
-  }
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo {
   display: -webkit-box;
