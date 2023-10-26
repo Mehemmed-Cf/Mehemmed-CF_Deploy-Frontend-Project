@@ -80,6 +80,7 @@
       @include for-size(tablet) {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 20px;
+        margin-right: 100px;
       }
 
       @include for-size(phone) {
