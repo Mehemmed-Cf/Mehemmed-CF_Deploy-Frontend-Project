@@ -723,9 +723,15 @@ table {
   transition: 0.3s;
   background-color: var(--CallToAction);
 }
+@media (max-width: 690px) {
+  .GetStarted-Btn {
+    width: 290px;
+  }
+}
 .GetStarted-Btn p {
   color: var(--White);
   text-align: center;
+  margin-left: 12px;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 600;
@@ -804,14 +810,36 @@ table {
   border: 2px solid var(--CallToAction);
   gap: 10px;
 }
+@media (max-width: 690px) {
+  .ViewRankings-Btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: normal;
+            flex-direction: normal;
+    gap: 70px;
+    width: 100%;
+    -webkit-transform: translate(-360px, 600px);
+            transform: translate(-360px, 600px);
+  }
+}
 .ViewRankings-Btn p {
   font-family: 16px;
   font-size: 600;
-  font-weight: 140%;
+  font-weight: 200%;
   line-height: normal;
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+  white-space: nowrap;
   text-align: center;
   color: white;
 }
@@ -1159,6 +1187,17 @@ html {
     text-transform: capitalize;
   }
 }
+@media (max-width: 690px) {
+  #Hero_Section .Hero_Frame .Frame_TextAndButtons .HeadlineAndSubhead p {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #Hero_Section .Hero_Frame .Frame_TextAndButtons .AdditionalInfo {
   width: 510px;
   height: 77px;
@@ -1368,6 +1407,8 @@ html {
 }
 @media (max-width: 690px) {
   #Hero_Section .Hero_Frame .HighlightedNFT {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
     height: 315px;
   }
 }
@@ -1722,6 +1763,12 @@ html {
     gap: 40px;
   }
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section {
+    padding: 40px 195px;
+    gap: 40px;
+  }
+}
 #TopRatedArtists_Section .Section_Headline_And_Button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1734,6 +1781,11 @@ html {
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Section_Headline_And_Button {
     width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button {
+    width: 315px;
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
@@ -1749,6 +1801,25 @@ html {
           flex-direction: column;
   width: 703px;
   gap: 10px;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+    width: 315px;
+    white-space: pre;
+    gap: 10px;
+  }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading {
   display: -webkit-box;
@@ -1769,6 +1840,17 @@ html {
   text-transform: capitalize;
 }
 @media (max-width: 1050px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
   #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Heading h1 {
     font-family: Work Sans;
     font-size: 28px;
@@ -1808,18 +1890,51 @@ html {
     text-transform: capitalize;
   }
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(3) {
+    display: none;
+  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row {
   display: -webkit-box;
@@ -1829,6 +1944,19 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row {
+    display: block;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Cards-Row .Artist-Card:nth-child(5) {
+    display: initial;
+  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
   display: -webkit-box;
@@ -1849,16 +1977,7 @@ html {
   transition: 0.3s;
   background-color: var(--BackGround-Secondary);
   position: relative;
-}
-@media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Removable {
-    display: none;
-  }
-}
-@media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Removable {
-    display: none;
-  }
+  margin-top: 20px;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
@@ -1877,6 +1996,27 @@ html {
             flex-direction: normal;
   }
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 275px;
+    height: 100px;
+    padding: 20px;
+    gap: 20px;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -1893,6 +2033,36 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 100px;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
+  display: initial;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
+    display: none;
+  }
+}
+#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
+  display: none;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
+    display: initial;
+  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
   display: -webkit-box;
@@ -1927,6 +2097,26 @@ html {
             flex-direction: column;
   }
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 195px;
+    height: 60px;
+    gap: 5px;
+  }
+}
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info h1 {
   font-family: Work Sans;
   font-size: 22px;
@@ -1951,6 +2141,21 @@ html {
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+    gap: 5px;
+  }
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 5px;
   }
 }

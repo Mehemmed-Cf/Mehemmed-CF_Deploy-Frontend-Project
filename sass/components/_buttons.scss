@@ -23,9 +23,14 @@
   @include Button(60px, 0px 50px, 12px);
   background-color: var(--CallToAction);
 
+  @include for-size(phone) {
+    width: 290px;
+  }
+
   p {
     color: var(--White);
     text-align: center;
+    margin-left: 12px;
     @include text-formatter(Work Sans, 16px, 600, 140%);
   }
 
@@ -56,8 +61,16 @@
   border: 2px solid var(--CallToAction);
   gap: 10px;
 
+  @include for-size(phone) {
+    @include Flexed(flex, center, center);
+    gap: 70px;
+    width: 100%;
+    transform: translate(-360px, 600px);
+  }
+
   p {
-    @include text-formatter(16px, 600, 140%);
+    @include text-formatter(16px, 600, 200%);
+    white-space: nowrap;
     text-align: center;
     color: white;
   }

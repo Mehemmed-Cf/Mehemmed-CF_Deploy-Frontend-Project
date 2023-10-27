@@ -93,6 +93,10 @@ html {
           @include for-size(tablet) {
             @include text-formatter(Work Sans, 16px, 400, 140%);
           }
+
+          @include for-size(phone) {
+            @include text-formatter(Work Sans, 14px, 400, 140%);
+          }
         }
       }
 
@@ -187,6 +191,7 @@ html {
       }
 
       @include for-size(phone) {
+        transform: translateX(-10px);
         height: 315px;
       }
 
@@ -405,6 +410,11 @@ html {
     gap: 40px;
   }
 
+  @include for-size(phone) {
+    padding: 40px 195px;
+    gap: 40px;
+  }
+
   .Section_Headline_And_Button {
     display: flex;
     align-items: flex-end;
@@ -414,10 +424,22 @@ html {
       width: 690px;
     }
 
+    @include for-size(phone) {
+      width: 315px;
+    }
+
     .Section_Headline {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       width: 703px;
       gap: 10px;
+
+      @include for-size(phone) {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        transform: translateX(40px);
+        width: 315px;
+        white-space: pre;
+        gap: 10px;
+      }
 
       .Heading {
         display: flex;
@@ -428,6 +450,10 @@ html {
           @include text-formatter(Work Sans, 38px, 600, 120%);
 
           @include for-size(tablet) {
+            @include text-formatter(Work Sans, 28px, 600, 140%);
+          }
+
+          @include for-size(phone) {
             @include text-formatter(Work Sans, 28px, 600, 140%);
           }
         }
@@ -444,21 +470,48 @@ html {
           @include for-size(tablet) {
             @include text-formatter(Work Sans, 16px, 400, 140%);
           }
+
+          @include for-size(phone) {
+            @include text-formatter(Work Sans, 16px, 400, 160%);
+          }
         }
       }
     }
   }
 
   .Artist-Card-Grids {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 30px;
+
+    @include for-size(phone) {
+      @include Flex-ItemsAndPosition(flex, flex-start, row);
+      transform: translateX(400px);
+
+      .Artist-Cards-Row:nth-child(2) {
+        display: none;
+      }
+
+      .Artist-Cards-Row:nth-child(3) {
+        display: none;
+      }
+    }
 
     .Artist-Cards-Row {
       display: flex;
       align-items: flex-start;
       gap: 30px;
+
+      @include for-size(phone) {
+        display: block;
+        flex-direction: row;
+        gap: 20px;
+
+        .Artist-Cards-Row {
+          .Artist-Card:nth-child(5) {
+            display: initial;
+          }
+        }
+      }
 
       .Artist-Card {
         @include Flex-ItemsAndPosition(flex, center, column);
@@ -469,19 +522,18 @@ html {
         transition: 0.3s;
         background-color: var(--BackGround-Secondary);
         position: relative;
-
-        .Removable {
-          @include for-size(tablet) {
-            display: none;
-          }
-
-          @include for-size(phone) {
-            display: none;
-          }
-        }
+        margin-top: 20px;
 
         @include for-size(tablet) {
           @include Flexed(flex, center, flex-start);
+        }
+
+        @include for-size(phone) {
+          @include Flexed(flex, center, flex-start, row);
+          width: 275px;
+          height: 100px;
+          padding: 20px;
+          gap: 20px;
         }
 
         &:hover {
@@ -491,6 +543,26 @@ html {
         .Artist-Avatar {
           @include Flex-ItemsAndPosition(flex, flex-end, column);
           border-radius: 100px;
+
+          @include for-size(phone) {
+            @include Flex-ItemsAndPosition(flex, flex-end, column);
+          }
+
+          img:nth-child(1) {
+            display: initial;
+
+            @include for-size(phone) {
+              display: none;
+            }
+          }
+
+          img:nth-child(2) {
+            display: none;
+
+            @include for-size(phone) {
+              display: initial;
+            }
+          }
         }
 
         .Artist-Info {
@@ -499,6 +571,13 @@ html {
 
           @include for-size(tablet) {
             @include Flexed(flex, center, flex-start, column);
+          }
+
+          @include for-size(phone) {
+            @include Flexed(flex, center, flex-start, column);
+            width: 195px;
+            height: 60px;
+            gap: 5px;
           }
 
           h1 {
@@ -510,6 +589,11 @@ html {
             gap: 10px;
 
             @include for-size(tablet) {
+              gap: 5px;
+            }
+
+            @include for-size(phone) {
+              @include Flex-ItemsAndPosition(flex, center, column);
               gap: 5px;
             }
 
