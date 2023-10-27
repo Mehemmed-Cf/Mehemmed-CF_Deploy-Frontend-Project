@@ -86,6 +86,7 @@
   background-color: transparent !important;
   border: 2px solid var(--CallToAction);
   gap: 10px;
+  margin-left: 370px;
 
   p {
     @include text-formatter(Work Sans, 16px, 600, 140%);
@@ -104,7 +105,7 @@
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
-  right: 0;
+  right: 10;
 
   @include for-size(phone) {
     @include Button(46px, 0px 50px, 12px);

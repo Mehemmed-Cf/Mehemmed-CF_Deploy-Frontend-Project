@@ -743,3 +743,115 @@ html {
     }
   }
 }
+
+#DiscoverNFTs_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  padding: 80px 195px;
+  gap: 60px;
+
+  .Section-HeadlineAndButton {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+
+    .Section-Headline {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      gap: 10px;
+
+      h1 {
+        @include text-formatter(Work Sans, 38px, 600, 120%);
+      }
+
+      p {
+        @include text-formatter(Work Sans, 22px, 400, 160%);
+      }
+    }
+  }
+
+  .NFTCards-Row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    .NFTCard {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      height: 469px;
+      border-radius: 20px;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      .Image {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 10px;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .NFT-Info {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        padding: 20px 30px 25px 30px;
+        gap: 25px;
+        width: 330px;
+        background-color: var(--BackGround-Secondary);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .Artist-Info {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          gap: 5px;
+
+          h1 {
+            @include text-formatter(Work Sans, 22px, 600, 140%);
+          }
+
+          .Artist-AvatarAndName {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            p {
+              @include text-formatter(Work Sans, 16px, 400, 140%);
+            }
+          }
+        }
+
+        .Additional-Info {
+          display: flex;
+          align-items: flex-start;
+          gap: 80px;
+
+          .Price {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            padding-right: 0px;
+            gap: 8px;
+
+            h1 {
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+              color: var(--CaptionAndLabelText);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
+          }
+
+          .Highest-Bid {
+            @include Flexed(flex, center, flex-end, column);
+            gap: 8px;
+
+            h1 {
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+              color: var(--CaptionAndLabelText);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

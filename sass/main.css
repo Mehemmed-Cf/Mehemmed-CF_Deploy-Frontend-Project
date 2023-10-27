@@ -874,6 +874,7 @@ table {
   background-color: transparent !important;
   border: 2px solid var(--CallToAction);
   gap: 10px;
+  margin-left: 370px;
 }
 .SeeAll-Btn p {
   font-family: Work Sans;
@@ -916,7 +917,7 @@ table {
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
-  right: 0;
+  right: 10;
 }
 @media (max-width: 690px) {
   .Subscribe-Btn {
@@ -2430,4 +2431,237 @@ html {
 #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+#DiscoverNFTs_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 195px;
+  gap: 60px;
+}
+#DiscoverNFTs_Section .Section-HeadlineAndButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 100px;
+}
+#DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline h1 {
+  font-family: Work Sans;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#DiscoverNFTs_Section .NFTCards-Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 469px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  border-radius: 20px 20px 0px 0px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px 25px 30px;
+  gap: 25px;
+  width: 330px;
+  background-color: var(--BackGround-Secondary);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info h1 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info .Artist-AvatarAndName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info .Artist-AvatarAndName p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 80px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 0px;
+  gap: 8px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Price h1 {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Price p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Highest-Bid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Highest-Bid h1 {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info .Highest-Bid p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }
