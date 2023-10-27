@@ -655,6 +655,10 @@ table {
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 .SignUp-Btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,6 +949,44 @@ table {
   color: white !important;
 }
 .Subscribe-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.See-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 22px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--White);
+}
+.See-Btn p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.See-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -1401,6 +1443,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 510px;
+  cursor: pointer;
 }
 @media (max-width: 1050px) {
   #Hero_Section .Hero_Frame .HighlightedNFT {
@@ -1667,6 +1710,7 @@ html {
           flex-direction: column;
   gap: 15px;
   border-radius: 20px;
+  cursor: pointer;
 }
 @media (max-width: 690px) {
   #TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional > img {
@@ -2392,6 +2436,7 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
@@ -2511,6 +2556,7 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard:hover {
   -webkit-transform: scale(0.95);
@@ -2660,6 +2706,286 @@ html {
   font-family: Space Mono;
   font-size: 16px;
   font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+#NFTHighlight_Section {
+  position: relative;
+}
+#NFTHighlight_Section .Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#NFTHighlight_Section .Image img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+  height: 660px;
+}
+#NFTHighlight_Section .NFT-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 360px 195px 60px 195px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+  padding: 10px 20px;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--BackGround-Secondary);
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card .Avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card .Avatar img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card .Avatar img:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button h1 {
+  font-family: Work Sans;
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 295px;
+  padding: 30px;
+  gap: 10px;
+  border-radius: 20px;
+  background: rgba(59, 59, 59, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer h1 {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Hours h1 {
+  font-family: Space Mono;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Hours p {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Minutes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Minutes h1 {
+  font-family: Space Mono;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Minutes p {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Seconds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Seconds h1 {
+  font-family: Space Mono;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer .Timer .Seconds p {
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer h2 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#NFTHighlight_Section .NFT-Info .NFT-Frame .Auction-Timer h2 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
   line-height: 140%;
   font-style: normal;
   letter-spacing: normal;

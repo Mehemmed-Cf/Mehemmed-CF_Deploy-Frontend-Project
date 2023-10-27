@@ -185,6 +185,7 @@ html {
     .HighlightedNFT {
       @include Flex-ItemsAndPosition(flex, center, column);
       height: 510px;
+      cursor: pointer;
 
       @include for-size(tablet) {
         height: 330px;
@@ -342,6 +343,7 @@ html {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 15px;
         border-radius: 20px;
+        cursor: pointer;
 
         > img {
           @include for-size(phone) {
@@ -724,6 +726,7 @@ html {
         background-color: var(--BackGround-Secondary);
         border-radius: 20px;
         transition: 0.3s;
+        cursor: pointer;
 
         @include for-size(phone) {
           @include Flex-ItemsAndPosition(flex, center, column);
@@ -778,6 +781,7 @@ html {
       height: 469px;
       border-radius: 20px;
       transition: 0.3s;
+      cursor: pointer;
 
       &:hover {
         transform: scale(0.95);
@@ -850,6 +854,136 @@ html {
               @include text-formatter(Space Mono, 16px, 400, 140%);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#NFTHighlight_Section {
+  position: relative;
+
+  .Image {
+    @include Flex-ItemsAndPosition(flex, center, column);
+
+    img {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      width: 1280px;
+      height: 660px;
+    }
+  }
+
+  .NFT-Info {
+    @include Flexed(flex, center, flex-end, column);
+    padding: 360px 195px 60px 195px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .NFT-Frame {
+      @include Flexed(flex, space-between, flex-end, row);
+
+      .NFT-Artist-Name-Button {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 30px;
+
+        .Artist-Card {
+          @include Flex-ItemsAndPosition(flex, center, row);
+          cursor: pointer;
+
+          padding: 10px 20px;
+          gap: 12px;
+          border-radius: 20px;
+          background-color: var(--BackGround-Secondary);
+
+          .Avatar {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            img {
+              transition: 0.3s;
+
+              &:hover {
+                transform: scale(0.95);
+              }
+            }
+          }
+
+          p {
+            @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
+        }
+
+        h1 {
+          @include text-formatter(Work Sans, 51px, 600, 110%);
+        }
+      }
+
+      .Auction-Timer {
+        @include Flexed(flex, flex-end, flex-start, column);
+        width: 295px;
+        padding: 30px;
+        gap: 10px;
+        border-radius: 20px;
+        background: rgba(59, 59, 59, 0.5);
+        backdrop-filter: blur(5px);
+
+        h1 {
+          @include text-formatter(Space Mono, 12px, 400, 110%);
+        }
+
+        .Timer {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+
+          .Hours {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            gap: 5px;
+
+            h1 {
+              @include text-formatter(Space Mono, 38px, 700, 120%);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+            }
+          }
+
+          .Minutes {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            gap: 5px;
+
+            h1 {
+              @include text-formatter(Space Mono, 38px, 700, 120%);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+            }
+          }
+
+          .Seconds {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            gap: 5px;
+
+            h1 {
+              @include text-formatter(Space Mono, 38px, 700, 120%);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+            }
+          }
+        }
+
+        h2 {
+          @include text-formatter(Space Mono, 28px, 700, 140%);
+        }
+
+        h2 {
+          @include text-formatter(Space Mono, 28px, 700, 140%);
         }
       }
     }
