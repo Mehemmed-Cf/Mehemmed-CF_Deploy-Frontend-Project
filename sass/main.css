@@ -302,6 +302,7 @@ table {
 @media (max-width: 690px) {
   .Footer {
     gap: 30px;
+    margin-top: 200px;
   }
 }
 .Footer .Footer-Info {
@@ -615,8 +616,8 @@ table {
 }
 @media (max-width: 690px) {
   .Footer .Footer-Frame {
-    -webkit-transform: translate(420px, 70px);
-            transform: translate(420px, 70px);
+    -webkit-transform: 420px, 70px;
+            transform: 420px, 70px;
   }
 }
 .Footer .Footer-Frame .Divider {
@@ -825,10 +826,10 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: normal;
             flex-direction: normal;
-    gap: 70px;
+    gap: 50px;
     width: 100%;
-    -webkit-transform: translate(-360px, 600px);
-            transform: translate(-360px, 600px);
+    -webkit-transform: translate(-350px, 600px);
+            transform: translate(-350px, 600px);
   }
 }
 .ViewRankings-Btn p {
@@ -2243,6 +2244,12 @@ html {
     padding: 40px 0px;
   }
 }
+@media (max-width: 690px) {
+  #BrowseCategories_Section {
+    gap: 40px;
+    padding: 40px 0px;
+  }
+}
 #BrowseCategories_Section .Section-Headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2255,6 +2262,15 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 690px) {
+  #BrowseCategories_Section .Section-Headline {
+    margin-top: 80px;
+    margin-bottom: -60px;
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+    width: 315px;
+  }
 }
 #BrowseCategories_Section .Section-Headline h1 {
   font-family: Work Sans;
@@ -2300,6 +2316,15 @@ html {
           flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 690px) {
+  #BrowseCategories_Section .CategoryCards {
+    width: 315px;
+    height: 918px;
+    gap: 30px;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
 #BrowseCategories_Section .CategoryCards .CategoryCards-Row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2312,6 +2337,44 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 30px;
+}
+@media (max-width: 690px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 315px;
+  }
+}
+@media (max-width: 690px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCards-Row:nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 209px;
+    gap: 20px;
+  }
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCards-Row:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 209px;
+    gap: 20px;
+  }
 }
 #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
   display: -webkit-box;
@@ -2328,6 +2391,20 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media (max-width: 690px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard .Collection-Name {
   display: -webkit-box;

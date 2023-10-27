@@ -654,9 +654,21 @@ html {
     padding: 40px 0px;
   }
 
+  @include for-size(phone) {
+    gap: 40px;
+    padding: 40px 0px;
+  }
+
   .Section-Headline {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
+
+    @include for-size(phone) {
+      margin-top: 80px;
+      margin-bottom: -60px;
+      transform: translateX(80px);
+      width: 315px;
+    }
 
     h1 {
       @include text-formatter(Work Sans, 28px, 600, 120%);
@@ -675,15 +687,47 @@ html {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 30px;
 
+    @include for-size(phone) {
+      width: 315px;
+      height: 918px;
+      gap: 30px;
+      transform: scale(0.8);
+    }
+
     .CategoryCards-Row {
       @include Flex-ItemsAndPosition(flex, flex-start, row);
       gap: 30px;
+
+      @include for-size(phone) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 315px;
+      }
+
+      @include for-size(phone) {
+        .CategoryCards-Row:nth-child(1) {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          height: 209px;
+          gap: 20px;
+        }
+
+        .CategoryCards-Row:nth-child(2) {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          height: 209px;
+          gap: 20px;
+        }
+      }
 
       .CategoryCard {
         @include Flex-ItemsAndPosition(flex, center, column);
         background-color: var(--BackGround-Secondary);
         border-radius: 20px;
         transition: 0.3s;
+
+        @include for-size(phone) {
+          @include Flex-ItemsAndPosition(flex, center, column);
+        }
 
         .Collection-Name {
           @include Flex-ItemsAndPosition(flex, flex-start, column);

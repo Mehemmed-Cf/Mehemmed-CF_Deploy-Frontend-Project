@@ -10,6 +10,7 @@
 
   @include for-size(phone) {
     gap: 30px;
+    margin-top: 200px;
   }
 
   .Footer-Info {
@@ -134,7 +135,7 @@
     gap: 20px;
 
     @include for-size(phone) {
-      transform: translate(420px, 70px);
+      transform: (420px, 70px);
     }
 
     .Divider {
