@@ -989,3 +989,57 @@ html {
     }
   }
 }
+
+#HowItWorks_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  padding: 80px 195px;
+  gap: 48px;
+
+  .Section-Headline {
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
+    gap: 10px;
+
+    h1 {
+      @include text-formatter(Work Sans, 38px, 600, 120%);
+    }
+
+    p {
+      @include text-formatter(Work Sans, 22px, 400, 160%);
+    }
+  }
+
+  .Cards-Row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    .Info-Card {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      width: 330px;
+      height: 440px;
+      padding: 10px 30px 30px 30px;
+      gap: 20px;
+      border-radius: 20px;
+      background-color: var(--BackGround-Secondary);
+
+      .Icon {
+        width: 250px;
+        height: 250px;
+      }
+
+      .Card-Detail {
+        @include Flex-ItemsAndPosition(flex, center, column);
+        gap: 10px;
+
+        h1 {
+          @include text-formatter(Work Sans, 22px, 600, 140%);
+        }
+
+        p {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
