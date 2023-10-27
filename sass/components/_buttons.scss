@@ -109,7 +109,7 @@ button {
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
-  right: 10;
+  right: 0;
 
   @include for-size(phone) {
     @include Button(46px, 0px 50px, 12px);

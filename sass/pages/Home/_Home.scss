@@ -1043,3 +1043,33 @@ html {
     }
   }
 }
+
+#SubscribeWidget_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  padding: 40px 195px 80px 195px;
+  gap: 10px;
+
+  .Subscribe-Widget {
+    @include Flex-ItemsAndPosition(flex, center, row);
+    padding: 60px;
+    gap: 80px;
+  }
+
+  .Widget-Frame {
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
+    width: 425px;
+    gap: 40px;
+
+    .HeadlineAndSubhead {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+
+      h1 {
+        @include text-formatter(work Sans, 38px, 600, 120%);
+      }
+
+      p {
+        @include text-formatter(work Sans, 22px, 400, 160%);
+      }
+    }
+  }
+}

@@ -921,7 +921,7 @@ button {
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
-  right: 10;
+  right: 0;
 }
 @media (max-width: 690px) {
   .Subscribe-Btn {
@@ -3099,4 +3099,77 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
   text-align: center;
+}
+
+#SubscribeWidget_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 195px 80px 195px;
+  gap: 10px;
+}
+#SubscribeWidget_Section .Subscribe-Widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 60px;
+  gap: 80px;
+}
+#SubscribeWidget_Section .Widget-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 425px;
+  gap: 40px;
+}
+#SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead h1 {
+  font-family: work Sans;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead p {
+  font-family: work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }
