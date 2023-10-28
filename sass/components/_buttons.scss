@@ -4,17 +4,25 @@ button {
 
 .SignUp-Btn {
   @include Flexed(flex, center, center);
-  @include Button(60px, 0px 30px, 12px);
+  @include Button(60px, 0px 40px, 12px);
   background-color: var(--CallToAction);
+  position: relative;
 
   @include for-size(tablet) {
     display: none;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    transform: translateX(17px);
   }
 
   p {
     color: var(--White);
     text-align: center;
     @include text-formatter(Work Sans, 16px, 600, 140%);
+    transform: translateX(10px);
   }
 
   &:hover {
@@ -92,6 +100,10 @@ button {
   gap: 10px;
   margin-left: 370px;
 
+  @include for-size(tablet) {
+    margin-left: 0px;
+  }
+
   p {
     @include text-formatter(Work Sans, 16px, 600, 140%);
     text-align: center;
@@ -128,10 +140,14 @@ button {
   }
 }
 
-.See-Btn {
-  @include Flexed(flex, center, center);
-  @include Button(60px, 22px 50px, 12px);
+.SeeNFT-Btn {
+  @include Flexed(flex, center, center, row);
+  @include Button(60px, 22px 60px, 12px);
   background-color: var(--White);
+
+  img {
+    transform: translateX(-10px);
+  }
 
   p {
     @include text-formatter(Work Sans, 16px, 600, 140%);

@@ -674,7 +674,7 @@ button {
       -ms-flex-direction: normal;
           flex-direction: normal;
   height: 60px;
-  padding: 0px 30px;
+  padding: 0px 40px;
   background-color: 12px;
   gap: normal;
   border-radius: 20px;
@@ -682,11 +682,18 @@ button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: var(--CallToAction);
+  position: relative;
 }
 @media (max-width: 1050px) {
   .SignUp-Btn {
     display: none;
   }
+}
+.SignUp-Btn img {
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateX(17px);
+          transform: translateX(17px);
 }
 .SignUp-Btn p {
   color: var(--White);
@@ -698,6 +705,8 @@ button {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 .SignUp-Btn:hover {
   -webkit-transform: scale(0.95);
@@ -880,6 +889,11 @@ button {
   gap: 10px;
   margin-left: 370px;
 }
+@media (max-width: 1050px) {
+  .SeeAll-Btn {
+    margin-left: 0px;
+  }
+}
 .SeeAll-Btn p {
   font-family: Work Sans;
   font-size: 16px;
@@ -953,7 +967,7 @@ button {
           transform: scale(0.95);
 }
 
-.See-Btn {
+.SeeNFT-Btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -963,12 +977,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: normal;
-          flex-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 60px;
-  padding: 22px 50px;
+  padding: 22px 60px;
   background-color: 12px;
   gap: normal;
   border-radius: 20px;
@@ -977,7 +991,11 @@ button {
   transition: 0.3s;
   background-color: var(--White);
 }
-.See-Btn p {
+.SeeNFT-Btn img {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+.SeeNFT-Btn p {
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 600;
@@ -986,7 +1004,7 @@ button {
   letter-spacing: normal;
   text-transform: capitalize;
 }
-.See-Btn:hover {
+.SeeNFT-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -1585,7 +1603,7 @@ html {
 }
 @media (max-width: 690px) {
   #TrendingCollection_Section {
-    margin-left: 600px;
+    margin-left: 400px;
     padding: 40px 0px;
     gap: 40px;
   }
@@ -1675,6 +1693,11 @@ html {
   height: 530px;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(1) {
+    display: none;
+  }
+}
 @media (max-width: 690px) {
   #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(2) {
     display: none;
@@ -1735,8 +1758,8 @@ html {
   gap: 15px;
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .Third {
-  -webkit-transform: translate(360px, -537px);
-          transform: translate(360px, -537px);
+  -webkit-transform: translate(360px, -538px);
+          transform: translate(360px, -538px);
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .CollectionInfo {
   display: -webkit-box;
@@ -1805,12 +1828,32 @@ html {
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 40px 195px;
     gap: 40px;
   }
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 40px 195px;
     gap: 40px;
   }
@@ -1960,6 +2003,38 @@ html {
           flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids {
+    -webkit-transform: translateX(175px);
+            transform: translateX(175px);
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Card-Grids {
+    width: 690px;
+    gap: 30px;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(2) {
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(3) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(4) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(3) {
+    display: none;
+  }
+}
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Card-Grids {
     display: -webkit-box;
@@ -2000,9 +2075,6 @@ html {
             flex-direction: row;
     gap: 20px;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Cards-Row .Artist-Card:nth-child(5) {
-    display: initial;
-  }
 }
 #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
   display: -webkit-box;
@@ -2036,10 +2108,14 @@ html {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: normal;
-            flex-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 330px;
+    height: 100px;
+    padding: 20px;
+    gap: 20px;
   }
 }
 @media (max-width: 690px) {
@@ -2058,7 +2134,7 @@ html {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 275px;
-    height: 100px;
+    height: 160px;
     padding: 20px;
     gap: 20px;
   }
@@ -2079,6 +2155,24 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 100px;
+}
+@media (max-width: 1050px) {
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
@@ -2308,6 +2402,12 @@ html {
           flex-direction: column;
   gap: 10px;
 }
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .Section-Headline {
+    margin-left: 80px;
+    width: 690px;
+  }
+}
 @media (max-width: 690px) {
   #BrowseCategories_Section .Section-Headline {
     margin-top: 80px;
@@ -2361,6 +2461,24 @@ html {
           flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .CategoryCards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 690px;
+    height: 470px;
+    gap: 50px;
+    margin-left: 80px;
+  }
+}
 @media (max-width: 690px) {
   #BrowseCategories_Section .CategoryCards {
     width: 315px;
@@ -2382,6 +2500,22 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 209px;
+    gap: 30px;
+  }
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section .CategoryCards .CategoryCards-Row {
@@ -2438,6 +2572,15 @@ html {
   transition: 0.3s;
   cursor: pointer;
 }
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
+    width: 150px;
+    height: 209px;
+  }
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard img {
+    width: 150px;
+  }
+}
 @media (max-width: 690px) {
   #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard {
     display: -webkit-box;
@@ -2473,6 +2616,35 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard .Collection-Name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 150px;
+    height: 22px;
+    background-color: var(--BackGround-Secondary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #BrowseCategories_Section .CategoryCards .CategoryCards-Row .CategoryCard:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -2492,6 +2664,22 @@ html {
   padding: 80px 195px;
   gap: 60px;
 }
+@media (max-width: 1050px) {
+  #DiscoverNFTs_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 195px 80px 195px;
+    gap: 40px;
+  }
+}
 #DiscoverNFTs_Section .Section-HeadlineAndButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2500,6 +2688,18 @@ html {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 100px;
+}
+@media (max-width: 1050px) {
+  #DiscoverNFTs_Section .Section-HeadlineAndButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 690px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 100px;
+  }
 }
 #DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline {
   display: -webkit-box;
@@ -2513,6 +2713,22 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 1050px) {
+  #DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+    white-space: nowrap;
+  }
 }
 #DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline h1 {
   font-family: Work Sans;
@@ -2540,6 +2756,23 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #DiscoverNFTs_Section .NFTCards-Row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 690px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 30px;
+  }
+}
+@media (max-width: 1050px) {
+  #DiscoverNFTs_Section .NFTCards-Row .NFTCard:last-child {
+    display: none;
+  }
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard {
   display: -webkit-box;
@@ -2741,6 +2974,12 @@ html {
   width: 1280px;
   height: 660px;
 }
+@media (max-width: 1050px) {
+  #NFTHighlight_Section .Image img {
+    width: 690px;
+    height: 440px;
+  }
+}
 #NFTHighlight_Section .NFT-Info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2759,6 +2998,24 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (max-width: 1050px) {
+  #NFTHighlight_Section .NFT-Info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: normal;
+            flex-direction: normal;
+    padding: 360px 195px 60px 195px;
+  }
 }
 #NFTHighlight_Section .NFT-Info .NFT-Frame {
   display: -webkit-box;
@@ -3128,6 +3385,7 @@ html {
           flex-direction: row;
   padding: 60px;
   gap: 80px;
+  background-color: var(--BackGround-Secondary);
 }
 #SubscribeWidget_Section .Widget-Frame {
   display: -webkit-box;
