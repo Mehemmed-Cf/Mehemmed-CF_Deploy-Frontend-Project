@@ -3,7 +3,7 @@
   padding: 20px 50px;
 
   @include for-size(tablet) {
-    padding: 15px 50px;
+    padding: 15px 15px;
   }
 
   @include for-size(phone) {

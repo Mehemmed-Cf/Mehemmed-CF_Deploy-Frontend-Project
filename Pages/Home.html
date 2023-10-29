@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="../sass/main.css">
+    <script defer src="./index.js"></script>
   <body>
     <nav class="Navigation">
       <div class="Logo">
@@ -57,12 +58,6 @@
         <div class="HighlightedNFT">
           <div class="HighlightedNFT-Img">
             <img src="./assets/images/HighlightedNFT.png" alt="Highlighted NFT Image" />
-          </div>
-          <div class="HighlightedNFT-Tablet-Img">
-            <img src="./assets/images/HighlightedNFT-Tablet.png" alt="Highlighted NFT Tablet Image" />
-          </div>
-          <div class="HighlightedNFT-Phone-Img">
-            <img src="./assets/images/HighlightedNFT-Phone.png" />
           </div>
           <div class="NFTFrame">
             <p>Space Walking</p>
@@ -159,7 +154,7 @@ NFT Marketplace</p>
           <p>View Rankings</p> 
         </button>
       </div>
-      <div class="Artist-Card-Grids">
+      <div class="Artist-Card-Grids Container">
         <div class="Artist-Cards-Row Container">
           <div class="Artist-Card">
             <div class="Artist-Avatar">
@@ -391,7 +386,7 @@ NFT Marketplace</p>
           </div>
           <div class="CategoryCard">
             <img src="./assets/images/Category-VirtualWorlds.png" />
-            <div class="Collection-Name">Virtual Worlds</div>
+            <div class="Collection-Name"><p>Virtual Worlds</p></div>
           </div>
         </div>
       </div>
@@ -399,7 +394,7 @@ NFT Marketplace</p>
 
     <section id="DiscoverNFTs_Section">
       <div class="Section-HeadlineAndButton Container">
-        <div class="Section-Headline">
+        <div class="Section-Headline Container">
           <h1>Discover More NFTs</h1>
           <p>Explore new trending NFTs</p>
         </div>
@@ -484,16 +479,13 @@ NFT Marketplace</p>
       </div>
     </section>
 
-    <Section id="NFTHighlight_Section">
-      <div class="Image">
-        <img src="./assets/images/NFT-BigHighlight.png" />
-      </div>
-      <div class="NFT-Info">
+    <section id="NFTHighlight_Section">
+        <div class="NFT-Info">
         <div class="NFT-Frame Container">
           <div class="NFT-Artist-Name-Button">
             <div class="Artist-Card">
               <div class="Avatar">
-                <img src="./assets/images/AvatarShrommie.svg" />
+                <img src="./assets/images/AvatarShroomie.svg" />
               </div>
               <p>Shroomie</p>
             </div>
@@ -515,16 +507,16 @@ NFT Marketplace</p>
                 <h1>59</h1>
                 <p>Minutes</p>
               </div>
+              <h3>:</h3>
               <div class="Seconds">
                 <h1>59</h1>
                 <p>Seconds</p>
               </div>
-              <h3>:</h3>
             </div>
           </div>
         </div>
       </div>
-    </Section>
+    </section>
 
     <section id="HowItWorks_Section">
       <div class="Section-Headline Container">
@@ -536,7 +528,7 @@ NFT Marketplace</p>
           <div class="Icon">
             <img src="./assets/images/SetUpYourWallet.png" />
           </div>
-          <div class="Card-Detail">
+          <div class="Card-Details">
             <h1>Setup Your wallet</h1>
             <p>Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.</p>
           </div>
@@ -545,7 +537,7 @@ NFT Marketplace</p>
           <div class="Icon">
             <img src="./assets/images/CreateCollection.png" />
           </div>
-          <div class="Card-Detail">
+          <div class="Card-Details">
             <h1>Create Collection</h1>
             <p>Upload your work and setup your collection. Add a description, social links and floor price.</p>
           </div>
@@ -554,7 +546,7 @@ NFT Marketplace</p>
           <div class="Icon">
             <img src="./assets/images/StartEarning.png" />
           </div>
-          <div class="Card-Detail">
+          <div class="Card-Details">
             <h1>Start Earning</h1>
             <p>Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.</p>
           </div>

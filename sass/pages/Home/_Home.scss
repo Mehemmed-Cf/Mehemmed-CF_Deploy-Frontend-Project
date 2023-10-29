@@ -26,7 +26,8 @@ html {
   gap: 30px;
 
   @include for-size(tablet) {
-    padding: 80px 0px;
+    margin-left: 6px;
+    padding: 80px 0px 0px 0px;
   }
 
   @include for-size(phone) {
@@ -39,7 +40,7 @@ html {
     gap: 30px;
 
     @include for-size(tablet) {
-      margin-left: 50px;
+      height: 450px;
     }
 
     @include for-size(phone) {
@@ -51,7 +52,6 @@ html {
       gap: 30px;
 
       @include for-size(tablet) {
-        width: 330px;
         gap: 20px;
       }
 
@@ -60,7 +60,6 @@ html {
       }
 
       .HeadlineAndSubhead {
-        width: 510px;
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 20px;
 
@@ -73,9 +72,8 @@ html {
         }
 
         h1 {
-          @include Flexed(flex, center);
+          @include Flexed(flex, center, column);
           @include text-formatter(Work Sans, 67px, 600, 110%);
-          flex-direction: column;
 
           @include for-size(tablet) {
             @include text-formatter(Work Sans, 38px, 600, 120%);
@@ -87,7 +85,6 @@ html {
         }
 
         p {
-          align-self: stretch;
           @include text-formatter(Work Sans, 22px, 400, 160%);
 
           @include for-size(tablet) {
@@ -101,16 +98,12 @@ html {
       }
 
       .AdditionalInfo {
-        width: 510px;
-        height: 77px;
+        @include Flex-ItemsAndPosition(flex, flex-start, row);
         gap: 30px;
         border-radius: 20px;
-        @include Flex-ItemsAndPosition(flex, flex-start, row);
 
         @include for-size(tablet) {
-          display: flex;
-          align-items: flex-start;
-          flex-direction: initial;
+          @include Flex-ItemsAndPosition(flex, flex-start, row);
         }
 
         .TotalSale {
@@ -187,46 +180,19 @@ html {
       height: 510px;
       cursor: pointer;
 
-      @include for-size(tablet) {
-        height: 330px;
-      }
-
       @include for-size(phone) {
         transform: translateX(-10px);
         height: 315px;
       }
 
       .HighlightedNFT-Img {
-        display: initial;
         img {
           @include for-size(tablet) {
-            display: none;
+            width: 330px;
           }
-        }
-      }
-
-      .HighlightedNFT-Tablet-Img {
-        img {
-          display: none;
-
-          @include for-size(tablet) {
-            display: initial;
-            border-radius: 20px 20px 0px 0px;
-
-            @include for-size(phone) {
-              display: none;
-            }
-          }
-        }
-      }
-
-      .HighlightedNFT-Phone-Img {
-        img {
-          display: none;
 
           @include for-size(phone) {
-            display: initial;
-            border-radius: 20px 20px 0px 0px;
+            width: 315px;
           }
         }
       }
@@ -275,13 +241,6 @@ html {
   background-color: var(--BackGround);
 
   @include for-size(tablet) {
-    margin-left: 400px;
-    padding: 40px 0px;
-    gap: 40px;
-  }
-
-  @include for-size(phone) {
-    margin-left: 400px;
     padding: 40px 0px;
     gap: 40px;
   }
@@ -289,6 +248,10 @@ html {
   .Section-Headline {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
+
+    @include for-size(tablet) {
+      width: 690px;
+    }
 
     .Heading {
       display: flex;
@@ -327,6 +290,10 @@ html {
     gap: 30px;
 
     @include for-size(tablet) {
+      width: 690px;
+    }
+
+    @include for-size(tablet) {
       .CollectionCard:nth-child(1) {
         display: none;
       }
@@ -342,8 +309,8 @@ html {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       border-radius: 20px;
       width: 330px;
+      height: 525px;
       gap: 15px;
-      flex-shrink: 0;
 
       .PhotosAndAdditional {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -398,7 +365,7 @@ html {
             cursor: pointer;
 
             &:hover {
-              transform: scale(1.1);
+              transform: scale(0.95);
             }
           }
         }
@@ -445,7 +412,6 @@ html {
 
       @include for-size(phone) {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
-        transform: translateX(40px);
         width: 315px;
         white-space: pre;
         gap: 10px;
@@ -494,11 +460,8 @@ html {
     gap: 30px;
 
     @include for-size(tablet) {
-      transform: translateX(175px);
-      .Artist-Card-Grids {
-        width: 690px;
-        gap: 30px;
-      }
+      gap: 30px;
+      width: 690px;
 
       .Artist-Cards-Row:nth-child(1) {
         display: grid;
@@ -507,10 +470,6 @@ html {
 
       .Artist-Cards-Row:nth-child(2) {
         justify-content: space-between;
-
-        .Artist-Card:nth-child(2) {
-          transform: translateX(-180px);
-        }
 
         .Artist-Card:nth-child(3) {
           display: none;
@@ -714,7 +673,6 @@ html {
     gap: 10px;
 
     @include for-size(tablet) {
-      margin-left: 80px;
       width: 690px;
     }
 
@@ -747,7 +705,6 @@ html {
       width: 690px;
       height: 470px;
       gap: 50px;
-      margin-left: 80px;
     }
 
     @include for-size(phone) {
@@ -812,16 +769,14 @@ html {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
           padding: 20px 30px 25px 30px;
           gap: 25px;
+          white-space: nowrap;
           @include text-formatter(Work Sans, 22px, 600, 140%);
 
           @include for-size(tablet) {
             @include Flexed(flex, center, center, row);
+            @include text-formatter(Work Sans, 16px, 600, 140%);
             width: 150px;
             height: 22px;
-            background-color: var(--BackGround-Secondary);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            @include text-formatter(Work Sans, 16px, 600, 140%);
           }
         }
 
@@ -853,7 +808,7 @@ html {
       display: flex;
       width: 690px;
       align-items: flex-end;
-      gap: 100px;
+      padding-left: 10px;
     }
 
     .Section-Headline {
@@ -870,10 +825,18 @@ html {
 
       h1 {
         @include text-formatter(Work Sans, 38px, 600, 120%);
+
+        @include for-size(tablet) {
+          @include text-formatter(Work Sans, 28px, 600, 140%);
+        }
       }
 
       p {
         @include text-formatter(Work Sans, 22px, 400, 160%);
+
+        @include for-size(tablet) {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+        }
       }
     }
   }
@@ -981,41 +944,34 @@ html {
 }
 
 #NFTHighlight_Section {
-  position: relative;
-
-  .Image {
-    @include Flex-ItemsAndPosition(flex, center, column);
-
-    img {
-      @include Flex-ItemsAndPosition(flex, center, column);
-      width: 1280px;
-      height: 660px;
-
-      @include for-size(tablet) {
-        width: 690px;
-        height: 440px;
-      }
-    }
-  }
+  @include Flex-ItemsAndPosition(flex, center, column);
+  background-image: url("../../..//Pages/assets/images/NFT-BigHighlight.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 
   .NFT-Info {
     @include Flexed(flex, center, flex-end, column);
-    padding: 360px 195px 60px 195px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 100px;
 
     @include for-size(tablet) {
       @include Flexed(flex, center, flex-end);
-      padding: 360px 195px 60px 195px;
     }
 
     .NFT-Frame {
       @include Flexed(flex, space-between, flex-end, row);
+      gap: 30px;
+
+      @include for-size(tablet) {
+        @include Flexed(flex, center, flex-end, row);
+      }
 
       .NFT-Artist-Name-Button {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 30px;
+
+        @include for-size(tablet) {
+          gap: 30px;
+        }
 
         .Artist-Card {
           @include Flex-ItemsAndPosition(flex, center, row);
@@ -1047,14 +1003,16 @@ html {
 
         h1 {
           @include text-formatter(Work Sans, 51px, 600, 110%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 38px, 600, 120%);
+          }
         }
       }
 
       .Auction-Timer {
         @include Flexed(flex, flex-end, flex-start, column);
-        width: 295px;
         padding: 30px;
-        gap: 10px;
         border-radius: 20px;
         background: rgba(59, 59, 59, 0.5);
         backdrop-filter: blur(5px);
@@ -1112,7 +1070,7 @@ html {
           @include text-formatter(Space Mono, 28px, 700, 140%);
         }
 
-        h2 {
+        h3 {
           @include text-formatter(Space Mono, 28px, 700, 140%);
         }
       }
@@ -1125,16 +1083,35 @@ html {
   padding: 80px 195px;
   gap: 48px;
 
+  @include for-size(tablet) {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 40px 195px;
+    gap: 40px;
+  }
+
   .Section-Headline {
-    @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
+
+    @include for-size(tablet) {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      width: 690px;
+      gap: 10px;
+    }
 
     h1 {
       @include text-formatter(Work Sans, 38px, 600, 120%);
+
+      @include for-size(tablet) {
+        @include text-formatter(Work Sans, 28px, 600, 140%);
+      }
     }
 
     p {
       @include text-formatter(Work Sans, 22px, 400, 160%);
+
+      @include for-size(tablet) {
+        @include text-formatter(Work Sans, 16px, 400, 140%);
+      }
     }
   }
 
@@ -1142,6 +1119,10 @@ html {
     display: flex;
     align-items: flex-start;
     gap: 30px;
+
+    @include for-size(tablet) {
+      width: 690px;
+    }
 
     .Info-Card {
       @include Flex-ItemsAndPosition(flex, center, column);
@@ -1152,22 +1133,45 @@ html {
       border-radius: 20px;
       background-color: var(--BackGround-Secondary);
 
+      @include for-size(tablet) {
+        padding: 10px 20px 30px 20px;
+        height: 350px;
+      }
+
       .Icon {
         width: 250px;
         height: 250px;
+
+        @include for-size(tablet) {
+          width: 160px;
+          height: 160px;
+
+          img {
+            width: 160px;
+            height: 160px;
+          }
+        }
       }
 
-      .Card-Detail {
+      .Card-Details {
         @include Flex-ItemsAndPosition(flex, center, column);
         gap: 10px;
 
         h1 {
           @include text-formatter(Work Sans, 22px, 600, 140%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 16px, 600, 140%);
+          }
         }
 
         p {
           @include text-formatter(Work Sans, 16px, 400, 140%);
           text-align: center;
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 12px, 600, 140%);
+          }
         }
       }
     }
@@ -1179,11 +1183,29 @@ html {
   padding: 40px 195px 80px 195px;
   gap: 10px;
 
+  @include for-size(tablet) {
+    transform: scale(0.7);
+    padding: 40px 0px 80px 0px;
+  }
+
   .Subscribe-Widget {
     @include Flex-ItemsAndPosition(flex, center, row);
     padding: 60px;
     gap: 80px;
     background-color: var(--BackGround-Secondary);
+    border-radius: 20px;
+
+    > img {
+      @include for-size(tablet) {
+        width: 100%;
+        height: 310px;
+      }
+
+      @include for-size(phone) {
+        width: 315px;
+        height: 255px;
+      }
+    }
   }
 
   .Widget-Frame {
@@ -1193,6 +1215,10 @@ html {
 
     .HeadlineAndSubhead {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
+
+      @include for-size(tablet) {
+        gap: 10px;
+      }
 
       h1 {
         @include text-formatter(work Sans, 38px, 600, 120%);

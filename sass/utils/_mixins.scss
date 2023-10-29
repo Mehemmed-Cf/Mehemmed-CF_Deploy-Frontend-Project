@@ -19,6 +19,7 @@
 $media: (
   "xm": 315px,
   "sm": 690px,
+  "xl": 990px,
   "md": 1050px,
 );
 
@@ -35,6 +36,10 @@ $media: (
     @media (max-width: map-get($media, "md")) {
       @content;
     }
+  } @else if $size == mini-laptop {
+    @media (max-width: map-get($media, "xl")) {
+      @content;
+    }
   } @else if $size == laptop {
     @media (min-width: map-get($media, "lg")) {
       @content;
@@ -47,7 +52,7 @@ $media: (
 }
 
 @mixin Flexed(
-  $display: normal,
+  $display: flex,
   $justify-content: normal,
   $align-items: normal,
   $flex-direction: normal

@@ -8,7 +8,7 @@
     border: 1px solid var(--CaptionAndLabelText);
 
     @include for-size(tablet) {
-      @include Input(420px, 60px, 16px 0px 16px 20px, 12px);
+      @include Input(405px, 28px, 16px 0px 16px 20px, 12px);
     }
 
     @include for-size(phone) {

@@ -4,7 +4,7 @@ button {
 
 .SignUp-Btn {
   @include Flexed(flex, center, center);
-  @include Button(60px, 0px 40px, 12px);
+  @include Button(60px, 0px 50px, 0px);
   background-color: var(--CallToAction);
   position: relative;
 
@@ -15,7 +15,7 @@ button {
   img {
     position: absolute;
     left: 0;
-    transform: translateX(17px);
+    transform: translateX(27px);
   }
 
   p {
@@ -108,6 +108,29 @@ button {
     @include text-formatter(Work Sans, 16px, 600, 140%);
     text-align: center;
     color: white;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.SeeNFT-Btn {
+  @include Flexed(flex, center, center, row);
+  @include Button(60px, 22px 60px, 12px);
+  background-color: var(--White);
+
+  @include for-size(tablet) {
+    @include Button(60px, 22px 50px, 12px);
+  }
+
+  img {
+    transform: translateX(-10px);
+  }
+
+  p {
+    @include text-formatter(Work Sans, 16px, 600, 140%);
   }
 
   &:hover {
@@ -123,6 +146,10 @@ button {
   gap: 10px;
   right: 0;
 
+  @include for-size(tablet) {
+    @include Button(60px, 0px 50px, 12px);
+  }
+
   @include for-size(phone) {
     @include Button(46px, 0px 50px, 12px);
     width: 315px;
@@ -133,24 +160,7 @@ button {
     @include text-formatter(Work Sans, 16px, 600, 140%);
     text-align: center;
     color: white !important;
-  }
-
-  &:hover {
-    transform: scale(0.95);
-  }
-}
-
-.SeeNFT-Btn {
-  @include Flexed(flex, center, center, row);
-  @include Button(60px, 22px 60px, 12px);
-  background-color: var(--White);
-
-  img {
-    transform: translateX(-10px);
-  }
-
-  p {
-    @include text-formatter(Work Sans, 16px, 600, 140%);
+    margin-left: 10px;
   }
 
   &:hover {
