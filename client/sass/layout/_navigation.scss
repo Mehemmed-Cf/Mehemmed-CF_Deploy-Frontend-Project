@@ -1,5 +1,5 @@
 .Navigation {
-  @include Flexed(flex, space-between, center);
+  @include Flexed(flex, space-around, center);
   padding: 20px 50px;
 
   @include for-size(tablet) {
@@ -35,7 +35,8 @@
       display: none;
       border: none;
       gap: 20px;
-      background-color: var(--BackGround-Secondary);
+      rotate: 90deg;
+      background-color: var(--BackGround);
 
       @include for-size(tablet) {
         display: initial;
@@ -45,6 +46,16 @@
         margin-left: 30px;
         display: initial;
       }
+    }
+
+    .Rotate {
+      transition: 0.45s;
+      rotate: 180deg;
+    }
+
+    .Rotate-Back {
+      transition: 0.45s;
+      rotate: 0;
     }
 
     a {

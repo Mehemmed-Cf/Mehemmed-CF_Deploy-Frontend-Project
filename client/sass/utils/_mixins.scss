@@ -98,7 +98,7 @@ $media: (
 @mixin Flex-ItemsAndPosition(
   $display: flex,
   $align-items: normal,
-  $flex-direction: column
+  $flex-direction: initial
 ) {
   display: $display;
   align-items: $align-items;

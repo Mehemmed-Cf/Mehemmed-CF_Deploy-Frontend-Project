@@ -27,7 +27,6 @@ html {
 
   @include for-size(tablet) {
     margin-left: 6px;
-    padding: 80px 0px 0px 0px;
   }
 
   @include for-size(phone) {
@@ -245,12 +244,21 @@ html {
     gap: 40px;
   }
 
+  @include for-size(phone) {
+    transform: translate(100px, 100px);
+  }
+
   .Section-Headline {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 10px;
 
     @include for-size(tablet) {
       width: 690px;
+    }
+
+    @include for-size(phone) {
+      transform: translateX(-100px);
+      width: 315px;
     }
 
     .Heading {
@@ -283,24 +291,30 @@ html {
   }
 
   .CardCollection-Row {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
+    @include Flex-ItemsAndPosition(flex, flex-start, row);
     height: 530px;
     gap: 30px;
 
     @include for-size(tablet) {
       width: 690px;
-    }
 
-    @include for-size(tablet) {
       .CollectionCard:nth-child(1) {
         display: none;
       }
     }
 
     @include for-size(phone) {
+      gap: 10px;
+      height: 505px;
+      .CollectionCard:nth-child(1) {
+        display: initial;
+      }
+
       .CollectionCard:nth-child(2) {
+        display: none;
+      }
+
+      .CollectionCard:nth-child(3) {
         display: none;
       }
     }
@@ -311,6 +325,11 @@ html {
       width: 330px;
       height: 525px;
       gap: 15px;
+
+      @include for-size(phone) {
+        width: 315px;
+        height: 505px;
+      }
 
       .PhotosAndAdditional {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -387,14 +406,12 @@ html {
   }
 
   @include for-size(phone) {
-    @include Flex-ItemsAndPosition(flex, center, column);
     padding: 40px 195px;
     gap: 40px;
   }
 
   .Section_Headline_And_Button {
-    display: flex;
-    align-items: flex-end;
+    @include Flex-ItemsAndPosition(flex, flex-end);
     gap: 100px;
 
     @include for-size(tablet) {
@@ -402,7 +419,6 @@ html {
     }
 
     @include for-size(phone) {
-      width: 315px;
     }
 
     .Section_Headline {
@@ -412,7 +428,6 @@ html {
 
       @include for-size(phone) {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
-        width: 315px;
         white-space: pre;
         gap: 10px;
       }
@@ -487,7 +502,11 @@ html {
 
     @include for-size(phone) {
       @include Flex-ItemsAndPosition(flex, flex-start, row);
-      transform: translateX(400px);
+
+      .Artist-Cards-Row::nth-child(1) {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
 
       .Artist-Cards-Row:nth-child(2) {
         display: none;
@@ -531,7 +550,6 @@ html {
         @include for-size(phone) {
           @include Flexed(flex, center, flex-start, row);
           width: 275px;
-          height: 160px;
           padding: 20px;
           gap: 20px;
         }
@@ -664,6 +682,7 @@ html {
   }
 
   @include for-size(phone) {
+    height: 800px;
     gap: 40px;
     padding: 40px 0px;
   }
@@ -677,9 +696,7 @@ html {
     }
 
     @include for-size(phone) {
-      margin-top: 80px;
-      margin-bottom: -60px;
-      transform: translateX(80px);
+      margin-left: 70px;
       width: 315px;
     }
 
@@ -799,6 +816,12 @@ html {
     gap: 40px;
   }
 
+  @include for-size(phone) {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 40px 0px 60px 0px;
+    gap: 40px;
+  }
+
   .Section-HeadlineAndButton {
     display: flex;
     align-items: flex-end;
@@ -808,7 +831,12 @@ html {
       display: flex;
       width: 690px;
       align-items: flex-end;
-      padding-left: 10px;
+    }
+
+    @include for-size(phone) {
+      display: block;
+      align-items: flex-start;
+      width: 315px;
     }
 
     .Section-Headline {
@@ -859,12 +887,29 @@ html {
       }
     }
 
+    @include for-size(phone) {
+      display: block;
+      width: 315px;
+    }
+
+    @include for-size(phone) {
+      .NFTCard:last-child {
+        display: initial;
+      }
+    }
+
     .NFTCard {
       @include Flex-ItemsAndPosition(flex, center, column);
       height: 469px;
       border-radius: 20px;
       transition: 0.3s;
       cursor: pointer;
+
+      @include for-size(phone) {
+        width: 315px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
 
       &:hover {
         transform: scale(0.95);
@@ -945,7 +990,8 @@ html {
 
 #NFTHighlight_Section {
   @include Flex-ItemsAndPosition(flex, center, column);
-  background-image: url("../../..//Pages/assets/images/NFT-BigHighlight.png");
+  justify-content: flex-end;
+  background-image: url("../../../../client/Pages/assets/images/NFT-BigHighlight.png");
   background-repeat: no-repeat;
   background-size: 100%;
 
@@ -954,7 +1000,14 @@ html {
     padding: 100px;
 
     @include for-size(tablet) {
-      @include Flexed(flex, center, flex-end);
+      @include Flexed(flex, center, flex-end, column);
+    }
+
+    @include for-size(phone) {
+      display: block;
+      padding: 120px 195px 40px 195px;
+      width: 315px;
+      height: 433px;
     }
 
     .NFT-Frame {
@@ -965,12 +1018,17 @@ html {
         @include Flexed(flex, center, flex-end, row);
       }
 
+      @include for-size(phone) {
+        @include Flexed(flex, center, flex-end, row);
+        width: 315px;
+      }
+
       .NFT-Artist-Name-Button {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 30px;
 
-        @include for-size(tablet) {
-          gap: 30px;
+        @include for-size(phone) {
+          width: 315px;
         }
 
         .Artist-Card {
@@ -981,6 +1039,9 @@ html {
           gap: 12px;
           border-radius: 20px;
           background-color: var(--BackGround-Secondary);
+
+          @include for-size(phone) {
+          }
 
           .Avatar {
             display: flex;
@@ -1095,7 +1156,10 @@ html {
     @include for-size(tablet) {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       width: 690px;
-      gap: 10px;
+    }
+
+    @include for-size(phone) {
+      width: 315px;
     }
 
     h1 {
@@ -1116,12 +1180,17 @@ html {
   }
 
   .Cards-Row {
-    display: flex;
-    align-items: flex-start;
+    @include Flex-ItemsAndPosition(flex, flex-start);
     gap: 30px;
 
     @include for-size(tablet) {
       width: 690px;
+    }
+
+    @include for-size(phone) {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      width: 315px;
+      gap: 20px;
     }
 
     .Info-Card {
@@ -1135,6 +1204,13 @@ html {
 
       @include for-size(tablet) {
         padding: 10px 20px 30px 20px;
+        height: 350px;
+      }
+
+      @include for-size(phone) {
+        width: 275px;
+        justify-content: space-between;
+        padding: 20px;
         height: 350px;
       }
 
@@ -1188,12 +1264,22 @@ html {
     padding: 40px 0px 80px 0px;
   }
 
+  @include for-size(phone) {
+    padding: 40px 0px;
+  }
+
   .Subscribe-Widget {
     @include Flex-ItemsAndPosition(flex, center, row);
     padding: 60px;
     gap: 80px;
     background-color: var(--BackGround-Secondary);
     border-radius: 20px;
+
+    @include for-size(phone) {
+      @include Flexed(flex, center, center, column);
+      gap: 30px;
+      width: 100%;
+    }
 
     > img {
       @include for-size(tablet) {
@@ -1210,7 +1296,6 @@ html {
 
   .Widget-Frame {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
-    width: 425px;
     gap: 40px;
 
     .HeadlineAndSubhead {
@@ -1222,10 +1307,18 @@ html {
 
       h1 {
         @include text-formatter(work Sans, 38px, 600, 120%);
+
+        @include for-size(phone) {
+          @include text-formatter(work Sans, 28px, 600, 140%);
+        }
       }
 
       p {
         @include text-formatter(work Sans, 22px, 400, 160%);
+
+        @include for-size(phone) {
+          @include text-formatter(work Sans, 16px, 400, 140%);
+        }
       }
     }
   }

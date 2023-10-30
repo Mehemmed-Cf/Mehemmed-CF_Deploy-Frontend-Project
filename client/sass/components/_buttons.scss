@@ -76,8 +76,7 @@ button {
   @include for-size(phone) {
     @include Flexed(flex, center, center);
     gap: 50px;
-    width: 100%;
-    transform: translate(-350px, 600px);
+    transform: translate(-210px, 500px);
   }
 
   p {
@@ -98,10 +97,9 @@ button {
   background-color: transparent !important;
   border: 2px solid var(--CallToAction);
   gap: 10px;
-  margin-left: 370px;
 
-  @include for-size(tablet) {
-    margin-left: 0px;
+  @include for-size(phone) {
+    margin-top: 30px;
   }
 
   p {
@@ -123,6 +121,11 @@ button {
 
   @include for-size(tablet) {
     @include Button(60px, 22px 50px, 12px);
+  }
+
+  @include for-size(phone) {
+    width: 215px;
+    height: 16px;
   }
 
   img {

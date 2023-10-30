@@ -151,9 +151,8 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -225,7 +224,8 @@ table {
   display: none;
   border: none;
   gap: 20px;
-  background-color: var(--BackGround-Secondary);
+  rotate: 90deg;
+  background-color: var(--BackGround);
 }
 @media (max-width: 1050px) {
   .Navigation .Navigation_Menu .Bars_Btn {
@@ -237,6 +237,16 @@ table {
     margin-left: 30px;
     display: initial;
   }
+}
+.Navigation .Navigation_Menu .Rotate {
+  -webkit-transition: 0.45s;
+  transition: 0.45s;
+  rotate: 180deg;
+}
+.Navigation .Navigation_Menu .Rotate-Back {
+  -webkit-transition: 0.45s;
+  transition: 0.45s;
+  rotate: 0;
 }
 .Navigation .Navigation_Menu a {
   display: -webkit-box;
@@ -303,7 +313,6 @@ table {
 @media (max-width: 690px) {
   .Footer {
     gap: 30px;
-    margin-top: 200px;
   }
 }
 .Footer .Footer-Info {
@@ -343,14 +352,15 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 30px;
+    width: 315px;
   }
 }
 .Footer .Footer-Info .NFT-Marketplace-Info {
@@ -619,8 +629,8 @@ table {
 }
 @media (max-width: 690px) {
   .Footer .Footer-Frame {
-    -webkit-transform: 420px, 70px;
-            transform: 420px, 70px;
+    margin-top: 50px;
+    width: 315px;
   }
 }
 .Footer .Footer-Frame .Divider {
@@ -634,7 +644,7 @@ table {
 }
 @media (max-width: 690px) {
   .Footer .Footer-Frame .Divider {
-    width: 300px;
+    width: 315px;
   }
 }
 .Footer .Footer-Frame p {
@@ -843,9 +853,8 @@ button {
         -ms-flex-direction: normal;
             flex-direction: normal;
     gap: 50px;
-    width: 100%;
-    -webkit-transform: translate(-350px, 600px);
-            transform: translate(-350px, 600px);
+    -webkit-transform: translate(-210px, 500px);
+            transform: translate(-210px, 500px);
   }
 }
 .ViewRankings-Btn p {
@@ -890,11 +899,10 @@ button {
   background-color: transparent !important;
   border: 2px solid var(--CallToAction);
   gap: 10px;
-  margin-left: 370px;
 }
-@media (max-width: 1050px) {
+@media (max-width: 690px) {
   .SeeAll-Btn {
-    margin-left: 0px;
+    margin-top: 30px;
   }
 }
 .SeeAll-Btn p {
@@ -948,6 +956,12 @@ button {
     border: none;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+  }
+}
+@media (max-width: 690px) {
+  .SeeNFT-Btn {
+    width: 215px;
+    height: 16px;
   }
 }
 .SeeNFT-Btn img {
@@ -1127,7 +1141,6 @@ html {
 @media (max-width: 1050px) {
   #Hero_Section {
     margin-left: 6px;
-    padding: 80px 0px 0px 0px;
   }
 }
 @media (max-width: 690px) {
@@ -1596,6 +1609,12 @@ html {
     gap: 40px;
   }
 }
+@media (max-width: 690px) {
+  #TrendingCollection_Section {
+    -webkit-transform: translate(100px, 100px);
+            transform: translate(100px, 100px);
+  }
+}
 #TrendingCollection_Section .Section-Headline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1612,6 +1631,13 @@ html {
 @media (max-width: 1050px) {
   #TrendingCollection_Section .Section-Headline {
     width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .Section-Headline {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    width: 315px;
   }
 }
 #TrendingCollection_Section .Section-Headline .Heading {
@@ -1690,14 +1716,22 @@ html {
   #TrendingCollection_Section .CardCollection-Row {
     width: 690px;
   }
-}
-@media (max-width: 1050px) {
   #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(1) {
     display: none;
   }
 }
 @media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row {
+    gap: 10px;
+    height: 505px;
+  }
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(1) {
+    display: initial;
+  }
   #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(2) {
+    display: none;
+  }
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(3) {
     display: none;
   }
 }
@@ -1716,6 +1750,12 @@ html {
   width: 330px;
   height: 525px;
   gap: 15px;
+}
+@media (max-width: 690px) {
+  #TrendingCollection_Section .CardCollection-Row .CollectionCard {
+    width: 315px;
+    height: 505px;
+  }
 }
 #TrendingCollection_Section .CardCollection-Row .CollectionCard .PhotosAndAdditional {
   display: -webkit-box;
@@ -1841,16 +1881,6 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding: 40px 195px;
     gap: 40px;
   }
@@ -1862,16 +1892,15 @@ html {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
   gap: 100px;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Section_Headline_And_Button {
     width: 690px;
-  }
-}
-@media (max-width: 690px) {
-  #TopRatedArtists_Section .Section_Headline_And_Button {
-    width: 315px;
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
@@ -1900,7 +1929,6 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 315px;
     white-space: pre;
     gap: 10px;
   }
@@ -2034,8 +2062,10 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-transform: translateX(400px);
-            transform: translateX(400px);
+  }
+  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row::nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr;
   }
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) {
     display: none;
@@ -2121,7 +2151,6 @@ html {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 275px;
-    height: 160px;
     padding: 20px;
     gap: 20px;
   }
@@ -2313,10 +2342,10 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
   width: 30px;
   height: 30px;
   gap: 10px;
@@ -2372,6 +2401,7 @@ html {
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section {
+    height: 800px;
     gap: 40px;
     padding: 40px 0px;
   }
@@ -2396,10 +2426,7 @@ html {
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section .Section-Headline {
-    margin-top: 80px;
-    margin-bottom: -60px;
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    margin-left: 70px;
     width: 315px;
   }
 }
@@ -2663,6 +2690,22 @@ html {
     gap: 40px;
   }
 }
+@media (max-width: 690px) {
+  #DiscoverNFTs_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 0px 60px 0px;
+    gap: 40px;
+  }
+}
 #DiscoverNFTs_Section .Section-HeadlineAndButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2681,7 +2724,15 @@ html {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-left: 10px;
+  }
+}
+@media (max-width: 690px) {
+  #DiscoverNFTs_Section .Section-HeadlineAndButton {
+    display: block;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 315px;
   }
 }
 #DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline {
@@ -2779,6 +2830,17 @@ html {
     display: none;
   }
 }
+@media (max-width: 690px) {
+  #DiscoverNFTs_Section .NFTCards-Row {
+    display: block;
+    width: 315px;
+  }
+}
+@media (max-width: 690px) {
+  #DiscoverNFTs_Section .NFTCards-Row .NFTCard:last-child {
+    display: initial;
+  }
+}
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2795,6 +2857,13 @@ html {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+}
+@media (max-width: 690px) {
+  #DiscoverNFTs_Section .NFTCards-Row .NFTCard {
+    width: 315px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard:hover {
   -webkit-transform: scale(0.95);
@@ -2961,7 +3030,10 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("../../..//Pages/assets/images/NFT-BigHighlight.png");
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-image: url("../../../../client/Pages/assets/images/NFT-BigHighlight.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -2994,8 +3066,16 @@ html {
             align-items: flex-end;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: normal;
-            flex-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 690px) {
+  #NFTHighlight_Section .NFT-Info {
+    display: block;
+    padding: 120px 195px 40px 195px;
+    width: 315px;
+    height: 433px;
   }
 }
 #NFTHighlight_Section .NFT-Info .NFT-Frame {
@@ -3031,6 +3111,24 @@ html {
             flex-direction: row;
   }
 }
+@media (max-width: 690px) {
+  #NFTHighlight_Section .NFT-Info .NFT-Frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 315px;
+  }
+}
 #NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3044,9 +3142,9 @@ html {
           flex-direction: column;
   gap: 30px;
 }
-@media (max-width: 1050px) {
+@media (max-width: 690px) {
   #NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button {
-    gap: 30px;
+    width: 315px;
   }
 }
 #NFTHighlight_Section .NFT-Info .NFT-Frame .NFT-Artist-Name-Button .Artist-Card {
@@ -3308,7 +3406,11 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 690px;
-    gap: 10px;
+  }
+}
+@media (max-width: 690px) {
+  #HowItWorks_Section .Section-Headline {
+    width: 315px;
   }
 }
 #HowItWorks_Section .Section-Headline h1 {
@@ -3358,11 +3460,31 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
   gap: 30px;
 }
 @media (max-width: 1050px) {
   #HowItWorks_Section .Cards-Row {
     width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  #HowItWorks_Section .Cards-Row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 315px;
+    gap: 20px;
   }
 }
 #HowItWorks_Section .Cards-Row .Info-Card {
@@ -3386,6 +3508,16 @@ html {
 @media (max-width: 1050px) {
   #HowItWorks_Section .Cards-Row .Info-Card {
     padding: 10px 20px 30px 20px;
+    height: 350px;
+  }
+}
+@media (max-width: 690px) {
+  #HowItWorks_Section .Cards-Row .Info-Card {
+    width: 275px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px;
     height: 350px;
   }
 }
@@ -3479,6 +3611,11 @@ html {
     padding: 40px 0px 80px 0px;
   }
 }
+@media (max-width: 690px) {
+  #SubscribeWidget_Section {
+    padding: 40px 0px;
+  }
+}
 #SubscribeWidget_Section .Subscribe-Widget {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3494,6 +3631,25 @@ html {
   gap: 80px;
   background-color: var(--BackGround-Secondary);
   border-radius: 20px;
+}
+@media (max-width: 690px) {
+  #SubscribeWidget_Section .Subscribe-Widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
 }
 @media (max-width: 1050px) {
   #SubscribeWidget_Section .Subscribe-Widget > img {
@@ -3518,7 +3674,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 425px;
   gap: 40px;
 }
 #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead {
@@ -3547,6 +3702,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 690px) {
+  #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead h1 {
+    font-family: work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead p {
   font-family: work Sans;
   font-size: 22px;
@@ -3555,4 +3721,15 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 690px) {
+  #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead p {
+    font-family: work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }

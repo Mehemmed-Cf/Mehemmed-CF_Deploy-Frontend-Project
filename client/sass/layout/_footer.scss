@@ -11,7 +11,6 @@
 
   @include for-size(phone) {
     gap: 30px;
-    margin-top: 200px;
   }
 
   .Footer-Info {
@@ -25,8 +24,9 @@
     }
 
     @include for-size(phone) {
-      @include Flex-ItemsAndPosition(flex, center, column);
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
       gap: 30px;
+      width: 315px;
     }
 
     .NFT-Marketplace-Info {
@@ -137,7 +137,8 @@
     }
 
     @include for-size(phone) {
-      transform: (420px, 70px);
+      margin-top: 50px;
+      width: 315px;
     }
 
     .Divider {
@@ -149,7 +150,7 @@
       }
 
       @include for-size(phone) {
-        width: 300px;
+        width: 315px;
       }
     }
 
