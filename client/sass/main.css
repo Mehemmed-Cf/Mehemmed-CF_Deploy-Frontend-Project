@@ -1051,6 +1051,44 @@ button {
           transform: scale(0.95);
 }
 
+.CreateAccount-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 46px;
+  padding: 0px 100px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.CreateAccount-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .Subscribe-Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1096,6 +1134,51 @@ button {
     gap: 12px;
     border-radius: 20px;
   }
+}
+
+.Typeform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.Typeform img {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+.Typeform input {
+  width: 290px;
+  height: 16px;
+  padding: 16px 20px 16px 40px;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--White);
+  border: 1px solid var(--CaptionAndLabelText);
+}
+.Typeform input::-webkit-input-placeholder {
+  color: black;
+}
+.Typeform input::-moz-placeholder {
+  color: black;
+}
+.Typeform input:-ms-input-placeholder {
+  color: black;
+}
+.Typeform input::-ms-input-placeholder {
+  color: black;
+}
+.Typeform input::placeholder {
+  color: black;
+}
+.Typeform p {
+  height: 20px;
+  width: 20px;
 }
 
 body {
@@ -3749,4 +3832,258 @@ html {
     letter-spacing: normal;
     text-transform: capitalize;
   }
+}
+
+body {
+  background-color: var(--BackGround);
+}
+
+html {
+  color: var(--White);
+}
+
+.Container {
+  width: 1050px;
+}
+@media (max-width: 1050px) {
+  .Container .Container {
+    width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  .Container .Container {
+    width: 315px;
+  }
+}
+
+#CreateAccount_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  gap: 60px;
+}
+#CreateAccount_Section .CreateAccount-Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0px;
+  gap: 40px;
+}
+#CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+#CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Headline h1 {
+  font-family: Work Sans;
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 460px;
+}
+#CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead p {
+  white-space: wrap;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#CreateAccount_Section .CreateAccount-Form .Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 330px;
+  gap: 30px;
+}
+#CreateAccount_Section .CreateAccount-Form .Form .Typeforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+#CreateAccount_Section .CreateAccount-Form .Form .Typeforms .Error-Message {
+  height: 5px;
+  width: 10px;
+}
+
+#Login_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  gap: 60px;
+}
+#Login_Section .Login-Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0px;
+  gap: 40px;
+}
+#Login_Section .Login-Form .HeadlineAndSubhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+#Login_Section .Login-Form .HeadlineAndSubhead .Headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#Login_Section .Login-Form .HeadlineAndSubhead .Headline h1 {
+  font-family: Work Sans;
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Login_Section .Login-Form .HeadlineAndSubhead .Subhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 460px;
+}
+#Login_Section .Login-Form .HeadlineAndSubhead .Subhead p {
+  white-space: wrap;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Login_Section .Login-Form .Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 330px;
+  gap: 30px;
+}
+#Login_Section .Login-Form .Form .Typeforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
 }

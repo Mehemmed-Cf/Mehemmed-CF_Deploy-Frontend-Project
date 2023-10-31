@@ -170,3 +170,16 @@ button {
     transform: scale(0.95);
   }
 }
+
+.CreateAccount-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(46px, 0px 100px, 12px);
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
