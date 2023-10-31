@@ -20,6 +20,10 @@
 .Typeform {
   @include Flex-ItemsAndPosition(flex, center, row);
 
+  @include for-size(phone) {
+    transform: translateX(-30px);
+  }
+
   img {
     transform: translateX(30px);
   }
@@ -29,13 +33,12 @@
     background-color: var(--White);
     border: 1px solid var(--CaptionAndLabelText);
 
+    @include for-size(tablet) {
+      @include Input(285px, 16px, 16px 20px 16px 40px, 12px);
+    }
+
     &::placeholder {
       color: black;
     }
-  }
-
-  p {
-    height: 20px;
-    width: 20px;
   }
 }

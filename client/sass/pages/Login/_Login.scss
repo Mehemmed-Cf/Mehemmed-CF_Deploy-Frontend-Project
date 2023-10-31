@@ -2,10 +2,44 @@
   @include Flex-ItemsAndPosition(flex, center);
   gap: 60px;
 
+  @include for-size(tablet) {
+    gap: 40px;
+  }
+
+  @include for-size(phone) {
+    @include Flexed(flex, center, center, column);
+  }
+
+  > img {
+    width: 610px;
+    height: 691px;
+
+    @include for-size(tablet) {
+      width: 397px;
+      height: 100%;
+    }
+
+    @include for-size(phone) {
+      width: 375px;
+      height: 100%;
+    }
+  }
+
   .Login-Form {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     padding: 100px 0px;
     gap: 40px;
+
+    @include for-size(tablet) {
+      padding: 80px 0px;
+    }
+
+    @include for-size(phone) {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      width: 315px;
+      padding: 30px 0px 40px 0px;
+      gap: 30px;
+    }
 
     .HeadlineAndSubhead {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -17,6 +51,10 @@
 
         h1 {
           @include text-formatter(Work Sans, 51px, 600, 110%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 38px, 600, 120%);
+          }
         }
       }
 
@@ -28,6 +66,10 @@
         p {
           white-space: wrap;
           @include text-formatter(Work Sans, 22px, 400, 160%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 16px, 600, 140%);
+          }
         }
       }
     }
@@ -36,6 +78,15 @@
       @include Flex-ItemsAndPosition(flex, center, column);
       width: 330px;
       gap: 30px;
+
+      @include for-size(tablet) {
+        width: 325px;
+      }
+
+      @include for-size(phone) {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        width: 325px;
+      }
 
       .Typeforms {
         @include Flex-ItemsAndPosition(flex, flex-start, column);

@@ -1148,6 +1148,12 @@ button {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+@media (max-width: 690px) {
+  .Typeform {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+}
 .Typeform img {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
@@ -1160,6 +1166,15 @@ button {
   border-radius: 20px;
   background-color: var(--White);
   border: 1px solid var(--CaptionAndLabelText);
+}
+@media (max-width: 1050px) {
+  .Typeform input {
+    width: 285px;
+    height: 16px;
+    padding: 16px 20px 16px 40px;
+    gap: 12px;
+    border-radius: 20px;
+  }
 }
 .Typeform input::-webkit-input-placeholder {
   color: black;
@@ -1175,10 +1190,6 @@ button {
 }
 .Typeform input::placeholder {
   color: black;
-}
-.Typeform p {
-  height: 20px;
-  width: 20px;
 }
 
 body {
@@ -3869,6 +3880,44 @@ html {
           flex-direction: initial;
   gap: 60px;
 }
+@media (max-width: 1050px) {
+  #CreateAccount_Section {
+    gap: 40px;
+  }
+}
+@media (max-width: 690px) {
+  #CreateAccount_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#CreateAccount_Section > img {
+  width: 610px;
+  height: 691px;
+}
+@media (max-width: 1050px) {
+  #CreateAccount_Section > img {
+    width: 397px;
+    height: 100%;
+  }
+}
+@media (max-width: 690px) {
+  #CreateAccount_Section > img {
+    width: 375px;
+    height: 100%;
+  }
+}
 #CreateAccount_Section .CreateAccount-Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3882,6 +3931,28 @@ html {
           flex-direction: column;
   padding: 100px 0px;
   gap: 40px;
+}
+@media (max-width: 1050px) {
+  #CreateAccount_Section .CreateAccount-Form {
+    padding: 80px 0px;
+  }
+}
+@media (max-width: 690px) {
+  #CreateAccount_Section .CreateAccount-Form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 315px;
+    padding: 30px 0px 40px 0px;
+    gap: 30px;
+  }
 }
 #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead {
   display: -webkit-box;
@@ -3918,6 +3989,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Headline h1 {
+    font-family: Work Sans;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3932,6 +4014,11 @@ html {
   gap: 10px;
   width: 460px;
 }
+@media (max-width: 1050px) {
+  #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead {
+    width: 325px;
+  }
+}
 #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead p {
   white-space: wrap;
   font-family: Work Sans;
@@ -3941,6 +4028,17 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #CreateAccount_Section .CreateAccount-Form .HeadlineAndSubhead .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #CreateAccount_Section .CreateAccount-Form .Form {
   display: -webkit-box;
@@ -3955,6 +4053,26 @@ html {
           flex-direction: column;
   width: 330px;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #CreateAccount_Section .CreateAccount-Form .Form {
+    width: 325px;
+  }
+}
+@media (max-width: 690px) {
+  #CreateAccount_Section .CreateAccount-Form .Form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 325px;
+  }
 }
 #CreateAccount_Section .CreateAccount-Form .Form .Typeforms {
   display: -webkit-box;
@@ -3987,6 +4105,44 @@ html {
           flex-direction: initial;
   gap: 60px;
 }
+@media (max-width: 1050px) {
+  #Login_Section {
+    gap: 40px;
+  }
+}
+@media (max-width: 690px) {
+  #Login_Section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#Login_Section > img {
+  width: 610px;
+  height: 691px;
+}
+@media (max-width: 1050px) {
+  #Login_Section > img {
+    width: 397px;
+    height: 100%;
+  }
+}
+@media (max-width: 690px) {
+  #Login_Section > img {
+    width: 375px;
+    height: 100%;
+  }
+}
 #Login_Section .Login-Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4000,6 +4156,28 @@ html {
           flex-direction: column;
   padding: 100px 0px;
   gap: 40px;
+}
+@media (max-width: 1050px) {
+  #Login_Section .Login-Form {
+    padding: 80px 0px;
+  }
+}
+@media (max-width: 690px) {
+  #Login_Section .Login-Form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 315px;
+    padding: 30px 0px 40px 0px;
+    gap: 30px;
+  }
 }
 #Login_Section .Login-Form .HeadlineAndSubhead {
   display: -webkit-box;
@@ -4036,6 +4214,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Login_Section .Login-Form .HeadlineAndSubhead .Headline h1 {
+    font-family: Work Sans;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #Login_Section .Login-Form .HeadlineAndSubhead .Subhead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4060,6 +4249,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Login_Section .Login-Form .HeadlineAndSubhead .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #Login_Section .Login-Form .Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4073,6 +4273,26 @@ html {
           flex-direction: column;
   width: 330px;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #Login_Section .Login-Form .Form {
+    width: 325px;
+  }
+}
+@media (max-width: 690px) {
+  #Login_Section .Login-Form .Form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 325px;
+  }
 }
 #Login_Section .Login-Form .Form .Typeforms {
   display: -webkit-box;
