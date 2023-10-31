@@ -74,9 +74,9 @@ button {
   gap: 10px;
 
   @include for-size(phone) {
+    margin-top: 20px;
     @include Flexed(flex, center, center);
     gap: 50px;
-    transform: translate(-210px, 500px);
   }
 
   p {

@@ -245,7 +245,7 @@ html {
   }
 
   @include for-size(phone) {
-    transform: translate(100px, 100px);
+    transform: translateY(300px);
   }
 
   .Section-Headline {
@@ -257,7 +257,6 @@ html {
     }
 
     @include for-size(phone) {
-      transform: translateX(-100px);
       width: 315px;
     }
 
@@ -292,7 +291,7 @@ html {
 
   .CardCollection-Row {
     @include Flex-ItemsAndPosition(flex, flex-start, row);
-    height: 530px;
+    height: 550px;
     gap: 30px;
 
     @include for-size(tablet) {
@@ -306,6 +305,8 @@ html {
     @include for-size(phone) {
       gap: 10px;
       height: 505px;
+      width: 315px;
+
       .CollectionCard:nth-child(1) {
         display: initial;
       }
@@ -406,8 +407,13 @@ html {
   }
 
   @include for-size(phone) {
-    padding: 40px 195px;
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    height: 613px;
     gap: 40px;
+    width: 715px;
+    transform: translate(-180px, 200px);
   }
 
   .Section_Headline_And_Button {
@@ -419,6 +425,9 @@ html {
     }
 
     @include for-size(phone) {
+      display: block;
+      margin-top: 100px;
+      width: 315px;
     }
 
     .Section_Headline {
@@ -502,6 +511,8 @@ html {
 
     @include for-size(phone) {
       @include Flex-ItemsAndPosition(flex, flex-start, row);
+      width: 315px;
+      height: 110px;
 
       .Artist-Cards-Row::nth-child(1) {
         display: grid;
@@ -696,7 +707,7 @@ html {
     }
 
     @include for-size(phone) {
-      margin-left: 70px;
+      margin-top: 100px;
       width: 315px;
     }
 
@@ -726,7 +737,6 @@ html {
 
     @include for-size(phone) {
       width: 315px;
-      height: 918px;
       gap: 30px;
       transform: scale(0.8);
     }

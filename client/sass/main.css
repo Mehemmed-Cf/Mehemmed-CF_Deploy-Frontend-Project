@@ -839,6 +839,7 @@ button {
 }
 @media (max-width: 690px) {
   .ViewRankings-Btn {
+    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -853,8 +854,6 @@ button {
         -ms-flex-direction: normal;
             flex-direction: normal;
     gap: 50px;
-    -webkit-transform: translate(-210px, 500px);
-            transform: translate(-210px, 500px);
   }
 }
 .ViewRankings-Btn p {
@@ -1611,8 +1610,8 @@ html {
 }
 @media (max-width: 690px) {
   #TrendingCollection_Section {
-    -webkit-transform: translate(100px, 100px);
-            transform: translate(100px, 100px);
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
   }
 }
 #TrendingCollection_Section .Section-Headline {
@@ -1635,8 +1634,6 @@ html {
 }
 @media (max-width: 690px) {
   #TrendingCollection_Section .Section-Headline {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
     width: 315px;
   }
 }
@@ -1709,7 +1706,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 530px;
+  height: 550px;
   gap: 30px;
 }
 @media (max-width: 1050px) {
@@ -1724,6 +1721,7 @@ html {
   #TrendingCollection_Section .CardCollection-Row {
     gap: 10px;
     height: 505px;
+    width: 315px;
   }
   #TrendingCollection_Section .CardCollection-Row .CollectionCard:nth-child(1) {
     display: initial;
@@ -1881,8 +1879,19 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section {
-    padding: 40px 195px;
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 613px;
     gap: 40px;
+    width: 715px;
+    -webkit-transform: translate(-180px, 200px);
+            transform: translate(-180px, 200px);
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button {
@@ -1901,6 +1910,13 @@ html {
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Section_Headline_And_Button {
     width: 690px;
+  }
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Section_Headline_And_Button {
+    display: block;
+    margin-top: 100px;
+    width: 315px;
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button .Section_Headline {
@@ -2062,6 +2078,8 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 315px;
+    height: 110px;
   }
   #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row::nth-child(1) {
     display: grid;
@@ -2426,7 +2444,7 @@ html {
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section .Section-Headline {
-    margin-left: 70px;
+    margin-top: 100px;
     width: 315px;
   }
 }
@@ -2494,7 +2512,6 @@ html {
 @media (max-width: 690px) {
   #BrowseCategories_Section .CategoryCards {
     width: 315px;
-    height: 918px;
     gap: 30px;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
