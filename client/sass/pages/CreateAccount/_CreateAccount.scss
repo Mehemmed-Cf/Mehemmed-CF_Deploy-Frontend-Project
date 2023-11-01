@@ -118,9 +118,11 @@ html {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 15px;
 
-        .Error-Message {
-          height: 5px;
-          width: 10px;
+        p {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+          height: 50px;
+          margin-left: 10px;
+          width: 430px;
         }
       }
     }
