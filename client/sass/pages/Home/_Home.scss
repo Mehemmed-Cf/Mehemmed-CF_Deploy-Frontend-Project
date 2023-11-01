@@ -479,7 +479,7 @@ html {
     }
   }
 
-  .Artist-Card-Grids {
+  .Artist-Cards {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 30px;
 

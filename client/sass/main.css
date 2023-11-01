@@ -289,6 +289,14 @@ table {
           transform: scale(0.95);
 }
 
+.Open {
+  display: initial;
+}
+
+.Close {
+  display: none;
+}
+
 .Footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1008,6 +1016,9 @@ button {
   gap: 10px;
   right: 0;
 }
+.Subscribe-Btn .LockIcon {
+  display: none;
+}
 @media (max-width: 1050px) {
   .Subscribe-Btn {
     height: 60px;
@@ -1096,11 +1107,23 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
+}
+.Subscribe-Form > p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  margin-top: 10px;
+  height: 20px;
+  width: 430px;
 }
 .Subscribe-Form input {
   width: 420px;
@@ -1190,6 +1213,14 @@ button {
 }
 .Typeform input::placeholder {
   color: black;
+}
+
+.True {
+  color: green !important;
+}
+
+.False {
+  color: red !important;
 }
 
 body {
@@ -2123,7 +2154,7 @@ html {
     text-transform: capitalize;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids {
+#TopRatedArtists_Section .Artist-Cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2137,31 +2168,31 @@ html {
   gap: 30px;
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids {
+  #TopRatedArtists_Section .Artist-Cards {
     gap: 30px;
     width: 690px;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(1) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(1) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(3) {
     display: none;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(4) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(4) {
     display: none;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(3) {
     display: none;
   }
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids {
+  #TopRatedArtists_Section .Artist-Cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2175,18 +2206,18 @@ html {
     width: 315px;
     height: 110px;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row::nth-child(1) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row::nth-child(1) {
     display: grid;
     grid-template-columns: 1fr;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(2) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) {
     display: none;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(3) {
     display: none;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2196,7 +2227,7 @@ html {
   gap: 30px;
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row {
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2205,7 +2236,7 @@ html {
     gap: 20px;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2227,7 +2258,7 @@ html {
   margin-top: 20px;
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2248,7 +2279,7 @@ html {
   }
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2267,11 +2298,11 @@ html {
     gap: 20px;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card:hover {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2285,7 +2316,7 @@ html {
   border-radius: 100px;
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2297,13 +2328,13 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar img {
     width: 60px;
     height: 60px;
   }
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2316,23 +2347,23 @@ html {
             flex-direction: column;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
   display: initial;
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(1) {
     display: none;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
   display: none;
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Avatar img:nth-child(2) {
     display: initial;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2349,7 +2380,7 @@ html {
   gap: 5px;
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2366,7 +2397,7 @@ html {
   }
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2385,7 +2416,7 @@ html {
     gap: 5px;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info h1 {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info h1 {
   font-family: Work Sans;
   font-size: 22px;
   font-weight: 600;
@@ -2394,7 +2425,7 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2408,12 +2439,12 @@ html {
   gap: 10px;
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
     gap: 5px;
   }
 }
 @media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2427,7 +2458,7 @@ html {
     gap: 5px;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
   color: var(--CaptionAndLabelText);
   text-align: right;
   font-family: Work Sans;
@@ -2438,7 +2469,7 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
   font-family: Space Mono;
   font-size: 16px;
   font-weight: 400;
@@ -2447,7 +2478,7 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Ranking-Number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2468,15 +2499,15 @@ html {
   background-color: var(--BackGround);
 }
 @media (max-width: 1050px) {
-  #TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Ranking-Number {
     left: 12px;
     top: 13px;
   }
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number .position-left-change {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Ranking-Number .position-left-change {
   left: 6px !important;
 }
-#TopRatedArtists_Section .Artist-Card-Grids .Artist-Cards-Row .Artist-Card .Ranking-Number p {
+#TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row .Artist-Card .Ranking-Number p {
   position: absolute;
   left: 10px;
   top: 4px;

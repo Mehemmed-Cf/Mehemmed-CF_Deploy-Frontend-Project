@@ -8,6 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../sass/main.css">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+  />
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/toastify-js"
+></script>
     <script defer src="./index.js"></script>
   <body>
     <nav class="Navigation">
@@ -154,7 +163,7 @@ NFT Marketplace</p>
           <p>View Rankings</p> 
         </button>
       </div>
-      <div class="Artist-Card-Grids Container">
+      <div class="Artist-Cards Container">
         <div class="Artist-Cards-Row Container">
           <div class="Artist-Card">
             <div class="Artist-Avatar">
@@ -562,13 +571,14 @@ NFT Marketplace</p>
             <h1>Join our weekly digest</h1>
             <p>Get exclusive promotions & updates straight to your inbox.</p>
           </div>
-          <div class="Subscribe-Form">
-            <input type="email" placeholder="Enter your email here" />
-            <button class="Subscribe-Btn">
-              <img src="../assets/icons/Email.svg" />
+          <form class="Subscribe-Form">
+            <input class="Subscribe-Input" type="email" placeholder="Enter your email here" />
+            <p class="Error-Message"></p>
+            <button type="button" class="Subscribe-Btn">
+              <img class="EmailIcon" src="../assets/icons/Email.svg" />
               <p>Subscribe</p>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -600,13 +610,14 @@ NFT Marketplace</p>
           <h1>Join our weekly digest</h1>
           <div class="Subscribe-FormAndInfo">
             <p>Get exclusive promotions & updates <br/> straight to your inbox.</p>
-            <div class="Subscribe-Form">
-              <input type="email" placeholder="Enter your email here" />
-              <button class="Subscribe-Btn">
-                <img src="../assets/icons/Email.svg" />
+            <form class="Subscribe-Form">
+              <input class="Subscribe-Input" type="email" placeholder="Enter your email here" />
+              <p class="Error-Message"></p>
+              <button type="button" class="Subscribe-Btn">
+                <img class="EmailIcon" src="../assets/icons/Email.svg" />
                 <p>Subscribe</p>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

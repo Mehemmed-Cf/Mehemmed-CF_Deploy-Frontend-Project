@@ -1,6 +1,13 @@
 .Subscribe-Form {
-  @include Flex-ItemsAndPosition(flex, center, row);
+  @include Flex-ItemsAndPosition(flex, center, column);
   position: relative;
+
+  > p {
+    @include text-formatter(Work Sans, 16px, 400, 140%);
+    margin-top: 10px;
+    height: 20px;
+    width: 430px;
+  }
 
   input {
     @include Input();
@@ -41,4 +48,12 @@
       color: black;
     }
   }
+}
+
+.True {
+  color: green !important;
+}
+
+.False {
+  color: red !important;
 }

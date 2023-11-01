@@ -149,6 +149,10 @@ button {
   gap: 10px;
   right: 0;
 
+  .LockIcon {
+    display: none;
+  }
+
   @include for-size(tablet) {
     @include Button(60px, 0px 50px, 12px);
   }
