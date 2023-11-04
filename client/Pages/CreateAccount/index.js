@@ -227,6 +227,10 @@ function AccountValidation() {
 
       RegisterUser(username, email, password);
 
+      if (status == 200) {
+        console.log("ok");
+      }
+
       Toastify({
         text: "Congratulations , Your Are Ready to see some Really good NFT's!!! ;)",
         duration: 3000,

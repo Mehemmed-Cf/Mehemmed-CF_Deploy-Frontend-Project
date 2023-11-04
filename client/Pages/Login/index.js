@@ -6,24 +6,26 @@ const passwordInput = document.querySelector(".Password-Input");
 const userErrorMessage = document.querySelector(".User-Error-Message");
 const passwordErrorMessage = document.querySelector(".Password-Error-Message");
 
-async function LoginUser(username, password) {
-  try {
-    const response = await fetch("http://localhost:3000/api/login", {
-      method: "POST",
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
-    });
+// async function LoginUser(username, password) {
+//   const response = await fetch("http://localhost:3000/api/login", {
+//     method: "POST",
+//     body: JSON.stringify({
+//       username: username,
+//       password: password,
+//     }),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// }
 
-    console.log(response);
-
-    if (response.ok) {
-      console.log("User Logged successfully:", data);
-    }
-  } catch {
-    console.log("An error occurred trying to Login:", data);
-  }
+function LoginUser(username, password) {
+  fetch("http://localhost:3000/api/login", {
+    method: "POST",
+    body: JSON.stringify({
+      username: username,
+      password: password,
+    }),
+  });
 }
 
 function LoginValidation() {
@@ -32,7 +34,6 @@ function LoginValidation() {
     password = passwordInput.value;
 
     LoginUser(username, password);
-
     Toastify({
       text: "Congratulations , Your are Logged in successfully ;)",
       duration: 3000,

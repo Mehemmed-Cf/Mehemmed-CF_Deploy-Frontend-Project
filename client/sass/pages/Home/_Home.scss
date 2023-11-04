@@ -480,8 +480,11 @@ html {
   }
 
   .Artist-Cards {
-    @include Flex-ItemsAndPosition(flex, flex-start, column);
-    gap: 30px;
+    // @include Flex-ItemsAndPosition(flex, flex-start, column);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
 
     @include for-size(tablet) {
       gap: 30px;
@@ -528,154 +531,142 @@ html {
       }
     }
 
-    .Artist-Cards-Row {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
+    .Artist-Card {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      padding: 20px;
+      gap: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: var(--BackGround-Secondary);
+      position: relative;
+      margin-top: 20px;
 
-      @include for-size(phone) {
-        display: block;
-        flex-direction: row;
+      @include for-size(tablet) {
+        @include Flexed(flex, center, flex-start, row);
+        width: 330px;
+        height: 100px;
+        padding: 20px;
         gap: 20px;
       }
 
-      .Artist-Card {
-        @include Flex-ItemsAndPosition(flex, center, column);
+      @include for-size(phone) {
+        @include Flexed(flex, center, flex-start, row);
+        width: 275px;
         padding: 20px;
         gap: 20px;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-        background-color: var(--BackGround-Secondary);
-        position: relative;
-        margin-top: 20px;
+      }
+
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      .Artist-Avatar {
+        @include Flex-ItemsAndPosition(flex, flex-end, column);
+        border-radius: 100px;
 
         @include for-size(tablet) {
-          @include Flexed(flex, center, flex-start, row);
-          width: 330px;
-          height: 100px;
-          padding: 20px;
-          gap: 20px;
+          @include Flex-ItemsAndPosition(flex, flex-end, column);
+
+          img {
+            width: 60px;
+            height: 60px;
+          }
         }
 
         @include for-size(phone) {
-          @include Flexed(flex, center, flex-start, row);
-          width: 275px;
-          padding: 20px;
-          gap: 20px;
-        }
-
-        &:hover {
-          transform: scale(0.95);
-        }
-
-        .Artist-Avatar {
           @include Flex-ItemsAndPosition(flex, flex-end, column);
-          border-radius: 100px;
+        }
 
-          @include for-size(tablet) {
-            @include Flex-ItemsAndPosition(flex, flex-end, column);
-
-            img {
-              width: 60px;
-              height: 60px;
-            }
-          }
+        img:nth-child(1) {
+          display: initial;
 
           @include for-size(phone) {
-            @include Flex-ItemsAndPosition(flex, flex-end, column);
-          }
-
-          img:nth-child(1) {
-            display: initial;
-
-            @include for-size(phone) {
-              display: none;
-            }
-          }
-
-          img:nth-child(2) {
             display: none;
-
-            @include for-size(phone) {
-              display: initial;
-            }
           }
         }
 
-        .Artist-Info {
-          @include Flexed(flex, center, center, column);
-          gap: 5px;
-
-          @include for-size(tablet) {
-            @include Flexed(flex, center, flex-start, column);
-          }
+        img:nth-child(2) {
+          display: none;
 
           @include for-size(phone) {
-            @include Flexed(flex, center, flex-start, column);
-            width: 195px;
-            height: 60px;
+            display: initial;
+          }
+        }
+      }
+
+      .Artist-Info {
+        @include Flexed(flex, center, center, column);
+        gap: 5px;
+
+        @include for-size(tablet) {
+          @include Flexed(flex, center, flex-start, column);
+        }
+
+        @include for-size(phone) {
+          @include Flexed(flex, center, flex-start, column);
+          width: 195px;
+          height: 60px;
+          gap: 5px;
+        }
+
+        h1 {
+          @include text-formatter(Work Sans, 22px, 600, 140%);
+        }
+
+        .Sales-Info {
+          @include Flex-ItemsAndPosition(flex, center, row);
+          gap: 10px;
+
+          @include for-size(tablet) {
             gap: 5px;
           }
 
-          h1 {
-            @include text-formatter(Work Sans, 22px, 600, 140%);
+          @include for-size(phone) {
+            @include Flex-ItemsAndPosition(flex, center, column);
+            gap: 5px;
           }
 
-          .Sales-Info {
-            @include Flex-ItemsAndPosition(flex, center, row);
-            gap: 10px;
-
-            @include for-size(tablet) {
-              gap: 5px;
-            }
-
-            @include for-size(phone) {
-              @include Flex-ItemsAndPosition(flex, center, column);
-              gap: 5px;
-            }
-
-            .Sales-Info_Key {
-              color: var(--CaptionAndLabelText);
-              text-align: right;
-              @include text-formatter(Work Sans, 16px, 400, 140%);
-            }
-
-            .Sales-Info_Value {
-              @include text-formatter(Space Mono, 16px, 400, 140%);
-            }
-          }
-        }
-
-        .Ranking-Number {
-          @include Flex-ItemsAndPosition(flex, flex-start);
-          width: 30px;
-          height: 30px;
-          gap: 10px;
-          border-radius: 20px;
-          position: absolute;
-          left: 20px;
-          top: 18px;
-          background-color: var(--BackGround);
-
-          @include for-size(tablet) {
-            left: 12px;
-            top: 13px;
-          }
-
-          .position-left-change {
-            left: 6px !important;
-          }
-
-          p {
-            position: absolute;
-            left: 10px;
-            top: 4px;
+          .Sales-Info_Key {
             color: var(--CaptionAndLabelText);
+            text-align: right;
+            @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
 
-            text-align: center;
+          .Sales-Info_Value {
             @include text-formatter(Space Mono, 16px, 400, 140%);
           }
+        }
+      }
+
+      .Ranking-Number {
+        @include Flex-ItemsAndPosition(flex, flex-start);
+        width: 30px;
+        height: 30px;
+        gap: 10px;
+        border-radius: 20px;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        background-color: var(--BackGround);
+
+        @include for-size(tablet) {
+          left: 12px;
+          top: 13px;
+        }
+
+        .position-left-change {
+          left: 6px !important;
+        }
+
+        p {
+          position: absolute;
+          left: 10px;
+          top: 4px;
+          color: var(--CaptionAndLabelText);
+
+          text-align: center;
+          @include text-formatter(Space Mono, 16px, 400, 140%);
         }
       }
     }
