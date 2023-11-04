@@ -9,6 +9,7 @@ button {
   position: relative;
 
   @include for-size(tablet) {
+    @include Button(50px, 0px 40px, 0px);
     display: none;
   }
 
@@ -27,6 +28,10 @@ button {
 
   &:hover {
     transform: scale(0.95);
+  }
+
+  .Open {
+    display: "initial" !important;
   }
 }
 
@@ -176,6 +181,19 @@ button {
 }
 
 .CreateAccount-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(46px, 0px 100px, 12px);
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.Login-Btn {
   @include Flexed(flex, center, center);
   @include Button(46px, 0px 100px, 12px);
   background-color: var(--CallToAction);

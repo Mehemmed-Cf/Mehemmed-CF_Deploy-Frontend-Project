@@ -207,6 +207,67 @@ table {
     gap: 20px;
   }
 }
+.Navigation .Navigation_Menu .NavigationLinksAndButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  gap: 10px;
+}
+@media (max-width: 1050px) {
+  .Navigation .Navigation_Menu .NavigationLinksAndButton {
+    gap: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .Navigation .Navigation_Menu .NavigationLinksAndButton {
+    display: none;
+  }
+}
+.Navigation .Navigation_Menu .NavigationLinksAndButton a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  height: 46px;
+  color: var(--White);
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 20px;
+  gap: 12px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.Navigation .Navigation_Menu .NavigationLinksAndButton a:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
 .Navigation .Navigation_Menu .Bars_Btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,10 +348,6 @@ table {
 .Navigation .Navigation_Menu a:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-}
-
-.Open {
-  display: initial;
 }
 
 .Close {
@@ -707,6 +764,14 @@ button {
 }
 @media (max-width: 1050px) {
   .SignUp-Btn {
+    height: 50px;
+    padding: 0px 40px;
+    background-color: 0px;
+    gap: normal;
+    border-radius: 20px;
+    border: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     display: none;
   }
 }
@@ -732,6 +797,9 @@ button {
 .SignUp-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+.SignUp-Btn .Open {
+  display: "initial" !important;
 }
 
 .GetStarted-Btn {
@@ -1096,6 +1164,44 @@ button {
   text-transform: capitalize;
 }
 .CreateAccount-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.Login-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 46px;
+  padding: 0px 100px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Login-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -3934,8 +4040,8 @@ html {
   }
 }
 #CreateAccount_Section > img {
-  width: 610px;
-  height: 691px;
+  width: 700px;
+  height: 800px;
 }
 @media (max-width: 1050px) {
   #CreateAccount_Section > img {
@@ -3960,7 +4066,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px 0px;
+  padding: 100px 200px;
   gap: 40px;
 }
 @media (max-width: 1050px) {
@@ -4084,10 +4190,12 @@ html {
           flex-direction: column;
   width: 330px;
   gap: 30px;
+  margin-left: 40px;
 }
 @media (max-width: 1050px) {
   #CreateAccount_Section .CreateAccount-Form .Form {
     width: 325px;
+    margin-left: 40px;
   }
 }
 @media (max-width: 690px) {
@@ -4127,7 +4235,7 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
   height: 50px;
-  margin-left: 10px;
+  margin-left: 30px;
   width: 430px;
 }
 
@@ -4316,6 +4424,7 @@ html {
 @media (max-width: 1050px) {
   #Login_Section .Login-Form .Form {
     width: 325px;
+    margin-left: 40px;
   }
 }
 @media (max-width: 690px) {
@@ -4345,4 +4454,17 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
+  margin-left: 100px;
+}
+#Login_Section .Login-Form .Form .Typeforms p {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  height: 40px;
+  margin-left: 30px;
+  width: 430px;
 }

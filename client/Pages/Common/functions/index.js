@@ -25,21 +25,18 @@ function EmailValidation() {
         if (!EMAIL_REGEX.test(email)) {
           errorMessage.classList.remove("True");
           errorMessage.classList.add("False");
-          errorMessage.textContent =
-            "Email is not in a correct format, please check again";
 
           if (!/[a-zA-Z]/.test(email)) {
-            errorMessage.textContent = "Email should contain letters";
+            errorMessage.textContent = "Email should contain letters.";
           } else if (!/@/.test(email)) {
-            errorMessage.textContent = "Email should contain an @ symbol";
+            errorMessage.textContent = "Email should contain an @ symbol.";
           } else if (email.includes(" ")) {
-            errorMessage.textContent = "Email cannot contain spaces";
+            errorMessage.textContent = "Email cannot contain spaces.";
           }
         } else {
           errorMessage.classList.remove("False");
           errorMessage.classList.add("True");
-          errorMessage.textContent =
-            "Huge Thanks For Subscribing, you are our new pal!";
+          errorMessage.textContent = "We Will hack your Information, Thanks ;)";
         }
       }, 500);
     });

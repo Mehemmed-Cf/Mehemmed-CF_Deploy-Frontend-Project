@@ -1,32 +1,26 @@
-AccountValidation();
+const USERNAME_REGEX = /^[a-zA-Z]{3,}$/;
 
-function AccountValidation() {
-  const USERNAME_REGEX = /^[a-zA-Z]{3,}$/;
+const EMAIL_REGEX =
+  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
-  const EMAIL_REGEX =
-    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+const PASSWORD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
 
-  const PASSWORD_REGEX =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
+const CreateAccountBtn = document.querySelector(".CreateAccount-Btn");
 
-  const CreateAccountBtn = document.querySelector(".CreateAccount-Btn");
+const userNameInput = document.querySelector(".UserName-Input");
+const emailInput = document.querySelector(".Email-Input");
+const passwordInput = document.querySelector(".Password-Input");
+const confirmPasswordInput = document.querySelector(".Confirm_Password-Input");
 
-  const userNameInput = document.querySelector(".UserName-Input");
-  const emailInput = document.querySelector(".Email-Input");
-  const passwordInput = document.querySelector(".Password-Input");
-  const confirmPasswordInput = document.querySelector(
-    ".Confirm_Password-Input"
-  );
+const userErrorMessage = document.querySelector(".User-Error-Message");
+const emailErrorMessage = document.querySelector(".Email-Error-Message");
+const passwordErrorMessage = document.querySelector(".Password-Error-Message");
+const confirmPasswordErrorMessage = document.querySelector(
+  ".ConfirmPassword-Error-Message"
+);
 
-  const userErrorMessage = document.querySelector(".User-Error-Message");
-  const emailErrorMessage = document.querySelector(".Email-Error-Message");
-  const passwordErrorMessage = document.querySelector(
-    ".Password-Error-Message"
-  );
-  const confirmPasswordErrorMessage = document.querySelector(
-    ".ConfirmPassword-Error-Message"
-  );
-
+function UserNameValidation() {
   userNameInput.addEventListener("keyup", () => {
     setTimeout(() => {
       if (userNameInput.value === "") {
@@ -50,7 +44,9 @@ function AccountValidation() {
       }
     }, 500);
   });
+}
 
+function EmailValidation() {
   emailInput.addEventListener("keyup", () => {
     setTimeout(() => {
       if (emailInput.value === "") {
@@ -65,24 +61,32 @@ function AccountValidation() {
       if (!EMAIL_REGEX.test(email)) {
         emailErrorMessage.classList.remove("True");
         emailErrorMessage.classList.add("False");
-        emailErrorMessage.textContent =
-          "Email is not in a correct format, please check again";
+        emailErrorMessage.textContent = "Email is not in a correct format";
 
         if (!/[a-zA-Z]/.test(email)) {
-          emailErrorMessage.textContent = "Email should contain letters";
+          emailErrorMessage.classList.remove("True");
+          emailErrorMessage.classList.add("False");
+          emailErrorMessage.textContent = "Email should contain letters.";
         } else if (!/@/.test(email)) {
-          emailErrorMessage.textContent = "Email should contain an @ symbol";
+          emailErrorMessage.classList.remove("True");
+          emailErrorMessage.classList.add("False");
+          emailErrorMessage.textContent = "Email should contain an @ symbol.";
         } else if (email.includes(" ")) {
-          emailErrorMessage.textContent = "Email cannot contain spaces";
+          emailErrorMessage.classList.remove("True");
+          emailErrorMessage.classList.add("False");
+          emailErrorMessage.textContent = "Email cannot contain spaces.";
         }
       } else {
         emailErrorMessage.classList.remove("False");
         emailErrorMessage.classList.add("True");
-        emailErrorMessage.textContent = "Nice Email ;)";
+        emailErrorMessage.textContent =
+          "We Will hack your Information, Thanks ;)";
       }
     }, 500);
   });
+}
 
+function PasswordValidationAndConfirm() {
   passwordInput.addEventListener("keyup", () => {
     setTimeout(() => {
       if (passwordInput.value === "") {
@@ -98,28 +102,33 @@ function AccountValidation() {
         passwordErrorMessage.classList.remove("True");
         passwordErrorMessage.classList.add("False");
         passwordErrorMessage.textContent =
-          "password is not in a correct format, please check again";
+          "Password is not in a correct format";
 
-        if (!/ *[A-Za-z] /.test(password)) {
+        if (!/[A-Z]/.test(password)) {
           passwordErrorMessage.classList.remove("True");
           passwordErrorMessage.classList.add("False");
           passwordErrorMessage.textContent =
-            "password should contain at least one lowercase and one uppercase letter";
-        } else if (!/ *\d /.test(password)) {
+            "Password should contain at least one uppercase letter.";
+        } else if (!/[a-z]/.test(password)) {
           passwordErrorMessage.classList.remove("True");
           passwordErrorMessage.classList.add("False");
           passwordErrorMessage.textContent =
-            "password should contain at least one digit";
-        } else if (!/ *[@$!%*?&] /.test(password)) {
+            "Password should contain at least one lowercase letter.";
+        } else if (!/\d/.test(password)) {
           passwordErrorMessage.classList.remove("True");
           passwordErrorMessage.classList.add("False");
           passwordErrorMessage.textContent =
-            "password should contain at least one special character";
-        } else if (!/ [A-Za-z\d@$!%*?&]{8,10}/.test(password)) {
+            "Password should contain at least one digit.";
+        } else if (!/[@$!%*?&]/.test(password)) {
           passwordErrorMessage.classList.remove("True");
           passwordErrorMessage.classList.add("False");
           passwordErrorMessage.textContent =
-            "password should contain at least 8-10 characters";
+            "Password should contain at least one special character.";
+        } else if (password.length < 8 || password.length > 10) {
+          passwordErrorMessage.classList.remove("True");
+          passwordErrorMessage.classList.add("False");
+          passwordErrorMessage.textContent =
+            "Password should be between 8 and 10 characters.";
         }
       } else {
         passwordErrorMessage.classList.remove("False");
@@ -131,21 +140,95 @@ function AccountValidation() {
 
   confirmPasswordInput.addEventListener("keyup", () => {
     setTimeout(() => {
+      if (!passwordErrorMessage.classList.contains("True")) {
+        confirmPasswordErrorMessage.classList.remove("True");
+        confirmPasswordErrorMessage.classList.add("False");
+        confirmPasswordErrorMessage.textContent =
+          "You do not seem like you have completed your password";
+        return;
+      }
+
       if (confirmPasswordInput.value !== passwordInput.value) {
         confirmPasswordErrorMessage.classList.remove("True");
         confirmPasswordErrorMessage.classList.add("False");
         confirmPasswordErrorMessage.textContent = "Passwords do not match";
+      } else {
+        confirmPasswordErrorMessage.classList.remove("False");
+        confirmPasswordErrorMessage.classList.add("True");
+        confirmPasswordErrorMessage.textContent = "Good";
       }
     }, 500);
   });
+}
+
+function ValidateInputs() {
+  UserNameValidation();
+  EmailValidation();
+  PasswordValidationAndConfirm();
+}
+
+function CheckAndSendToastForEmptyInputs() {
+  if (
+    userNameInput.value !== "" &&
+    emailInput.value !== "" &&
+    passwordInput.value !== ""
+  ) {
+  } else if (userNameInput.value === "") {
+    userErrorMessage.classList.remove("True");
+    userErrorMessage.classList.add("False");
+    userErrorMessage.textContent = `You need to set a cool username!!`;
+  }
+  if (emailInput.value === "") {
+    emailErrorMessage.classList.remove("True");
+    emailErrorMessage.classList.add("False");
+    emailErrorMessage.textContent = "You need to enter a valid email! ";
+  }
+  if (passwordInput.value === "") {
+    passwordErrorMessage.classList.remove("True");
+    passwordErrorMessage.classList.add("False");
+    passwordErrorMessage.textContent = "You need to set a strong Password!!";
+  }
+}
+
+async function RegisterUser(username, email, password) {
+  try {
+    const response = await fetch("http://localhost:3000/api/register", {
+      method: "POST",
+      body: JSON.stringify({
+        username: username,
+        email: email,
+        password: password,
+      }),
+    });
+
+    if (response.ok) {
+      console.log("User registered successfully:", data);
+    } else {
+      console.log("Registration failed:", data);
+    }
+  } catch {}
+}
+
+function AccountValidation() {
+  ValidateInputs();
+
   CreateAccountBtn.addEventListener("click", () => {
+    CheckAndSendToastForEmptyInputs();
+
     if (
-      !userNameInput.value === "" &&
-      !emailInput.value === "" &&
-      !passwordInput.value === ""
+      userErrorMessage.classList.contains("True") &&
+      emailErrorMessage.classList.contains("True") &&
+      passwordErrorMessage.classList.contains("True") &&
+      confirmPasswordErrorMessage.classList.contains("True")
     ) {
+      username = userNameInput.value;
+      email = emailInput.value;
+      password = passwordInput.value;
+
+      RegisterUser(username, email, password);
+
       Toastify({
-        text: "Your account was successfully Created , Welcome To NFT Marketplace!!;)",
+        text: "Congratulations , Your Are Ready to see some Really good NFT's!!! ;)",
         duration: 3000,
         destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,
@@ -157,6 +240,22 @@ function AccountValidation() {
           background: "green",
         },
       }).showToast();
+    } else {
+      Toastify({
+        text: "It seems like you have a problem with your registration please check Again ;(",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "red",
+        },
+      }).showToast();
     }
   });
 }
+
+AccountValidation();

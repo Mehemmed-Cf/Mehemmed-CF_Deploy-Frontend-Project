@@ -81,6 +81,7 @@
 
       @include for-size(tablet) {
         width: 325px;
+        margin-left: 40px;
       }
 
       @include for-size(phone) {
@@ -91,6 +92,14 @@
       .Typeforms {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         gap: 15px;
+        margin-left: 100px;
+
+        p {
+          @include text-formatter(Work Sans, 16px, 400, 140%);
+          height: 40px;
+          margin-left: 30px;
+          width: 430px;
+        }
       }
     }
   }

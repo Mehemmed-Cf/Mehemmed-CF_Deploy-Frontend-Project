@@ -1,12 +1,15 @@
 const bars_Btn = document.querySelector(".Bars_Btn");
-const Navigation_Menu = document.querySelector(".Navigation_Menu");
+const Navigation_Links_Button = document.querySelector(
+  ".NavigationLinksAndButton"
+);
+const SignUpBtn = document.querySelector(".SignUp-Btn");
+const MarketPlaceLink = document.querySelector("#MarketPlaceLink");
+const Rankings = document.querySelector("#Rankings");
+const ConnectAWallet = document.querySelector("#ConnectAWallet");
+
+ToggleOpen();
 
 function ToggleOpen() {
-  bars_Btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    Navigation_Menu.classList.toggle(".Open");
-  });
-
   document.addEventListener("click", () => {
     if (bars_Btn.classList.contains("Rotate")) {
       bars_Btn.classList.remove("Rotate");
@@ -25,54 +28,37 @@ function ToggleOpen() {
       bars_Btn.classList.remove("Rotate-Back");
     }
   });
-}
 
-const SignUpBtn = document.querySelector(".SignUp-Btn");
+  bars_Btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    MarketPlaceLink.style.display = "initial";
+    SignUpBtn.style.display = "initial";
+  });
+}
 
 SignUpBtn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
 });
 
-// function EmailValidation() {
-//   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const response = fetch("http://localhost:3000/api/creators", {
+  method: "GET",
+});
 
-//   const subscribeForm = document.getElementsByClassName(".Subscribe-Form");
-//   const emailInput = document.getElementsByClassName(".Subscribe-Input");
-//   const errorMessage = document.getElementsByClassName(".Error-Message");
-//   const subscribeBtn = document.getElementsByClassName(".Subscribe-Btn");
+const data = response;
 
-//   subscribeBtn.addEventListener("click", () => {
-//     if (emailInput.value === "") {
-//       errorMessage.classList.remove("True");
-//       errorMessage.classList.add("False");
-//       errorMessage.textContent = `You have an invisible email? That's cool`;
-//       return;
-//     }
+console.log(data);
 
-//     const email = emailInput.value.trim();
+const ArtistContainer = document.querySelector(".Artist-Cards");
 
-//     if (!EMAIL_REGEX.test(email)) {
-//       errorMessage.classList.remove("True");
-//       errorMessage.classList.add("False");
+const ArtistCards = document.querySelectorAll(".Artist-Card");
 
-//       if (!email.includes("@")) {
-//         errorMessage.textContent = "Email must contain the @ symbol";
-//       } else if (email.startsWith("@") || email.endsWith("@")) {
-//         errorMessage.textContent = "Email cannot start or end with @ symbol";
-//       } else if (email.includes("..")) {
-//         errorMessage.textContent =
-//           "Email cannot contain consecutive periods (..)";
-//       } else if (email.includes(" ")) {
-//         errorMessage.textContent = "Email cannot contain spaces";
-//       } else {
-//         errorMessage.textContent =
-//           "Email is not in a correct format, please check again";
-//       }
-//     } else {
-//       errorMessage.classList.remove("False");
-//       errorMessage.classList.add("True");
-//       errorMessage.textContent =
-//         "Huge Thanks For Subscribing, you are my new pal!";
-//     }
-//   });
-// }
+ArtistCards.forEach((ArtistCard) => {
+  const Artist_Avatar = document.querySelector(".Artist-Avatar");
+  const Artist_Info = document.querySelector(".Artist-Info");
+  const Ranking_Number = document.querySelector(".Ranking-Number");
+
+  const Image = document.createElement("img");
+
+  Image.src = `{data.}`;
+});
