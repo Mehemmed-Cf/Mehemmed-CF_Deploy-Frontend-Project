@@ -180,11 +180,11 @@ table {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 .Navigation .Logo #MarketPlace-Name {
   padding-left: 5px;
   padding-top: 5px;
-  cursor: pointer;
 }
 .Navigation .Navigation_Menu {
   display: -webkit-box;
@@ -4879,6 +4879,9 @@ html {
           align-items: flex-start;
   gap: 10px;
 }
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Web-Links .Icons img {
+  cursor: pointer;
+}
 #Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .CTAs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4903,4 +4906,290 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#Artist-Detail_Section .Artist-Frame .Line {
+  width: 1700px;
+  height: 1px;
+  background-color: var(--BackGround-Secondary);
+}
+#Artist-Detail_Section .Artist-Frame .Tab-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1050px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60px;
+  padding: 0px 30px;
+  gap: 16px;
+}
+#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Tab h1 {
+  text-align: center;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 80px 0px;
+  gap: 30px;
+}
+@media (max-width: 1050px) {
+  #Artist-Detail_Section .NFT-Cards-Section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 690px) {
+  #Artist-Detail_Section .NFT-Cards-Section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 469px;
+  border-radius: 20px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  border-radius: 20px 20px 0px 0px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px 25px 30px;
+  gap: 25px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info > h1 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme .Avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme h1 {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 0px;
+  gap: 8px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Price h1 {
+  color: var(--CaptionAndLabelText);
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Price p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid h1 {
+  color: var(--CaptionAndLabelText);
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+.Not-Found-Title {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  margin-top: 200px;
+}
+.Not-Found-Title img {
+  width: 150px;
+}
+.Not-Found-Title h1 {
+  color: var(--CaptionAndLabelText);
+  font-family: Space Mono;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Not-Found-Title h2 {
+  font-family: Work Sans;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 120%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Not-Found-Title h2 b {
+  color: var(--CallToAction);
 }

@@ -124,6 +124,10 @@
               display: flex;
               align-items: flex-start;
               gap: 10px;
+
+              img {
+                cursor: pointer;
+              }
             }
           }
         }
@@ -134,6 +138,133 @@
 
           button {
             @include text-formatter(Work Sans, 16px, 600, 140%);
+          }
+        }
+      }
+    }
+  }
+
+  .Artist-Frame {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    gap: 10px;
+
+    .Line {
+      width: 1700px;
+      height: 1px;
+      background-color: var(--BackGround-Secondary);
+    }
+
+    .Tab-Frame {
+      display: flex;
+      width: 1050px;
+      align-items: flex-start;
+      justify-content: center;
+
+      .Tabs {
+        @include Flex-ItemsAndPosition(flex, flex-start, row);
+
+        .Tab {
+          @include Flexed(flex, center, center, row);
+          height: 60px;
+          padding: 0px 30px;
+          gap: 16px;
+
+          h1 {
+            text-align: center;
+            @include text-formatter(Work Sans, 22px, 600, 140%);
+          }
+        }
+      }
+    }
+  }
+
+  .NFT-Cards-Section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 80px 0px;
+    gap: 30px;
+
+    @include for-size(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-size(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .NFT-Card {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      height: 469px;
+      border-radius: 20px;
+
+      .Image {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 10px;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .NFT-Info {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        padding: 20px 30px 25px 30px;
+        gap: 25px;
+
+        .Artist-Info {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          gap: 5px;
+
+          > h1 {
+            @include text-formatter(Work Sans, 22px, 600, 140%);
+          }
+
+          .Artist-AvatarAndNAme {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            .Avatar {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+            }
+
+            h1 {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
+          }
+        }
+
+        .Additional-Info {
+          display: flex;
+          align-items: flex-start;
+
+          .Price {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            padding-right: 0px;
+            gap: 8px;
+
+            h1 {
+              color: var(--CaptionAndLabelText);
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
+          }
+
+          .Highest-Bid {
+            @include Flexed(flex, center, flex-end, column);
+            gap: 8px;
+
+            h1 {
+              color: var(--CaptionAndLabelText);
+              @include text-formatter(Space Mono, 12px, 400, 110%);
+            }
+
+            p {
+              @include text-formatter(Space Mono, 16px, 400, 140%);
+            }
           }
         }
       }

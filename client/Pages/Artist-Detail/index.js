@@ -1,6 +1,7 @@
-getDataFromServer();
+getDataForCreators();
+getDataForNFTs();
 
-function getDataFromServer() {
+function getDataForCreators() {
   fetch("http://localhost:3000/api/creators", {
     method: "GET",
   })
@@ -12,12 +13,27 @@ function getDataFromServer() {
 
       let creator = data.find((c) => paramsCreatorId == c.id);
 
+      if (!creator) {
+        window.open(
+          `http://127.0.0.1:5500/client/Pages/Not-Found/index.html`,
+          "_self"
+        );
+      }
+
       fillArtistInfo(creator);
       fillArtistNFTs(creator);
     });
 }
 
+function getDataForNFTs() {
+  fetch("http://localhost:3000/api/nfts", {
+    method: "GEt",
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
 const Artist_Info = document.querySelector(".Artist-Info");
+const NFT_Cards_Section = document.querySelector(".NFT-Cards-Section");
 
 function fillArtistInfo(creator) {
   fillArtistAvatar(creator);
@@ -25,9 +41,13 @@ function fillArtistInfo(creator) {
   fillArtistName(creator);
   fillArtistStats(creator);
   fillArtistBio(creator);
+  fillArtistLinks();
 }
 
-function fillArtistNFTs(creator) {}
+function fillArtistNFTs(creator) {
+  const NFT_Card = document.createElement("div");
+  NFT_Card.className = "NFT-Card";
+}
 
 function fillArtistAvatar(creator) {
   const Avatar = document.querySelector(".Avatar");
@@ -38,10 +58,27 @@ function fillArtistAvatar(creator) {
 }
 
 function fillArtistChainId(creator) {
-  const ChainId = document.querySelector(".Chain-Id-Btn");
+  const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
   const chainIDContent = document.createElement("p");
   chainIDContent.textContent = creator.chainId;
-  ChainId.appendChild(chainIDContent);
+  ChainId_Btn.appendChild(chainIDContent);
+
+  ChainId_Btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(chainIDContent.textContent);
+    Toastify({
+      text: "Copy That Fella! ;)",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "green",
+      },
+    }).showToast();
+  });
 }
 
 function fillArtistName(creator) {
@@ -105,4 +142,23 @@ function fillArtistBio(creator) {
   Artist_Bio.append(Bio_Key, Bio_Value);
 
   Artist_Info.append(Artist_Bio);
+}
+
+function fillArtistLinks() {
+  const Web_Links = document.createElement("div");
+  Web_Links.className = "Web-Links";
+
+  const Links_Key = document.createElement("h1");
+  Links_Key.textContent = "Links";
+
+  const Icons = document.createElement("div");
+  Icons.className = "Icons";
+
+  const IconElements = document.createElement("img");
+  IconElements.src = "../assets/icons/Icons-SocialMedia.svg";
+  Icons.append(IconElements);
+
+  Web_Links.append(Links_Key, Icons);
+
+  Artist_Info.append(Web_Links);
 }

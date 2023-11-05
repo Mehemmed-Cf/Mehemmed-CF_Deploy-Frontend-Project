@@ -1,0 +1,23 @@
+.Not-Found-Title {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  margin-top: 200px;
+
+  img {
+    width: 150px;
+  }
+
+  h1 {
+    color: var(--CaptionAndLabelText);
+    @include text-formatter(Space Mono, 40px, 600, 120%);
+  }
+
+  h2 {
+    @include text-formatter(Work Sans, 35px, 500, 120%);
+
+    b {
+      color: var(--CallToAction);
+    }
+  }
+}
