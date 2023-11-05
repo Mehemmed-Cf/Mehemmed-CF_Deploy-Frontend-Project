@@ -54,10 +54,6 @@
         border-radius: 20px;
         transition: 0.3s;
 
-        // @include for-size(tablet) {
-        //   display: none;
-        // }
-
         &:hover {
           transform: scale(0.95);
         }

@@ -1,19 +1,19 @@
 #Artist-Detail_Section {
   @include Flex-ItemsAndPosition(flex, flex-start, column);
-  width: 1280px;
+  width: 1800px;
 
   .CoverAndProfileImage {
-    @include Flex-ItemsAndPosition(flex, center, column);
+    @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: -70px;
 
     > img {
-      width: 100%;
+      width: 140%;
       height: 320px;
     }
 
     .Profile-Image {
       @include Flex-ItemsAndPosition(flex, center, column);
-      width: 1050px;
+      width: 599px;
 
       .Avatar {
         @include Flex-ItemsAndPosition(flex, center);
@@ -35,30 +35,32 @@
       gap: 30px;
 
       .Artist-NameAndButton {
-        display: flex;
-        align-items: flex-start;
+        @include Flex-ItemsAndPosition(flex, flex-start, row);
+        width: 1600px;
+        justify-content: space-evenly;
         gap: 100px;
 
         .Artist-Info {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
-          display: flex;
           width: 599px;
-          flex-direction: column;
-          align-items: flex-start;
           gap: 30px;
 
-          h1 {
+          > h1 {
             width: 510px;
             @include text-formatter(Work Sans, 51px, 600, 110%);
           }
-
           .Stats {
             @include Flex-ItemsAndPosition(flex, flex-start, row);
             width: 510px;
             gap: 20px;
             border-radius: 20px;
 
-            .TotalSale {
+            h1 {
+              width: 210px;
+              @include text-formatter(Work Sans, 51px, 600, 110%);
+            }
+
+            .Volume {
               @include Flex-ItemsAndPosition(flex, flex-start, column);
               border-radius: 20px;
 
@@ -71,7 +73,7 @@
               }
             }
 
-            .Auctions {
+            .NFTs-Sold {
               @include Flex-ItemsAndPosition(flex, flex-start, column);
               border-radius: 20px;
 
@@ -122,8 +124,6 @@
               display: flex;
               align-items: flex-start;
               gap: 10px;
-
-              // image ile ver
             }
           }
         }
