@@ -124,6 +124,14 @@
           @include text-formatter(Space Mono, 16px, 400, 140%);
           color: var(--CaptionAndLabelText);
         }
+
+        .Error-Message {
+          @include for-size(phone) {
+            width: 315px;
+            height: auto;
+            transform: translateX(-70px);
+          }
+        }
       }
     }
   }
@@ -137,7 +145,7 @@
     }
 
     @include for-size(phone) {
-      margin-top: 50px;
+      margin-top: 70px;
       width: 315px;
     }
 

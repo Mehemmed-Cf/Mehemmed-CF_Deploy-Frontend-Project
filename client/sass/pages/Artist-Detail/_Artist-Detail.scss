@@ -1,2 +1,142 @@
-// #Artist-Detail_Section {
-// }
+#Artist-Detail_Section {
+  @include Flex-ItemsAndPosition(flex, flex-start, column);
+  width: 1280px;
+
+  .CoverAndProfileImage {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    gap: -70px;
+
+    > img {
+      width: 100%;
+      height: 320px;
+    }
+
+    .Profile-Image {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      width: 1050px;
+
+      .Avatar {
+        @include Flex-ItemsAndPosition(flex, center);
+        gap: 10px;
+        border-radius: 20px;
+        border: 2px solid var(--BackGround);
+      }
+    }
+  }
+
+  .Artist-Info-Container {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 40px 0px;
+    gap: 30px;
+
+    .Artist-Info-Section {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      width: 1050px;
+      gap: 30px;
+
+      .Artist-NameAndButton {
+        display: flex;
+        align-items: flex-start;
+        gap: 100px;
+
+        .Artist-Info {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          display: flex;
+          width: 599px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+
+          h1 {
+            width: 510px;
+            @include text-formatter(Work Sans, 51px, 600, 110%);
+          }
+
+          .Stats {
+            @include Flex-ItemsAndPosition(flex, flex-start, row);
+            width: 510px;
+            gap: 20px;
+            border-radius: 20px;
+
+            .TotalSale {
+              @include Flex-ItemsAndPosition(flex, flex-start, column);
+              border-radius: 20px;
+
+              h1 {
+                @include text-formatter(Space Mono, 28px, 700, 140%);
+              }
+
+              p {
+                @include text-formatter(Work Sans, 22px, 400, 160%);
+              }
+            }
+
+            .Auctions {
+              @include Flex-ItemsAndPosition(flex, flex-start, column);
+              border-radius: 20px;
+
+              h1 {
+                @include text-formatter(Space Mono, 28px, 700, 140%);
+              }
+
+              p {
+                @include text-formatter(Work Sans, 22px, 400, 160%);
+              }
+            }
+
+            .Followers {
+              @include Flex-ItemsAndPosition(flex, flex-start, column);
+              border-radius: 20px;
+
+              h1 {
+                @include text-formatter(Space Mono, 28px, 700, 140%);
+              }
+
+              p {
+                @include text-formatter(Work Sans, 22px, 400, 160%);
+              }
+            }
+          }
+
+          .Bio {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            gap: 10px;
+
+            h1 {
+              @include text-formatter(Space Mono, 22px, 700, 160%);
+              color: var(--CaptionAndLabelText);
+            }
+
+            p {
+              @include text-formatter(Work Sans, 22px, 400, 160%);
+            }
+          }
+
+          .Web-Links {
+            h1 {
+              @include text-formatter(Space Mono, 22px, 700, 160%);
+              color: var(--CaptionAndLabelText);
+            }
+
+            .Icons {
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+
+              // image ile ver
+            }
+          }
+        }
+
+        .CTAs {
+          @include Flexed(flex, flex-end, flex-start);
+          gap: 20px;
+
+          button {
+            @include text-formatter(Work Sans, 16px, 600, 140%);
+          }
+        }
+      }
+    }
+  }
+}

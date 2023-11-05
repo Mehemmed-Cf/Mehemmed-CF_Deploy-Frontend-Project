@@ -42,7 +42,7 @@ function EmailValidation() {
     });
 
     subscribeBtn.addEventListener("click", () => {
-      if (!emailInput.value === "") {
+      if (errorMessage.classList.contains("True")) {
         Toastify({
           text: "Congratulations , You Subscribed! ;)",
           duration: 3000,
@@ -54,6 +54,20 @@ function EmailValidation() {
           stopOnFocus: true,
           style: {
             background: "green",
+          },
+        }).showToast();
+      } else {
+        Toastify({
+          text: "An error occurred , please check again!",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "red",
           },
         }).showToast();
       }

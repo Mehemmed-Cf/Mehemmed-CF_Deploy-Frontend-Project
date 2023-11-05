@@ -480,53 +480,45 @@ html {
   }
 
   .Artist-Cards {
-    // @include Flex-ItemsAndPosition(flex, flex-start, column);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 30px;
+    position: relative;
 
     @include for-size(tablet) {
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       width: 690px;
 
-      .Artist-Cards-Row:nth-child(1) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      .Artist-Card:nth-child(7) {
+        display: none;
       }
-
-      .Artist-Cards-Row:nth-child(2) {
-        justify-content: space-between;
-
-        .Artist-Card:nth-child(3) {
-          display: none;
-        }
-
-        .Artist-Card:nth-child(4) {
-          display: none;
-        }
+      .Artist-Card:nth-child(8) {
+        display: none;
       }
-
-      .Artist-Cards-Row:nth-child(3) {
+      .Artist-Card:nth-child(9) {
+        display: none;
+      }
+      .Artist-Card:nth-child(10) {
+        display: none;
+      }
+      .Artist-Card:nth-child(11) {
+        display: none;
+      }
+      .Artist-Card:nth-child(12) {
         display: none;
       }
     }
 
     @include for-size(phone) {
-      @include Flex-ItemsAndPosition(flex, flex-start, row);
       width: 315px;
       height: 110px;
 
-      .Artist-Cards-Row::nth-child(1) {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 1fr);
 
-      .Artist-Cards-Row:nth-child(2) {
-        display: none;
-      }
-
-      .Artist-Cards-Row:nth-child(3) {
+      .Artist-Card:nth-child(6) {
         display: none;
       }
     }
@@ -668,6 +660,49 @@ html {
           text-align: center;
           @include text-formatter(Space Mono, 16px, 400, 140%);
         }
+      }
+    }
+  }
+
+  .Loader {
+    position: absolute;
+    top: 5;
+
+    .lds-facebook {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    .lds-facebook div {
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      width: 16px;
+      background: #fff;
+      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+    .lds-facebook div:nth-child(1) {
+      left: 8px;
+      animation-delay: -0.24s;
+    }
+    .lds-facebook div:nth-child(2) {
+      left: 32px;
+      animation-delay: -0.12s;
+    }
+    .lds-facebook div:nth-child(3) {
+      left: 56px;
+      animation-delay: 0;
+    }
+    @keyframes lds-facebook {
+      0% {
+        top: 8px;
+        height: 64px;
+      }
+      50%,
+      100% {
+        top: 24px;
+        height: 32px;
       }
     }
   }

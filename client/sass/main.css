@@ -674,6 +674,14 @@ table {
   text-transform: capitalize;
   color: var(--CaptionAndLabelText);
 }
+@media (max-width: 690px) {
+  .Footer .Footer-Info .Subscribe .Subscribe-FormAndInfo .Error-Message {
+    width: 315px;
+    height: auto;
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+}
 .Footer .Footer-Frame {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -694,7 +702,7 @@ table {
 }
 @media (max-width: 690px) {
   .Footer .Footer-Frame {
-    margin-top: 50px;
+    margin-top: 70px;
     width: 315px;
   }
 }
@@ -1110,7 +1118,8 @@ button {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     width: 315px;
-    bottom: -50px;
+    bottom: -80px;
+    right: 200px;
   }
 }
 .Subscribe-Btn p {
@@ -1155,6 +1164,7 @@ button {
   background-color: var(--CallToAction);
   color: var(--White);
   white-space: nowrap;
+  margin-right: 70px;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 600;
@@ -1206,6 +1216,84 @@ button {
           transform: scale(0.95);
 }
 
+.Chain-Id-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 50px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 186px;
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Chain-Id-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.Follow-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 30px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: transparent;
+  color: var(--White);
+  border: 2px solid var(--CallToAction);
+  white-space: nowrap;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.Follow-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .Subscribe-Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,6 +1318,11 @@ button {
   margin-top: 10px;
   height: 20px;
   width: 430px;
+}
+@media (max-width: 690px) {
+  .Subscribe-Form > p {
+    margin-right: 40px;
+  }
 }
 .Subscribe-Form input {
   width: 420px;
@@ -1262,6 +1355,7 @@ button {
     padding: 16px 20px;
     gap: 12px;
     border-radius: 20px;
+    margin-right: 200px;
   }
 }
 
@@ -2264,55 +2358,42 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 30px;
+  position: relative;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Cards {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     width: 690px;
   }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(1) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(7) {
     display: none;
   }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) .Artist-Card:nth-child(4) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(8) {
     display: none;
   }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(9) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(10) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(11) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(12) {
     display: none;
   }
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     width: 315px;
     height: 110px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row::nth-child(1) {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(2) {
-    display: none;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Cards-Row:nth-child(3) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(6) {
     display: none;
   }
 }
@@ -2600,6 +2681,60 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+#TopRatedArtists_Section .Loader {
+  position: absolute;
+  top: 5;
+}
+#TopRatedArtists_Section .Loader .lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+#TopRatedArtists_Section .Loader .lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+#TopRatedArtists_Section .Loader .lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+#TopRatedArtists_Section .Loader .lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+#TopRatedArtists_Section .Loader .lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 }
 
 #BrowseCategories_Section {
@@ -4430,6 +4565,11 @@ html {
   gap: 15px;
   margin-left: 100px;
 }
+@media (max-width: 690px) {
+  #Login_Section .Login-Form .Form .Typeforms {
+    margin-left: -50px;
+  }
+}
 #Login_Section .Login-Form .Form .Typeforms p {
   font-family: Work Sans;
   font-size: 16px;
@@ -4441,4 +4581,311 @@ html {
   height: 40px;
   margin-left: 30px;
   width: 430px;
+}
+
+#Artist-Detail_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+}
+#Artist-Detail_Section .CoverAndProfileImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: -70px;
+}
+#Artist-Detail_Section .CoverAndProfileImage > img {
+  width: 100%;
+  height: 320px;
+}
+#Artist-Detail_Section .CoverAndProfileImage .Profile-Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1050px;
+}
+#Artist-Detail_Section .CoverAndProfileImage .Profile-Image .Avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  gap: 10px;
+  border-radius: 20px;
+  border: 2px solid var(--BackGround);
+}
+#Artist-Detail_Section .Artist-Info-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 0px;
+  gap: 30px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1050px;
+  gap: 30px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 100px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  width: 599px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info h1 {
+  width: 510px;
+  font-family: Work Sans;
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 510px;
+  gap: 20px;
+  border-radius: 20px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .TotalSale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .TotalSale h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .TotalSale p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Auctions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Auctions h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Auctions p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Followers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Followers h1 {
+  font-family: Space Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Stats .Followers p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Bio h1 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Bio p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Web-Links h1 {
+  font-family: Space Mono;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 160%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: var(--CaptionAndLabelText);
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .Artist-Info .Web-Links .Icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .CTAs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  gap: 20px;
+}
+#Artist-Detail_Section .Artist-Info-Container .Artist-Info-Section .Artist-NameAndButton .CTAs button {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }

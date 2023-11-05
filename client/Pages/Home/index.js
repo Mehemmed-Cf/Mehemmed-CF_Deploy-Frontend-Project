@@ -41,8 +41,6 @@ SignUpBtn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
 });
 
-const Artist_Cards = document.querySelector(".Artist-Cards");
-
 getDataFromServer();
 
 function getDataFromServer() {
@@ -60,6 +58,8 @@ function fillArtistContainer(data) {
 }
 
 function addCreator(data) {
+  const Artist_Cards = document.querySelector(".Artist-Cards");
+
   const ArtistCard = document.createElement("div");
   ArtistCard.classList.add("Artist-Card");
 
@@ -104,4 +104,11 @@ function addCreator(data) {
 
   ArtistCard.append(Artist_Avatar, Artist_Info, Artist_Ranking);
   Artist_Cards.append(ArtistCard);
+
+  ArtistCard.addEventListener("click", () => {
+    window.open(
+      `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=${data.id}`,
+      "_self"
+    );
+  });
 }

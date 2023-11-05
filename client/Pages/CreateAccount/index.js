@@ -191,22 +191,47 @@ function CheckAndSendToastForEmptyInputs() {
 }
 
 async function RegisterUser(username, email, password) {
-  try {
-    const response = await fetch("http://localhost:3000/api/register", {
-      method: "POST",
-      body: JSON.stringify({
-        username: username,
-        email: email,
-        password: password,
-      }),
-    });
+  const response = await fetch("http://localhost:3000/api/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: username,
+      email: email,
+      password: password,
+    }),
+  });
 
-    if (response.ok) {
-      console.log("User registered successfully:", data);
-    } else {
-      console.log("Registration failed:", data);
-    }
-  } catch {}
+  if (response.status >= 200 && response.status <= 300) {
+    Toastify({
+      text: "Congratulations , Your Are Ready to see some Really good NFT's!!! ;)",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "green",
+      },
+    }).showToast();
+  } else {
+    Toastify({
+      text: "It seems like you have a problem with your registration please check Again ;(",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "red",
+      },
+    }).showToast();
+  }
 }
 
 function AccountValidation() {
@@ -226,24 +251,6 @@ function AccountValidation() {
       password = passwordInput.value;
 
       RegisterUser(username, email, password);
-
-      if (status == 200) {
-        console.log("ok");
-      }
-
-      Toastify({
-        text: "Congratulations , Your Are Ready to see some Really good NFT's!!! ;)",
-        duration: 3000,
-        destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-          background: "green",
-        },
-      }).showToast();
     } else {
       Toastify({
         text: "It seems like you have a problem with your registration please check Again ;(",

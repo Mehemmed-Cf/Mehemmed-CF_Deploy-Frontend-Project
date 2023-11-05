@@ -165,7 +165,8 @@ button {
   @include for-size(phone) {
     @include Button(46px, 0px 50px, 12px);
     width: 315px;
-    bottom: -50px;
+    bottom: -80px;
+    right: 200px;
   }
 
   p {
@@ -186,6 +187,7 @@ button {
   background-color: var(--CallToAction);
   color: var(--White);
   white-space: nowrap;
+  margin-right: 70px;
   @include text-formatter(Work Sans, 16px, 600, 140%);
 
   &:hover {
@@ -198,6 +200,34 @@ button {
   @include Button(46px, 0px 100px, 12px);
   background-color: var(--CallToAction);
   color: var(--White);
+  white-space: nowrap;
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.Chain-Id-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 50px, 12px);
+  width: 186px;
+  background-color: var(--CallToAction);
+  color: var(--White);
+  white-space: nowrap;
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.Follow-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 30px, 12px);
+  background-color: transparent;
+  color: var(--White);
+  border: 2px solid var(--CallToAction);
   white-space: nowrap;
   @include text-formatter(Work Sans, 16px, 600, 140%);
 

@@ -7,6 +7,10 @@
     margin-top: 10px;
     height: 20px;
     width: 430px;
+
+    @include for-size(phone) {
+      margin-right: 40px;
+    }
   }
 
   input {
@@ -20,6 +24,7 @@
 
     @include for-size(phone) {
       @include Input(275px, 14px, 16px 20px, 12px);
+      margin-right: 200px;
     }
   }
 }
