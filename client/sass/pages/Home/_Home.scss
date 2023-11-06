@@ -399,6 +399,7 @@ html {
   padding: 80px 195px;
   gap: 60px;
   background-color: var(--BackGround);
+  position: relative;
 
   @include for-size(tablet) {
     @include Flex-ItemsAndPosition(flex, center, column);
@@ -484,7 +485,6 @@ html {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 30px;
-    position: relative;
 
     @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);
@@ -665,8 +665,10 @@ html {
   }
 
   .Loader {
+    display: grid;
+    place-items: center;
     position: absolute;
-    top: 5;
+    transform: translateY(300px);
 
     .lds-facebook {
       display: inline-block;

@@ -2185,6 +2185,7 @@ html {
   padding: 80px 195px;
   gap: 60px;
   background-color: var(--BackGround);
+  position: relative;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section {
@@ -2359,7 +2360,6 @@ html {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 30px;
-  position: relative;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Cards {
@@ -2683,8 +2683,11 @@ html {
   text-transform: capitalize;
 }
 #TopRatedArtists_Section .Loader {
+  display: grid;
+  place-items: center;
   position: absolute;
-  top: 5;
+  -webkit-transform: translateY(300px);
+          transform: translateY(300px);
 }
 #TopRatedArtists_Section .Loader .lds-facebook {
   display: inline-block;
@@ -4168,14 +4171,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px 200px;
+  padding: 100px 50px;
   gap: 40px;
 }
 @media (max-width: 1050px) {
@@ -4346,6 +4349,54 @@ html {
   height: 50px;
   margin-left: 30px;
   width: 430px;
+}
+#CreateAccount_Section .CreateAccount-Form .SendToLogin {
+  display: grid;
+  place-items: center;
+}
+#CreateAccount_Section .CreateAccount-Form .SendToLogin p {
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#CreateAccount_Section .CreateAccount-Form .SendToLogin a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  height: 46px;
+  color: var(--CallToAction);
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 20px;
+  gap: 12px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#CreateAccount_Section .CreateAccount-Form .SendToLogin a:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 #Login_Section {

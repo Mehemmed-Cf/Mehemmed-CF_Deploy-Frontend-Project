@@ -6,6 +6,7 @@ const SignUpBtn = document.querySelector(".SignUp-Btn");
 const MarketPlaceLink = document.querySelector("#MarketPlaceLink");
 const Rankings = document.querySelector("#Rankings");
 const ConnectAWallet = document.querySelector("#ConnectAWallet");
+const loaderElement = document.querySelector(".Loader");
 
 ToggleOpen();
 
@@ -44,11 +45,14 @@ SignUpBtn.addEventListener("click", () => {
 getDataFromServer();
 
 function getDataFromServer() {
+  showLoader(true);
   fetch("http://localhost:3000/api/creators", {
     method: "GET",
   })
     .then((res) => res.json())
     .then((data) => fillArtistContainer(data));
+
+  showLoader(false);
 }
 
 function fillArtistContainer(data) {
@@ -111,4 +115,8 @@ function addCreator(data) {
       "_self"
     );
   });
+}
+
+function showLoader(show) {
+  loaderElement.style.display = show ? "grid" : "none";
 }

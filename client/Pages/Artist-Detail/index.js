@@ -1,37 +1,20 @@
+let searchParams = new URLSearchParams(window.location.search);
+let paramsCreatorId = searchParams.get("id");
+
 getDataForCreators();
-getDataForNFTs();
 
 function getDataForCreators() {
-  fetch("http://localhost:3000/api/creators", {
+  fetch(`http://localhost:3000/api/creators/${paramsCreatorId}`, {
     method: "GET",
   })
     .then((res) => res.json())
-    .then((data) => {
-      let searchParams = new URLSearchParams(window.location.search);
-
-      let paramsCreatorId = searchParams.get("id");
-
-      let creator = data.find((c) => paramsCreatorId == c.id);
-
-      if (!creator) {
-        window.open(
-          `http://127.0.0.1:5500/client/Pages/Not-Found/index.html`,
-          "_self"
-        );
-      }
-
+    .then((creator) => {
+      console.log(creator);
       fillArtistInfo(creator);
       fillArtistNFTs(creator);
     });
 }
 
-function getDataForNFTs() {
-  fetch("http://localhost:3000/api/nfts", {
-    method: "GEt",
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-}
 const Artist_Info = document.querySelector(".Artist-Info");
 const NFT_Cards_Section = document.querySelector(".NFT-Cards-Section");
 
@@ -45,8 +28,19 @@ function fillArtistInfo(creator) {
 }
 
 function fillArtistNFTs(creator) {
-  const NFT_Card = document.createElement("div");
-  NFT_Card.className = "NFT-Card";
+  creator.nfts.forEach((nft) => {
+    const NFT_Card = document.createElement("div");
+    NFT_Card.className = "NFT-Card";
+
+    const Image = document.createElement("div");
+    Image.className = "Image";
+
+    const ImageElement = document.createElement("img");
+    ImageElement.src = "../../../" + nft.imgPath;
+    Image.append(ImageElement);
+
+    NFT_Card.append(Image);
+  });
 }
 
 function fillArtistAvatar(creator) {
