@@ -74,3 +74,43 @@ function EmailValidation() {
     });
   });
 }
+
+const bars_Btn = document.querySelector(".Bars_Btn");
+const Navigation_Links_Button = document.querySelector(
+  ".NavigationLinksAndButton"
+);
+
+toggleNavbarAndRotateBtn();
+
+function toggleNavbarAndRotateBtn() {
+  document.addEventListener("click", () => {
+    if (bars_Btn.classList.contains("Rotate")) {
+      bars_Btn.classList.remove("Rotate");
+      bars_Btn.classList.add("Rotate-Back");
+
+      Navigation_Links_Button.classList.remove("Navbar-Open");
+    }
+  });
+
+  bars_Btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    if (bars_Btn.classList.contains("Rotate")) {
+      bars_Btn.classList.remove("Rotate");
+      bars_Btn.classList.add("Rotate-Back");
+    } else {
+      bars_Btn.classList.add("Rotate");
+      bars_Btn.classList.remove("Rotate-Back");
+    }
+  });
+
+  bars_Btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    if (bars_Btn.classList.contains("Rotate")) {
+      Navigation_Links_Button.classList.add("Navbar-Open");
+    } else if (bars_Btn.classList.contains("Rotate-Back")) {
+      Navigation_Links_Button.classList.remove("Navbar-Open");
+    }
+  });
+}

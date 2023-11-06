@@ -207,6 +207,12 @@ table {
     gap: 20px;
   }
 }
+.Navigation .Navigation_Menu .Navbar-Open {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  right: 0 !important;
+}
 .Navigation .Navigation_Menu .NavigationLinksAndButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,12 +231,20 @@ table {
 }
 @media (max-width: 1050px) {
   .Navigation .Navigation_Menu .NavigationLinksAndButton {
-    gap: 20px;
-  }
-}
-@media (max-width: 1050px) {
-  .Navigation .Navigation_Menu .NavigationLinksAndButton {
     display: none;
+    padding: 130px 16px;
+    gap: 20px;
+    z-index: 10;
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: -210px;
+    height: 100vh;
+    border: 2px solid var(--CallToAction);
+    border-radius: 20px;
+    background-color: var(--BackGround);
   }
 }
 .Navigation .Navigation_Menu .NavigationLinksAndButton a {
@@ -348,10 +362,6 @@ table {
 .Navigation .Navigation_Menu a:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-}
-
-.Close {
-  display: none;
 }
 
 .Footer {
@@ -746,8 +756,9 @@ button {
 }
 
 .SignUp-Btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

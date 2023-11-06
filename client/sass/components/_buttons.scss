@@ -3,6 +3,7 @@ button {
 }
 
 .SignUp-Btn {
+  display: flex !important;
   @include Flexed(flex, center, center);
   @include Button(60px, 0px 50px, 0px);
   background-color: var(--CallToAction);

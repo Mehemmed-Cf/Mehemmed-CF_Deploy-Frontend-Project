@@ -30,16 +30,27 @@
       gap: 20px;
     }
 
+    .Navbar-Open {
+      display: flex !important;
+      right: 0 !important;
+    }
+
     .NavigationLinksAndButton {
       @include Flexed(flex, flex-end, center);
       gap: 10px;
 
       @include for-size(tablet) {
-        gap: 20px;
-      }
-
-      @include for-size(tablet) {
         display: none;
+        padding: 130px 16px;
+        gap: 20px;
+        z-index: 10;
+        position: fixed;
+        flex-direction: column;
+        right: -210px;
+        height: 100vh;
+        border: 2px solid var(--CallToAction);
+        border-radius: 20px;
+        background-color: var(--BackGround);
       }
 
       a {
@@ -109,8 +120,4 @@
       }
     }
   }
-}
-
-.Close {
-  display: none;
 }
