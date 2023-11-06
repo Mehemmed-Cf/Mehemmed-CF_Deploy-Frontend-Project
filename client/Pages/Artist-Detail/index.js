@@ -1,9 +1,11 @@
 let searchParams = new URLSearchParams(window.location.search);
 let paramsCreatorId = searchParams.get("id");
+const loaderElement = document.querySelector(".Loader");
 
 getDataForCreators();
 
 function getDataForCreators() {
+  showLoader(true);
   fetch(`http://localhost:3000/api/creators/${paramsCreatorId}`, {
     method: "GET",
   })
@@ -13,6 +15,7 @@ function getDataForCreators() {
       fillArtistInfo(creator);
       fillArtistNFTs(creator);
     });
+  showLoader(false);
 }
 
 const Artist_Info = document.querySelector(".Artist-Info");
@@ -155,4 +158,8 @@ function fillArtistLinks() {
   Web_Links.append(Links_Key, Icons);
 
   Artist_Info.append(Web_Links);
+}
+
+function showLoader(show) {
+  loaderElement.style.display = show ? "grid" : "none";
 }

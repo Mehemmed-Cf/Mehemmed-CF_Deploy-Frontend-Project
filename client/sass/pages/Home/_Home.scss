@@ -670,6 +670,10 @@ html {
     position: absolute;
     transform: translateY(300px);
 
+    #Loading-Info {
+      @include text-formatter(Space Mono, 20px, 500, 100%);
+    }
+
     .lds-facebook {
       display: inline-block;
       position: relative;
