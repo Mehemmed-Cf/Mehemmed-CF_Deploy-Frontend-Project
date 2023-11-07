@@ -183,8 +183,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 80px 0px;
+    padding: 80px 300px;
     gap: 30px;
+    background-color: var(--BackGround);
 
     @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);
@@ -198,6 +199,12 @@
       @include Flex-ItemsAndPosition(flex, center, column);
       height: 469px;
       border-radius: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.95);
+      }
 
       .Image {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -209,6 +216,10 @@
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         padding: 20px 30px 25px 30px;
         gap: 25px;
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: var(--BackGround-Secondary);
 
         .Artist-Info {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -218,7 +229,7 @@
             @include text-formatter(Work Sans, 22px, 600, 140%);
           }
 
-          .Artist-AvatarAndNAme {
+          .Artist-AvatarAndName {
             display: flex;
             align-items: flex-start;
             gap: 12px;
@@ -227,6 +238,11 @@
               display: flex;
               align-items: flex-start;
               gap: 10px;
+
+              img {
+                width: 24px;
+                height: 24px;
+              }
             }
 
             h1 {
@@ -238,6 +254,7 @@
         .Additional-Info {
           display: flex;
           align-items: flex-start;
+          gap: 50px;
 
           .Price {
             @include Flex-ItemsAndPosition(flex, flex-start, column);

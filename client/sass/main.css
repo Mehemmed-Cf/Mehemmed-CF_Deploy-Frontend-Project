@@ -5053,8 +5053,9 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  padding: 80px 0px;
+  padding: 80px 300px;
   gap: 30px;
+  background-color: var(--BackGround);
 }
 @media (max-width: 1050px) {
   #Artist-Detail_Section .NFT-Cards-Section {
@@ -5079,6 +5080,13 @@ html {
           flex-direction: column;
   height: 469px;
   border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 #Artist-Detail_Section .NFT-Cards-Section .NFT-Card .Image {
   display: -webkit-box;
@@ -5107,6 +5115,10 @@ html {
           flex-direction: column;
   padding: 20px 30px 25px 30px;
   gap: 25px;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--BackGround-Secondary);
 }
 #Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info {
   display: -webkit-box;
@@ -5130,7 +5142,7 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
-#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme {
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5139,7 +5151,7 @@ html {
           align-items: flex-start;
   gap: 12px;
 }
-#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme .Avatar {
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName .Avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5148,7 +5160,11 @@ html {
           align-items: flex-start;
   gap: 10px;
 }
-#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndNAme h1 {
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName .Avatar img {
+  width: 24px;
+  height: 24px;
+}
+#Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName h1 {
   font-family: Space Mono;
   font-size: 16px;
   font-weight: 400;
@@ -5164,6 +5180,7 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 50px;
 }
 #Artist-Detail_Section .NFT-Cards-Section .NFT-Card .NFT-Info .Additional-Info .Price {
   display: -webkit-box;

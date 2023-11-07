@@ -42,7 +42,65 @@ function fillArtistNFTs(creator) {
     ImageElement.src = "../../../" + nft.imgPath;
     Image.append(ImageElement);
 
-    NFT_Card.append(Image);
+    const NFT_Info = document.createElement("div");
+    NFT_Info.className = "NFT-Info ";
+
+    const Artist_Info = document.createElement("div");
+    Artist_Info.className = "Artist-Info";
+
+    const NFT_Name = document.createElement("h1");
+    NFT_Name.textContent = nft.name;
+
+    const Artist_Avatar_And_Name = document.createElement("div");
+    Artist_Avatar_And_Name.className = "Artist-AvatarAndName";
+
+    const Artist_Avatar = document.createElement("div");
+    Artist_Avatar.className = "Avatar";
+
+    const Avatar_Image = document.createElement("img");
+    Avatar_Image.src = "../../../" + creator.profileImgPath;
+
+    Artist_Avatar.append(Avatar_Image);
+
+    const Artist_Name = document.createElement("h1");
+    Artist_Name.textContent = creator.name;
+
+    Artist_Avatar_And_Name.append(Artist_Avatar, Artist_Name);
+
+    Artist_Info.append(NFT_Name, Artist_Avatar_And_Name);
+
+    const Additional_Info = document.createElement("div");
+    Additional_Info.className = "Additional-Info";
+
+    const Price = document.createElement("div");
+    Price.className = "Price";
+
+    const Price_Key = document.createElement("h1");
+    Price_Key.textContent = "Price";
+
+    const Price_Value = document.createElement("p");
+    Price_Value.textContent = nft.price.value + "" + nft.price.currency;
+
+    Price.append(Price_Key, Price_Value);
+
+    const HighestBid = document.createElement("div");
+    HighestBid.className = "Highest-Bid";
+
+    const Bid_Key = document.createElement("h1");
+    Bid_Key.textContent = "Highest Bid";
+
+    const Bid_Value = document.createElement("p");
+    Bid_Value.textContent = nft.highestBid.value + "" + nft.highestBid.currency;
+
+    HighestBid.append(Bid_Key, Bid_Value);
+
+    Additional_Info.append(Price, HighestBid);
+
+    NFT_Info.append(Artist_Info, Additional_Info);
+
+    NFT_Card.append(Image, NFT_Info);
+
+    NFT_Cards_Section.append(NFT_Card);
   });
 }
 
