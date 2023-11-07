@@ -3,18 +3,58 @@
   width: 1800px;
   position: relative;
 
+  @include for-size(tablet) {
+    width: 834px;
+  }
+
+  @include for-size(phone) {
+    width: 375px;
+  }
+
   .CoverAndProfileImage {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: -70px;
 
+    @include for-size(tablet) {
+      align-items: center;
+    }
+
     > img {
       width: 140%;
       height: 320px;
+      background: linear-gradient(
+          180deg,
+          rgba(151, 71, 255, 0) 21.88%,
+          #9747ff 95.31%
+        ),
+        url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+      @include for-size(tablet) {
+        width: 140%;
+        height: 280px;
+      }
+
+      @include for-size(phone) {
+        width: 240%;
+        height: 250px;
+      }
     }
 
     .Profile-Image {
       @include Flex-ItemsAndPosition(flex, center, column);
       width: 599px;
+
+      @include for-size(tablet) {
+        width: 690px;
+        align-items: flex-start;
+      }
+
+      @include for-size(phone) {
+        width: 375px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+      }
 
       .Avatar {
         @include Flex-ItemsAndPosition(flex, center);
@@ -30,10 +70,26 @@
     padding: 40px 0px;
     gap: 30px;
 
+    @include for-size(tablet) {
+      padding: 30px 50px;
+    }
+
+    @include for-size(phone) {
+      padding: 30px 50px;
+    }
+
     .Artist-Info-Section {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       width: 1050px;
       gap: 30px;
+
+      @include for-size(tablet) {
+        width: 690px;
+      }
+
+      @include for-size(tablet) {
+        width: 315px;
+      }
 
       .Artist-NameAndButton {
         @include Flex-ItemsAndPosition(flex, flex-start, row);
@@ -41,20 +97,38 @@
         justify-content: space-evenly;
         gap: 100px;
 
+        @include for-size(tablet) {
+          gap: 50px;
+          flex-direction: column;
+        }
+
         .Artist-Info {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
           width: 599px;
           gap: 30px;
 
           > h1 {
-            width: 510px;
+            width: 100%;
             @include text-formatter(Work Sans, 51px, 600, 110%);
+
+            @include for-size(tablet) {
+              @include text-formatter(Work Sans, 38px, 600, 120%);
+            }
+
+            @include for-size(phone) {
+              @include text-formatter(Work Sans, 28px, 600, 140%);
+            }
           }
+
           .Stats {
             @include Flex-ItemsAndPosition(flex, flex-start, row);
             width: 510px;
             gap: 20px;
             border-radius: 20px;
+
+            @include for-size(phone) {
+              width: 315px;
+            }
 
             h1 {
               width: 210px;
@@ -67,10 +141,18 @@
 
               h1 {
                 @include text-formatter(Space Mono, 28px, 700, 140%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Space Mono, 22px, 700, 160%);
+                }
               }
 
               p {
                 @include text-formatter(Work Sans, 22px, 400, 160%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Work Sans, 16px, 400, 140%);
+                }
               }
             }
 
@@ -80,10 +162,18 @@
 
               h1 {
                 @include text-formatter(Space Mono, 28px, 700, 140%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Space Mono, 22px, 700, 160%);
+                }
               }
 
               p {
                 @include text-formatter(Work Sans, 22px, 400, 160%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Work Sans, 16px, 400, 140%);
+                }
               }
             }
 
@@ -93,10 +183,18 @@
 
               h1 {
                 @include text-formatter(Space Mono, 28px, 700, 140%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Space Mono, 22px, 700, 160%);
+                }
               }
 
               p {
                 @include text-formatter(Work Sans, 22px, 400, 160%);
+
+                @include for-size(tablet) {
+                  @include text-formatter(Work Sans, 16px, 400, 140%);
+                }
               }
             }
           }
@@ -106,12 +204,19 @@
             gap: 10px;
 
             h1 {
-              @include text-formatter(Space Mono, 22px, 700, 160%);
-              color: var(--CaptionAndLabelText);
+              @include text-formatter(Space Mono, 28px, 700, 140%);
+
+              @include for-size(tablet) {
+                @include text-formatter(Space Mono, 16px, 700, 140%);
+              }
             }
 
             p {
               @include text-formatter(Work Sans, 22px, 400, 160%);
+
+              @include for-size(tablet) {
+                @include text-formatter(Work Sans, 16px, 400, 140%);
+              }
             }
           }
 
@@ -119,12 +224,21 @@
             h1 {
               @include text-formatter(Space Mono, 22px, 700, 160%);
               color: var(--CaptionAndLabelText);
+
+              @include for-size(tablet) {
+                @include text-formatter(Space Mono, 16px, 700, 140%);
+              }
             }
 
             .Icons {
               display: flex;
               align-items: flex-start;
               gap: 10px;
+              margin-top: 10px;
+
+              @include for-size(tablet) {
+                height: 24;
+              }
 
               img {
                 cursor: pointer;
@@ -136,6 +250,10 @@
         .CTAs {
           @include Flexed(flex, flex-end, flex-start);
           gap: 20px;
+
+          @include for-size(tablet) {
+            align-items: flex-start;
+          }
 
           button {
             @include text-formatter(Work Sans, 16px, 600, 140%);
@@ -153,6 +271,15 @@
       width: 1700px;
       height: 1px;
       background-color: var(--BackGround-Secondary);
+
+      @include for-size(tablet) {
+        width: 834px;
+      }
+
+      @include for-size(phone) {
+        padding-left: 1000px;
+        width: 375px;
+      }
     }
 
     .Tab-Frame {
@@ -161,18 +288,43 @@
       align-items: flex-start;
       justify-content: center;
 
+      @include for-size(tablet) {
+        width: 680px;
+      }
+
+      @include for-size(phone) {
+        width: 315px;
+      }
+
       .Tabs {
         @include Flex-ItemsAndPosition(flex, flex-start, row);
+        padding-right: 100px;
+
+        @include for-size(tablet) {
+          padding-right: 0px;
+        }
+
+        @include for-size(tablet) {
+          padding-right: 350px;
+          gap: 40px;
+        }
 
         .Tab {
           @include Flexed(flex, center, center, row);
           height: 60px;
           padding: 0px 30px;
-          gap: 16px;
+
+          @include for-size(phone) {
+            padding: 0px 10px;
+          }
 
           h1 {
             text-align: center;
             @include text-formatter(Work Sans, 22px, 600, 140%);
+
+            @include for-size(tablet) {
+              @include text-formatter(Work Sans, 16px, 600, 140%);
+            }
           }
         }
       }
@@ -182,17 +334,22 @@
   .NFT-Cards-Section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     padding: 80px 300px;
     gap: 30px;
     background-color: var(--BackGround);
 
     @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);
+      padding: 80px 100px;
     }
 
     @include for-size(phone) {
       grid-template-columns: repeat(1, 1fr);
+      padding: 80px 160px;
+    }
+
+    > h1 {
+      @include text-formatter(Space Mono, 30px, 600, 120%);
     }
 
     .NFT-Card {

@@ -1,11 +1,6 @@
-const SignUpBtn = document.querySelector(".SignUp-Btn");
 const Rankings = document.querySelector("#Rankings");
 const ConnectAWallet = document.querySelector("#ConnectAWallet");
 const loaderElement = document.querySelector(".Loader");
-
-SignUpBtn.addEventListener("click", () => {
-  window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
-});
 
 getDataFromServer();
 

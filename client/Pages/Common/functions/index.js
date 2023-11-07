@@ -79,6 +79,7 @@ const bars_Btn = document.querySelector(".Bars_Btn");
 const Navigation_Links_Button = document.querySelector(
   ".NavigationLinksAndButton"
 );
+const SignUp_Btn = document.querySelector(".Bars_Btn");
 
 toggleNavbarAndRotateBtn();
 
@@ -114,3 +115,9 @@ function toggleNavbarAndRotateBtn() {
     }
   });
 }
+
+const SignUpBtn = document.querySelector(".SignUp-Btn");
+
+SignUpBtn.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
+});
