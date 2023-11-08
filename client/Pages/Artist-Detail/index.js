@@ -2,6 +2,25 @@ let searchParams = new URLSearchParams(window.location.search);
 let paramsCreatorId = searchParams.get("id");
 const loaderElement = document.querySelector(".Loader");
 
+const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
+const Follow_Btn = document.querySelector(".Follow-Btn");
+
+Follow_Btn.addEventListener("click", () => {
+  Toastify({
+    text: "Follow That Fella! ;)",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "green",
+    },
+  }).showToast();
+});
+
 getDataForCreators();
 
 function getDataForCreators() {
@@ -11,7 +30,6 @@ function getDataForCreators() {
   })
     .then((res) => res.json())
     .then((creator) => {
-      console.log(creator);
       fillArtistInfo(creator);
       fillArtistNFTs(creator);
     });
@@ -113,7 +131,6 @@ function fillArtistAvatar(creator) {
 }
 
 function fillArtistChainId(creator) {
-  const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
   const chainIDContent = document.createElement("p");
   chainIDContent.textContent = creator.chainId;
   ChainId_Btn.appendChild(chainIDContent);

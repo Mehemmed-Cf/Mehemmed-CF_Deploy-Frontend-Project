@@ -121,3 +121,15 @@ const SignUpBtn = document.querySelector(".SignUp-Btn");
 SignUpBtn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
 });
+
+const Rankings_Link = document.querySelector("#Rankings");
+
+Rankings_Link.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Rankings/index.html");
+});
+
+const Logo = document.querySelector(".Logo");
+
+Logo.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Home/index.html#");
+});

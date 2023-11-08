@@ -221,6 +221,10 @@ button {
   &:hover {
     transform: scale(0.95);
   }
+
+  @include for-size(phone) {
+    width: 315px;
+  }
 }
 
 .Follow-Btn {
@@ -234,5 +238,9 @@ button {
 
   &:hover {
     transform: scale(0.95);
+  }
+
+  @include for-size(phone) {
+    width: 315px;
   }
 }

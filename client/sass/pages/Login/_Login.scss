@@ -94,6 +94,10 @@
         gap: 15px;
         margin-left: 100px;
 
+        @include for-size(tablet) {
+          margin-left: 0px;
+        }
+
         @include for-size(phone) {
           margin-left: -50px;
         }

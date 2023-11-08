@@ -1,0 +1,261 @@
+#Rankings_Section {
+  @include Flex-ItemsAndPosition(flex, center, column);
+  transform: translateX(120px);
+  width: 1280px;
+
+  .HeadlineAndSubhead {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 40px 0px;
+    gap: 40px;
+
+    .Headline_And_Subhead {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      gap: 20px;
+
+      .Headline {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+
+        h1 {
+          @include text-formatter(Work Sans, 51px, 600, 110%);
+        }
+      }
+
+      .Subhead {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        p {
+          @include text-formatter(Work Sans, 22px, 400, 160%);
+        }
+      }
+    }
+  }
+
+  .Rankings {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 40px 0px;
+    gap: 20px;
+    height: 1350px;
+
+    .Rankings-Header {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      height: 46px;
+      padding: 12px 0px;
+      gap: 30px;
+      border-radius: 20px;
+      border: 1px solid var(--BackGround-Secondary);
+
+      .Rankings-Headers {
+        @include Flexed(flex, space-between, center, row);
+        padding: 0px 20px;
+
+        .RankAndArtist {
+          display: flex;
+          width: 430px;
+          align-items: center;
+          gap: 20px;
+
+          > h1 {
+            width: 30px;
+          }
+
+          h1 {
+            text-align: center;
+            color: var(--CaptionAndLabelText);
+            @include text-formatter(Space Mono, 16px400, 140%);
+          }
+        }
+
+        .Stats-Header {
+          @include Flexed(flex, flex-end, center, row);
+          gap: 20px;
+
+          .Change-Header {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            width: 160px;
+            gap: 10px;
+            color: var(--CaptionAndLabelText);
+            @include text-formatter(Space Mono, 16px, 400, 140%);
+          }
+
+          .NFTs-Sold-Header {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            width: 160px;
+            gap: 10px;
+            color: var(--CaptionAndLabelText);
+            @include text-formatter(Space Mono, 16px, 400, 140%);
+          }
+          .Volume-Header {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            width: 160px;
+            gap: 10px;
+            color: var(--CaptionAndLabelText);
+            @include text-formatter(Space Mono, 16px, 400, 140%);
+          }
+        }
+      }
+
+      .Ranking-Items {
+        @include Flexed(flex, center, center, column);
+        gap: 20px;
+
+        .Ranking-Item {
+          background-color: var(--BackGround-Secondary);
+          border-radius: 20px;
+          height: 80px;
+          @include Flexed(flex, space-between, center, row);
+
+          .RankAndArtist {
+            @include Flex-ItemsAndPosition(flex, center, row);
+            gap: 20px;
+
+            .Ranking-Number {
+              @include Flex-ItemsAndPosition(flex, flex-start, row);
+              position: relative;
+              width: 30px;
+              height: 30px;
+              gap: 10px;
+              margin-left: 20px;
+              border-radius: 20px;
+              background-color: var(--BackGround);
+
+              p {
+                position: absolute;
+                left: 10px;
+                top: 4px;
+                text-align: center;
+                color: var(--CaptionAndLabelText);
+
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+
+              .position-left-change {
+                left: 6px !important;
+              }
+            }
+
+            .Artist-Card {
+              @include Flexed(flex, center, center, row);
+              gap: 20px;
+              border-radius: 20px;
+              transition: 0.3s;
+
+              .Artist-Avatar {
+                @include Flex-ItemsAndPosition(flex, flex-end, row);
+
+                .Avatar {
+                  display: flex;
+                  width: 60px;
+                  align-items: flex-start;
+                  gap: 10px;
+
+                  img {
+                    height: 60px;
+                  }
+                }
+              }
+
+              .Artist-Info {
+                @include Flexed(flex, center, flex-start, column);
+                gap: 5px;
+
+                h1 {
+                  width: 300px;
+                  @include text-formatter(Work Sans, 22px, 600, 140%);
+                }
+              }
+
+              &:hover {
+                transform: scale(0.95);
+              }
+            }
+
+            .Stats {
+              @include Flexed(flex, flex-end, center, row);
+              gap: 20px;
+              text-align: center;
+              margin-left: 40px;
+
+              .Change {
+                @include Flex-ItemsAndPosition(flex, flex-start, column);
+                width: 160px;
+                gap: 10px;
+                color: var(--Green);
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+
+              .NFTs-Sold {
+                @include Flex-ItemsAndPosition(flex, flex-start, column);
+                width: 160px;
+                gap: 10px;
+                text-align: center;
+                margin-left: 20px;
+                margin-right: -20px;
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+              .Volume {
+                @include Flex-ItemsAndPosition(flex, flex-start, column);
+                width: 160px;
+                gap: 10px;
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Loader {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    transform: translate(70px, 500px);
+
+    #Loading-Info {
+      @include text-formatter(Space Mono, 20px, 500, 100%);
+    }
+
+    .lds-facebook {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    .lds-facebook div {
+      display: inline-block;
+      position: absolute;
+      left: 8px;
+      width: 16px;
+      background: #fff;
+      animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+    .lds-facebook div:nth-child(1) {
+      left: 8px;
+      animation-delay: -0.24s;
+    }
+    .lds-facebook div:nth-child(2) {
+      left: 32px;
+      animation-delay: -0.12s;
+    }
+    .lds-facebook div:nth-child(3) {
+      left: 56px;
+      animation-delay: 0;
+    }
+    @keyframes lds-facebook {
+      0% {
+        top: 8px;
+        height: 64px;
+      }
+      50%,
+      100% {
+        top: 24px;
+        height: 32px;
+      }
+    }
+  }
+}

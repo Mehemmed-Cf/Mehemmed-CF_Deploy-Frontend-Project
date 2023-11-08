@@ -2,6 +2,12 @@ const Rankings = document.querySelector("#Rankings");
 const ConnectAWallet = document.querySelector("#ConnectAWallet");
 const loaderElement = document.querySelector(".Loader");
 
+const ViewRankings_Btn = document.querySelector(".ViewRankings-Btn");
+
+ViewRankings_Btn.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Rankings/index.html");
+});
+
 getDataFromServer();
 
 function getDataFromServer() {

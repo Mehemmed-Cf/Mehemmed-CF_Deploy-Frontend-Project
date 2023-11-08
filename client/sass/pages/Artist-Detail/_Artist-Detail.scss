@@ -53,7 +53,6 @@
         width: 375px;
         justify-content: center;
         align-items: center;
-        margin-left: 100px;
       }
 
       .Avatar {
@@ -75,7 +74,7 @@
     }
 
     @include for-size(phone) {
-      padding: 30px 50px;
+      padding: 30px 20px;
     }
 
     .Artist-Info-Section {
@@ -98,14 +97,23 @@
         gap: 100px;
 
         @include for-size(tablet) {
+          width: 690px;
           gap: 50px;
           flex-direction: column;
+        }
+
+        @include for-size(phone) {
+          width: 315px;
         }
 
         .Artist-Info {
           @include Flex-ItemsAndPosition(flex, flex-start, column);
           width: 599px;
           gap: 30px;
+
+          @include for-size(phone) {
+            width: 315px;
+          }
 
           > h1 {
             width: 100%;
@@ -133,6 +141,10 @@
             h1 {
               width: 210px;
               @include text-formatter(Work Sans, 51px, 600, 110%);
+
+              @include for-size(phone) {
+                width: 100px;
+              }
             }
 
             .Volume {
@@ -255,6 +267,10 @@
             align-items: flex-start;
           }
 
+          @include for-size(phone) {
+            flex-direction: column;
+          }
+
           button {
             @include text-formatter(Work Sans, 16px, 600, 140%);
           }
@@ -273,11 +289,11 @@
       background-color: var(--BackGround-Secondary);
 
       @include for-size(tablet) {
-        width: 834px;
+        width: 690px;
       }
 
       @include for-size(phone) {
-        padding-left: 1000px;
+        padding-left: 800px;
         width: 375px;
       }
     }
@@ -298,14 +314,9 @@
 
       .Tabs {
         @include Flex-ItemsAndPosition(flex, flex-start, row);
-        padding-right: 100px;
 
-        @include for-size(tablet) {
-          padding-right: 0px;
-        }
-
-        @include for-size(tablet) {
-          padding-right: 350px;
+        @include for-size(phone) {
+          padding-right: 400px;
           gap: 40px;
         }
 
@@ -340,12 +351,12 @@
 
     @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);
-      padding: 80px 100px;
+      padding: 80px 20px;
     }
 
     @include for-size(phone) {
       grid-template-columns: repeat(1, 1fr);
-      padding: 80px 160px;
+      padding: 80px 30px;
     }
 
     > h1 {
