@@ -10,7 +10,6 @@ function getDataForCreators() {
   })
     .then((res) => res.json())
     .then((creator) => {
-      console.log(creator);
       fillItemRanking(creator);
     });
   showLoader(false);
@@ -95,7 +94,11 @@ function addCreatorItem(creator) {
 
   RankAndArtist.append(Ranking_Number, Artist_Card, Stats);
 
-  Ranking_Item.append(RankAndArtist);
+  const Delete_Btn = document.createElement("button");
+  Delete_Btn.className = "Delete-Btn";
+  Delete_Btn.textContent = "Delete Creator";
+
+  Ranking_Item.append(RankAndArtist, Delete_Btn);
 
   Ranking_Items.append(Ranking_Item);
 
@@ -109,6 +112,26 @@ function addCreatorItem(creator) {
       "_self"
     );
   });
+
+  Delete_Btn.addEventListener("click", () => {
+    deleteCreatorItem(creator, Ranking_Item);
+  });
+}
+
+function deleteCreatorItem(creator, Item) {
+  if (
+    confirm(
+      `Are you sure you want to delete the creator with the id ${creator.id}`
+    )
+  ) {
+    fetch(`http://localhost:3000/api/creators/${creator.id}`, {
+      method: "DELETE",
+    }).then((response) => {
+      if (response.status >= 200 && response.status < 300) {
+        Item.remove();
+      }
+    });
+  }
 }
 
 function showLoader(show) {

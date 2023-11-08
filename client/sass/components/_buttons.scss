@@ -244,3 +244,18 @@ button {
     width: 315px;
   }
 }
+
+.Delete-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 30px, 12px);
+  background-color: transparent;
+  color: var(--White);
+  border: 2px solid var(--CallToAction);
+  white-space: nowrap;
+  margin-left: 30px;
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
