@@ -255,6 +255,16 @@ button {
   margin-left: 30px;
   @include text-formatter(Work Sans, 16px, 600, 140%);
 
+  @include for-size(tablet) {
+    height: 40px;
+    width: 20px;
+    margin-left: 195px;
+  }
+
+  @include for-size(phone) {
+    margin-left: -10px;
+  }
+
   &:hover {
     transform: scale(0.95);
   }

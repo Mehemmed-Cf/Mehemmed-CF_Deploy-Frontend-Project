@@ -96,7 +96,7 @@ function addCreatorItem(creator) {
 
   const Delete_Btn = document.createElement("button");
   Delete_Btn.className = "Delete-Btn";
-  Delete_Btn.textContent = "Delete Creator";
+  Delete_Btn.textContent = "Delete";
 
   Ranking_Item.append(RankAndArtist, Delete_Btn);
 
@@ -129,6 +129,19 @@ function deleteCreatorItem(creator, Item) {
     }).then((response) => {
       if (response.status >= 200 && response.status < 300) {
         Item.remove();
+        Toastify({
+          text: "You Just threw a big pile of effort into the trash! ;)",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "green",
+          },
+        }).showToast();
       }
     });
   }

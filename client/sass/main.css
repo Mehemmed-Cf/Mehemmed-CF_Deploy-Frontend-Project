@@ -1351,6 +1351,18 @@ button {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  .Delete-Btn {
+    height: 40px;
+    width: 20px;
+    margin-left: 195px;
+  }
+}
+@media (max-width: 690px) {
+  .Delete-Btn {
+    margin-left: -10px;
+  }
+}
 .Delete-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -5345,6 +5357,18 @@ html {
     gap: 40px;
   }
 }
+#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Created {
+  color: white !important;
+}
+#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Created :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
 #Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Tab {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5361,6 +5385,8 @@ html {
           flex-direction: row;
   height: 60px;
   padding: 0px 30px;
+  position: relative;
+  color: var(--CaptionAndLabelText);
 }
 @media (max-width: 690px) {
   #Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Tab {
@@ -5702,6 +5728,19 @@ html {
   -webkit-transform: translateX(120px);
           transform: translateX(120px);
   width: 1280px;
+  position: relative;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    width: 834px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section {
+    width: 375px;
+  }
 }
 #Rankings_Section .HeadlineAndSubhead {
   display: -webkit-box;
@@ -5717,6 +5756,17 @@ html {
   padding: 40px 0px;
   gap: 40px;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .HeadlineAndSubhead {
+    margin-right: 100px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .HeadlineAndSubhead {
+    margin-right: 0px;
+    padding: 30px 0px;
+  }
+}
 #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5729,6 +5779,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 690px) {
+  #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead {
+    gap: 10px;
+  }
 }
 #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead .Headline {
   display: -webkit-box;
@@ -5747,6 +5802,28 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead .Headline h1 {
+    font-family: Work Sans;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead .Headline h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead .Subhead {
   display: -webkit-box;
@@ -5770,6 +5847,17 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .HeadlineAndSubhead .Headline_And_Subhead .Subhead p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #Rankings_Section .Rankings {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5784,6 +5872,16 @@ html {
   padding: 40px 0px;
   gap: 20px;
   height: 1350px;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings {
+    height: 746px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings {
+    height: 660px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header {
   display: -webkit-box;
@@ -5802,6 +5900,19 @@ html {
   border-radius: 20px;
   border: 1px solid var(--BackGround-Secondary);
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header {
+    margin-right: 100px;
+    width: 690px;
+    gap: 10px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header {
+    margin-right: 0px;
+    width: 315px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5818,6 +5929,17 @@ html {
           flex-direction: row;
   padding: 0px 20px;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
+    width: 690px !important;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
+    width: 315px !important;
+    padding: 0px 10px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5828,19 +5950,41 @@ html {
           align-items: center;
   gap: 20px;
 }
-#Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist > h1 {
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist {
+    width: 215px;
+    gap: 10px;
+  }
+}
+#Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist h1:nth-child(1) {
   width: 30px;
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist h1:nth-child(1) {
+    width: 24px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist h1 {
   text-align: center;
   color: var(--CaptionAndLabelText);
   font-family: Space Mono;
-  font-size: 16px400;
-  font-weight: 140%;
-  line-height: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist h1 {
+    font-family: Space Mono;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header {
   display: -webkit-box;
@@ -5880,6 +6024,16 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .Change-Header {
+    width: 100px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .Change-Header {
+    display: none;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .NFTs-Sold-Header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5901,6 +6055,11 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .NFTs-Sold-Header {
+    display: none;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .Volume-Header {
   display: -webkit-box;
@@ -5924,6 +6083,16 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .Volume-Header {
+    width: 100px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .Stats-Header .Volume-Header {
+    width: 70px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5940,10 +6109,19 @@ html {
           flex-direction: column;
   gap: 20px;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
+    height: 750px;
+    padding: 20px 0px 140px 0px;
+    gap: 10px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
+    height: 690px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item {
-  background-color: var(--BackGround-Secondary);
-  border-radius: 20px;
-  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5957,6 +6135,19 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-color: var(--BackGround-Secondary);
+  border-radius: 20px;
+  height: 80px;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item {
+    padding: 0px 10px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist {
   display: -webkit-box;
@@ -5970,6 +6161,17 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist {
+    width: 410px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist {
+    width: 300px;
+    gap: 10px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number {
   display: -webkit-box;
@@ -5990,6 +6192,25 @@ html {
   border-radius: 20px;
   background-color: var(--BackGround);
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: normal;
+            flex-direction: normal;
+    width: 24px !important;
+    height: 24px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number p {
   position: absolute;
   left: 10px;
@@ -6004,8 +6225,41 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number p {
+    top: 0;
+    left: -10px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number p {
+    top: 5px;
+    left: -12px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number p {
+    font-family: Space Mono;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number .position-left-change {
   left: 6px !important;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number .position-left-change {
+    left: -13px !important;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Ranking-Number .position-left-change {
+    left: -20px !important;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card {
   display: -webkit-box;
@@ -6025,6 +6279,17 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card {
+    width: 320px;
+    gap: 12px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card {
+    width: 150px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Avatar {
   display: -webkit-box;
@@ -6048,8 +6313,18 @@ html {
           align-items: flex-start;
   gap: 10px;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Avatar .Avatar {
+    width: 24px;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Avatar .Avatar img {
   height: 60px;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Avatar .Avatar img {
+    height: 24px;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Info {
   display: -webkit-box;
@@ -6076,6 +6351,18 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card .Artist-Info h1 {
+    width: 130px;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card:hover {
   -webkit-transform: scale(0.95);
@@ -6121,6 +6408,16 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .Change {
+    width: 100px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .Change {
+    display: none;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .NFTs-Sold {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6145,6 +6442,11 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .NFTs-Sold {
+    display: none;
+  }
+}
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .Volume {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6165,6 +6467,23 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .Volume {
+    width: 100px;
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Stats .Volume {
+    font-family: Space Mono;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    width: 80px;
+  }
 }
 #Rankings_Section .Loader {
   display: grid;
