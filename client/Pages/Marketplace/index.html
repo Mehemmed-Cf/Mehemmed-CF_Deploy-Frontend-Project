@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../sass/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script defer src="./index.js"></script>
+    <script defer src="../Common/functions/index.js"></script>
+  </head>
+  <body>
+    <nav class="Navigation">
+      <div class="Logo">
+        <img src="../assets/icons/MarketPlace-Logo.svg" />
+        <img id="MarketPlace-Name" src="../assets/icons/MarketPlace.svg" />
+      </div>
+      <div class="Navigation_Menu">
+        <div class="NavigationLinksAndButton">
+          <a id="MarketPlaceLink" href="#">Marketplace</a>
+          <a id="Rankings" href="#">Rankings</a>
+          <a id="ConnectAWallet" href="#">Connect a wallet</a>
+          <button class="SignUp-Btn">
+            <img src="../assets/icons/User.svg" />
+            <p>Sign Up</p>
+          </button>
+        </div>
+        <button class="Bars_Btn">
+          <img src="../assets/icons/Bars.svg" />
+        </button>
+      </div>
+    </nav>
+
+    <section id="MarketPlace_Section">
+      <div class="Headline-Subhead">
+        <div class="HeadlineAndSubhead Container">
+          <div class="Header-Frame Container">
+            <h1>Browse Marketplace</h1>
+            <p>Browse through more than 50k NFTs on the NFT Marketplace.</p>
+          </div>
+        </div>
+        <div class="Header Container">
+          <div class="Headers Container">
+            <div class="Search">
+              <input
+                class="Search-Input"
+                type="search"
+                placeholder="Search your favorite NFTs"
+              />
+              <img src="../assets/icons/SearchIcon.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="Footer">
+      <div class="Footer-Info Container">
+        <div class="NFT-Marketplace-Info">
+          <div class="Logo">
+            <img src="../assets/icons/MarketPlace-Logo.svg" />
+            <img id="MarketPlace-Name" src="../assets/icons/MarketPlace.svg" />
+          </div>
+          <div class="Additional-Info">
+            <p>NFT marketplace UI created with Anima for Figma.</p>
+            <div class="Community-Info">
+              <p>Join our community</p>
+              <img src="../assets/icons/Icons-SocialMedia.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="Explore">
+          <h1>Explore</h1>
+          <div class="Pages">
+            <a href="#">Marketplace</a>
+            <a href="#">Rankings</a>
+            <a href="#">Connect a wallet</a>
+          </div>
+        </div>
+        <div class="Subscribe">
+          <h1>Join our weekly digest</h1>
+          <div class="Subscribe-FormAndInfo">
+            <p>
+              Get exclusive promotions & updates <br />
+              straight to your inbox.
+            </p>
+            <form class="Subscribe-Form">
+              <input
+                class="Subscribe-Input"
+                type="email"
+                placeholder="Enter your email here"
+              />
+              <p class="Error-Message"></p>
+              <button type="button" class="Subscribe-Btn">
+                <img class="EmailIcon" src="../assets/icons/Email.svg" />
+                <p>Subscribe</p>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="Footer-Frame Container">
+        <div class="Divider Container"></div>
+        <p>
+          Ⓒ NFT Market. You cant freely use this template , I made it myself ,
+          if you want to use it then PAY!!!.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

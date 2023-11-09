@@ -294,6 +294,7 @@
               gap: 20px;
               border-radius: 20px;
               transition: 0.3s;
+              cursor: pointer;
 
               @include for-size(tablet) {
                 width: 320px;

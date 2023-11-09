@@ -458,6 +458,9 @@ Ranking {
     gap: 20px;
   }
 }
+.Footer .Footer-Info .NFT-Marketplace-Info .Logo {
+  cursor: pointer;
+}
 .Footer .Footer-Info .NFT-Marketplace-Info .Additional-Info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1489,6 +1492,38 @@ button {
   color: black;
 }
 
+.Search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 960px;
+  gap: 20px;
+  height: 60px;
+  border: 2px solid var(--BackGround-Secondary);
+  border-radius: 20px;
+}
+.Search input {
+  width: 960px;
+  height: 22px;
+  padding: 16px 20px 16px 40px;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--BackGround);
+  color: var(--CaptionAndLabelText);
+  border: none;
+}
+.Search img {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
 .True {
   color: green !important;
 }
@@ -2289,9 +2324,9 @@ html {
             flex-direction: column;
     height: 613px;
     gap: 40px;
-    width: 715px;
-    -webkit-transform: translate(-180px, 200px);
-            transform: translate(-180px, 200px);
+    width: 315px;
+    -webkit-transform: translate(-80px, 260px);
+            transform: translate(-80px, 260px);
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button {
@@ -2467,6 +2502,15 @@ html {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(3) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(4) {
+    display: none;
+  }
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(5) {
+    display: none;
+  }
   #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(6) {
     display: none;
   }
@@ -2529,6 +2573,7 @@ html {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 275px;
+    height: 60px;
     padding: 20px;
     gap: 20px;
   }
@@ -2581,21 +2626,12 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-#TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img:nth-child(1) {
-  display: initial;
-}
-@media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img:nth-child(1) {
-    display: none;
-  }
-}
-#TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img:nth-child(2) {
-  display: none;
-}
-@media (max-width: 690px) {
-  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img:nth-child(2) {
-    display: initial;
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img {
+    margin-left: 30px;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    width: 40px;
+    height: 40px;
   }
 }
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info {
@@ -2633,9 +2669,7 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2660,6 +2694,18 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info h1 {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    width: 100px;
+  }
+}
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2680,9 +2726,7 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2704,6 +2748,19 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
   font-family: Space Mono;
   font-size: 16px;
@@ -2712,6 +2769,19 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
+    -webkit-transform: translate(80px, -20px);
+            transform: translate(80px, -20px);
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
 }
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Ranking-Number {
   display: -webkit-box;
@@ -2737,6 +2807,12 @@ html {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Ranking-Number {
     left: 12px;
     top: 13px;
+  }
+}
+@media (max-width: 690px) {
+  #TopRatedArtists_Section .Artist-Cards .Artist-Card .Ranking-Number {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
 }
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Ranking-Number .position-left-change {
@@ -4119,6 +4195,12 @@ html {
           flex-direction: column;
   gap: 40px;
 }
+@media (max-width: 690px) {
+  #SubscribeWidget_Section .Widget-Frame {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
 #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4167,6 +4249,7 @@ html {
 }
 @media (max-width: 690px) {
   #SubscribeWidget_Section .Widget-Frame .HeadlineAndSubhead p {
+    width: 200px;
     font-family: work Sans;
     font-size: 16px;
     font-weight: 400;
@@ -6279,6 +6362,7 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item .RankAndArtist .Artist-Card {
@@ -6540,4 +6624,160 @@ html {
     top: 24px;
     height: 32px;
   }
+}
+
+#MarketPlace_Section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+}
+#MarketPlace_Section .Headline-Subhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 0px;
+  gap: 40px;
+  margin-left: 250px;
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame h1 {
+  font-family: Work Sans;
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame h1 {
+    font-family: Work Sans;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame h1 {
+    font-family: Work Sans;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame p {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame p {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60px;
+  padding: 12px 0px;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--BackGround-Secondary);
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0px 20px;
+}
+#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers .Search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 960px;
+  gap: 20px;
 }

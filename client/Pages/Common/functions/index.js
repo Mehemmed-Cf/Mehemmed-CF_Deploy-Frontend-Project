@@ -1,3 +1,14 @@
+const Marketplace_Link = document.querySelector("#MarketPlaceLink");
+const bars_Btn = document.querySelector(".Bars_Btn");
+const Navigation_Links_Button = document.querySelector(
+  ".NavigationLinksAndButton"
+);
+const SignUp_Btn = document.querySelector(".Bars_Btn");
+const SignUpBtn = document.querySelector(".SignUp-Btn");
+const Logo = document.querySelector(".Logo");
+const Rankings_Link = document.querySelector("#Rankings");
+
+
 EmailValidation();
 
 function EmailValidation() {
@@ -75,12 +86,6 @@ function EmailValidation() {
   });
 }
 
-const bars_Btn = document.querySelector(".Bars_Btn");
-const Navigation_Links_Button = document.querySelector(
-  ".NavigationLinksAndButton"
-);
-const SignUp_Btn = document.querySelector(".Bars_Btn");
-
 toggleNavbarAndRotateBtn();
 
 function toggleNavbarAndRotateBtn() {
@@ -116,20 +121,20 @@ function toggleNavbarAndRotateBtn() {
   });
 }
 
-const SignUpBtn = document.querySelector(".SignUp-Btn");
-
 SignUpBtn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/CreateAccount/index.html");
 });
-
-const Rankings_Link = document.querySelector("#Rankings");
 
 Rankings_Link.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/Rankings/index.html");
 });
 
-const Logo = document.querySelector(".Logo");
-
 Logo.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/Home/index.html#");
 });
+
+Marketplace_Link.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");
+});
+
+const 

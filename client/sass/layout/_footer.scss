@@ -38,6 +38,10 @@
         gap: 20px;
       }
 
+      .Logo {
+        cursor: pointer;
+      }
+
       .Additional-Info {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
         @include text-formatter(Work Sans, 16px, 400, 140%);

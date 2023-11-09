@@ -55,6 +55,27 @@
   }
 }
 
+.Search {
+  @include Flex-ItemsAndPosition(flex, center, row);
+  width: 960px;
+  gap: 20px;
+  height: 60px;
+  border: 2px solid var(--BackGround-Secondary);
+  border-radius: 20px;
+
+  input {
+    @include Input(960px, 22px, 16px 20px 16px 40px, 12px);
+    background-color: var(--BackGround);
+    color: var(--CaptionAndLabelText);
+    border: none;
+  }
+
+  img {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+}
+
 .True {
   color: green !important;
 }

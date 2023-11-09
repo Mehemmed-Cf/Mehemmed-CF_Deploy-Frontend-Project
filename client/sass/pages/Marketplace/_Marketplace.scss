@@ -1,0 +1,61 @@
+#MarketPlace_Section {
+  @include Flex-ItemsAndPosition(flex, flex-start, column);
+  width: 1280px;
+
+  .Headline-Subhead {
+    @include Flex-ItemsAndPosition(flex, center, column);
+    padding: 80px 0px;
+    gap: 40px;
+    margin-left: 250px;
+
+    .HeadlineAndSubhead {
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
+      gap: 30px;
+
+      .Header-Frame {
+        @include Flex-ItemsAndPosition(flex, flex-start, column);
+        gap: 10px;
+
+        h1 {
+          @include text-formatter(Work Sans, 51px, 600, 110%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 38px, 600, 120%);
+          }
+
+          @include for-size(phone) {
+            @include text-formatter(Work Sans, 28px, 600, 140%);
+          }
+        }
+
+        p {
+          @include text-formatter(Work Sans, 22px, 400, 140%);
+
+          @include for-size(tablet) {
+            @include text-formatter(Work Sans, 16px, 400, 140%);
+          }
+        }
+      }
+
+      .Header {
+        @include Flexed(flex, center, center, column);
+        height: 60px;
+        padding: 12px 0px;
+        gap: 10px;
+        border-radius: 20px;
+        border: 1px solid var(--BackGround-Secondary);
+
+        .Headers {
+          @include Flexed(flex, space-between, center, row);
+          padding: 0px 20px;
+
+          .Search {
+            @include Flex-ItemsAndPosition(flex, center, row);
+            width: 960px;
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}

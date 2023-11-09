@@ -414,8 +414,8 @@ html {
     flex-direction: column;
     height: 613px;
     gap: 40px;
-    width: 715px;
-    transform: translate(-180px, 200px);
+    width: 315px;
+    transform: translate(-80px, 260px);
   }
 
   .Section_Headline_And_Button {
@@ -519,6 +519,18 @@ html {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(1, 1fr);
 
+      .Artist-Card:nth-child(3) {
+        display: none;
+      }
+
+      .Artist-Card:nth-child(4) {
+        display: none;
+      }
+
+      .Artist-Card:nth-child(5) {
+        display: none;
+      }
+
       .Artist-Card:nth-child(6) {
         display: none;
       }
@@ -546,6 +558,7 @@ html {
       @include for-size(phone) {
         @include Flexed(flex, center, flex-start, row);
         width: 275px;
+        height: 60px;
         padding: 20px;
         gap: 20px;
       }
@@ -569,21 +582,12 @@ html {
 
         @include for-size(phone) {
           @include Flex-ItemsAndPosition(flex, flex-end, column);
-        }
 
-        img:nth-child(1) {
-          display: initial;
-
-          @include for-size(phone) {
-            display: none;
-          }
-        }
-
-        img:nth-child(2) {
-          display: none;
-
-          @include for-size(phone) {
-            display: initial;
+          img {
+            margin-left: 30px;
+            transform: translateY(-10px);
+            width: 40px;
+            height: 40px;
           }
         }
       }
@@ -597,7 +601,7 @@ html {
         }
 
         @include for-size(phone) {
-          @include Flexed(flex, center, flex-start, column);
+          @include Flexed(block, center, flex-start, column);
           width: 195px;
           height: 60px;
           gap: 5px;
@@ -605,6 +609,11 @@ html {
 
         h1 {
           @include text-formatter(Work Sans, 22px, 600, 140%);
+
+          @include for-size(phone) {
+            @include text-formatter(Work Sans, 16px, 600, 140%);
+            width: 100px;
+          }
         }
 
         .Sales-Info {
@@ -616,7 +625,7 @@ html {
           }
 
           @include for-size(phone) {
-            @include Flex-ItemsAndPosition(flex, center, column);
+            @include Flex-ItemsAndPosition(block, center, column);
             gap: 5px;
           }
 
@@ -624,10 +633,20 @@ html {
             color: var(--CaptionAndLabelText);
             text-align: right;
             @include text-formatter(Work Sans, 16px, 400, 140%);
+
+            @include for-size(phone) {
+              transform: translateY(-30px);
+              @include text-formatter(Work Sans, 12px, 400, 110%);
+            }
           }
 
           .Sales-Info_Value {
             @include text-formatter(Space Mono, 16px, 400, 140%);
+
+            @include for-size(phone) {
+              transform: translate(80px, -20px);
+              @include text-formatter(Work Sans, 12px, 400, 110%);
+            }
           }
         }
       }
@@ -646,6 +665,10 @@ html {
         @include for-size(tablet) {
           left: 12px;
           top: 13px;
+        }
+
+        @include for-size(phone) {
+          transform: scale(0.85);
         }
 
         .position-left-change {
@@ -1341,6 +1364,10 @@ html {
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     gap: 40px;
 
+    @include for-size(phone) {
+      transform: translateX(100px);
+    }
+
     .HeadlineAndSubhead {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
 
@@ -1360,6 +1387,7 @@ html {
         @include text-formatter(work Sans, 22px, 400, 160%);
 
         @include for-size(phone) {
+          width: 200px;
           @include text-formatter(work Sans, 16px, 400, 140%);
         }
       }
