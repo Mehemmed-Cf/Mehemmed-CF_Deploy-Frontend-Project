@@ -8,7 +8,6 @@ const SignUpBtn = document.querySelector(".SignUp-Btn");
 const Logo = document.querySelector(".Logo");
 const Rankings_Link = document.querySelector("#Rankings");
 
-
 EmailValidation();
 
 function EmailValidation() {
@@ -136,5 +135,3 @@ Logo.addEventListener("click", () => {
 Marketplace_Link.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");
 });
-
-const 

@@ -5442,15 +5442,7 @@ html {
 }
 #Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Created {
   color: white !important;
-}
-#Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Created :after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
+  border-bottom: 2px solid white;
 }
 #Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs .Tab {
   display: -webkit-box;
@@ -6630,6 +6622,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -6780,4 +6775,114 @@ html {
           flex-direction: row;
   width: 960px;
   gap: 20px;
+}
+#MarketPlace_Section .MarketPlace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame .Line {
+  width: 1520px;
+  height: 1px;
+  background-color: var(--BackGround-Secondary);
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .NFTs-Tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60px;
+  padding: 0px 30px;
+  gap: 16px;
+  text-align: center;
+  border-bottom: 1px solid;
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .Collections-Tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 60px;
+  padding: 0px 30px;
+  gap: 16px;
+  text-align: center;
+  color: var(--CaptionAndLabelText);
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
 }

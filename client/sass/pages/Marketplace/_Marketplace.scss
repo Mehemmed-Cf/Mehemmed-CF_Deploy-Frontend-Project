@@ -1,5 +1,5 @@
 #MarketPlace_Section {
-  @include Flex-ItemsAndPosition(flex, flex-start, column);
+  @include Flexed(flex, center, flex-start, column);
   width: 1280px;
 
   .Headline-Subhead {
@@ -53,6 +53,50 @@
             @include Flex-ItemsAndPosition(flex, center, row);
             width: 960px;
             gap: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .MarketPlace {
+    @include Flexed(flex, center, center, column);
+
+    .MarketPlace-Frame {
+      @include Flex-ItemsAndPosition(flex, center, column);
+      gap: 10px;
+
+      .Line {
+        width: 1520px;
+        height: 1px;
+        background-color: var(--BackGround-Secondary);
+      }
+
+      .Frame {
+        @include Flexed(flex, center, flex-start);
+
+        .Tabs {
+          display: flex;
+          align-items: flex-start;
+
+          .NFTs-Tab {
+            @include Flexed(flex, center, center, row);
+            height: 60px;
+            padding: 0px 30px;
+            gap: 16px;
+            text-align: center;
+            border-bottom: 1px solid;
+            @include text-formatter(Work Sans, 22px, 600, 140%);
+          }
+
+          .Collections-Tab {
+            @include Flexed(flex, center, center, row);
+            height: 60px;
+            padding: 0px 30px;
+            gap: 16px;
+            text-align: center;
+            color: var(--CaptionAndLabelText);
+            @include text-formatter(Work Sans, 22px, 600, 140%);
           }
         }
       }
