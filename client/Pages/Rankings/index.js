@@ -5,14 +5,14 @@ getDataForCreators();
 
 function getDataForCreators() {
   showLoader(true);
-  // fetch(`http://localhost:3000/api/creators`, {
-  //   method: "GET",
-  // })
-  //   .then((res) => res.json())
-  //   .then((creator) => {
-  //     fillItemRanking(creator);
-  //   });
-  // showLoader(false);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      fillItemRanking(creator);
+    });
+  showLoader(false);
 }
 
 function fillItemRanking(data) {

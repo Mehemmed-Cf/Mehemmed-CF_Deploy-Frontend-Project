@@ -1,24 +1,57 @@
 let searchParams = new URLSearchParams(window.location.search);
 let paramsCreatorId = searchParams.get("id");
+let count = JSON.parse(localStorage.getItem("count")) ?? [];
 const loaderElement = document.querySelector(".Loader");
 
 const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
+
 const Follow_Btn = document.querySelector(".Follow-Btn");
+const PlusIcon = document.querySelector(".Plus");
+const FollowIcon = document.querySelector(".Follow");
+
+if (count > 0) {
+  PlusIcon.style.display = "none";
+  FollowIcon.style.display = "initial";
+} else if (count == 0) {
+  PlusIcon.style.display = "initial";
+  FollowIcon.style.display = "none";
+}
 
 Follow_Btn.addEventListener("click", () => {
-  Toastify({
-    text: "Follow That Fella! ;)",
-    duration: 3000,
-    destination: "https://github.com/apvarun/toastify-js",
-    newWindow: true,
-    close: true,
-    gravity: "top",
-    position: "right",
-    stopOnFocus: true,
-    style: {
-      background: "green",
-    },
-  }).showToast();
+  if (count == 0) {
+    PlusIcon.style.display = "none";
+    FollowIcon.style.display = "initial";
+    Toastify({
+      text: "Follow That Fella! ;)",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "green",
+      },
+    }).showToast();
+  } else {
+    Toastify({
+      text: "I understand that you love this guy too much but you can only follow once",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "grey",
+      },
+    }).showToast();
+  }
+
+  count = 1;
+  localStorage.setItem("count", JSON.stringify(count));
 });
 
 getDataForCreators();
@@ -227,7 +260,7 @@ function fillArtistLinks() {
   Icons.className = "Icons";
 
   const IconElements = document.createElement("img");
-  IconElements.src = "../assets/icons/Icons-SocialMedia.svg";
+  IconElements.src = "../../assets/icons/Icons-SocialMedia.svg";
   Icons.append(IconElements);
 
   Web_Links.append(Links_Key, Icons);

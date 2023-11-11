@@ -308,7 +308,33 @@ button {
   color: var(--White);
   border: 2px solid var(--CallToAction);
   white-space: nowrap;
+  position: relative;
   @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  .Plus {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 20px;
+  }
+
+  .Close {
+    display: none;
+  }
+
+  .Open {
+    display: initial;
+  }
+
+  .Follow {
+    display: none;
+    margin-right: 10px;
+    margin-top: 5px;
+    bottom: 20px;
+
+    img {
+      width: 20px;
+    }
+  }
 
   &:hover {
     transform: scale(0.95);
