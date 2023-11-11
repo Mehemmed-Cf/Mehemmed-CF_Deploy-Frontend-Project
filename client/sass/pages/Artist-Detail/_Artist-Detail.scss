@@ -314,6 +314,7 @@
 
       .Tabs {
         @include Flex-ItemsAndPosition(flex, flex-start, row);
+        padding-right: 150px;
 
         @include for-size(phone) {
           padding-right: 400px;

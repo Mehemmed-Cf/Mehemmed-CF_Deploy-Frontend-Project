@@ -5563,6 +5563,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-right: 150px;
 }
 @media (max-width: 690px) {
   #Artist-Detail_Section .Artist-Frame .Tab-Frame .Tabs {
@@ -5941,6 +5942,8 @@ html {
 }
 @media (max-width: 690px) {
   #Rankings_Section {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     width: 375px;
   }
 }
@@ -6686,8 +6689,20 @@ html {
   display: grid;
   place-items: center;
   position: absolute;
-  -webkit-transform: translate(70px, 500px);
-          transform: translate(70px, 500px);
+  -webkit-transform: translate(0px, 300px);
+          transform: translate(0px, 300px);
+}
+@media (max-width: 1050px) {
+  #Rankings_Section .Loader {
+    -webkit-transform: translate(-50px, 270px);
+            transform: translate(-50px, 270px);
+  }
+}
+@media (max-width: 690px) {
+  #Rankings_Section .Loader {
+    -webkit-transform: translate(0px, 170px);
+            transform: translate(0px, 170px);
+  }
 }
 #Rankings_Section .Loader #Loading-Info {
   font-family: Space Mono;

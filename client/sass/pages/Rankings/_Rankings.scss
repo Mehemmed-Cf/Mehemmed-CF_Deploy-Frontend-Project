@@ -9,6 +9,7 @@
   }
 
   @include for-size(phone) {
+    transform: translateX(-100px);
     width: 375px;
   }
 
@@ -348,10 +349,6 @@
               text-align: center;
               margin-left: 40px;
 
-              @include for-size(tablet) {
-                // margin-left: 130px;
-              }
-
               .Change {
                 @include Flex-ItemsAndPosition(flex, flex-start, column);
                 width: 160px;
@@ -407,7 +404,15 @@
     display: grid;
     place-items: center;
     position: absolute;
-    transform: translate(70px, 500px);
+    transform: translate(0px, 300px);
+
+    @include for-size(tablet) {
+      transform: translate(-50px, 270px);
+    }
+
+    @include for-size(phone) {
+      transform: translate(0px, 170px);
+    }
 
     #Loading-Info {
       @include text-formatter(Space Mono, 20px, 500, 100%);

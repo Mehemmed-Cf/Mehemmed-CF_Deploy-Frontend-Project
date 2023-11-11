@@ -5,14 +5,14 @@ getDataForCreators();
 
 function getDataForCreators() {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      fillItemRanking(creator);
-    });
-  showLoader(false);
+  // fetch(`http://localhost:3000/api/creators`, {
+  //   method: "GET",
+  // })
+  //   .then((res) => res.json())
+  //   .then((creator) => {
+  //     fillItemRanking(creator);
+  //   });
+  // showLoader(false);
 }
 
 function fillItemRanking(data) {
@@ -95,7 +95,7 @@ function addCreatorItem(creator) {
   RankAndArtist.append(Ranking_Number, Artist_Card, Stats);
 
   const Delete_Btn = document.createElement("img");
-  Delete_Btn.src = "../assets/icons/TrashIcon.svg";
+  Delete_Btn.src = "../../assets/icons/TrashIcon.svg";
   Delete_Btn.className = "Delete-Btn";
 
   Ranking_Item.append(RankAndArtist, Delete_Btn);
