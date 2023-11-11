@@ -1,11 +1,10 @@
 #Rankings_Section {
   @include Flex-ItemsAndPosition(flex, center, column);
-  transform: translateX(120px);
+  margin-left: 120px;
   width: 1280px;
   position: relative;
 
   @include for-size(tablet) {
-    transform: translateX(0px);
     width: 834px;
   }
 
@@ -74,38 +73,33 @@
     @include Flex-ItemsAndPosition(flex, center, column);
     padding: 40px 0px;
     gap: 20px;
-    height: 1350px;
-
-    @include for-size(tablet) {
-      height: 746px;
-    }
+    height: 100%;
 
     @include for-size(phone) {
-      height: 660px;
+      padding: 0px 0px;
     }
 
     .Rankings-Header {
       @include Flex-ItemsAndPosition(flex, center, column);
-      height: 46px;
+      height: 100%;
       padding: 12px 0px;
       gap: 30px;
-      border-radius: 20px;
-      border: 1px solid var(--BackGround-Secondary);
 
       @include for-size(tablet) {
         margin-right: 100px;
-        width: 690px;
         gap: 10px;
       }
 
       @include for-size(phone) {
         margin-right: 0px;
-        width: 315px;
       }
 
       .Rankings-Headers {
         @include Flexed(flex, space-between, center, row);
         padding: 0px 20px;
+        border-radius: 20px;
+        height: 60px;
+        border: 1px solid var(--BackGround-Secondary);
 
         @include for-size(tablet) {
           width: 690px !important;
@@ -200,14 +194,12 @@
         gap: 20px;
 
         @include for-size(tablet) {
-          height: 750px;
-          margin: auto;
-          padding: 120px 0px 240px 0px;
+          padding: 20px 0px 140px 0px;
           gap: 10px;
         }
 
         @include for-size(phone) {
-          height: 690px;
+          padding: 10px 10px;
         }
 
         .Ranking-Item {
@@ -215,6 +207,7 @@
           background-color: var(--BackGround-Secondary);
           border-radius: 20px;
           height: 80px;
+          position: relative;
 
           @include for-size(tablet) {
             padding: 0px 20px;

@@ -320,9 +320,20 @@ button {
 
 .Delete-Btn {
   @include Flexed(flex, center, center);
-  margin-left: -50px;
-  width: 80px;
+  width: 90px;
   transition: 0.3s;
+  position: absolute;
+  right: -10px;
+
+  @include for-size(tablet) {
+    right: -5px;
+    width: 60px;
+  }
+
+  @include for-size(phone) {
+    width: 50px;
+    right: -12px;
+  }
 
   &:hover {
     transform: scale(0.95);

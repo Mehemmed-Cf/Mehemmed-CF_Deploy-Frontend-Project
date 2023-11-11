@@ -1414,10 +1414,23 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: normal;
           flex-direction: normal;
-  margin-left: -50px;
-  width: 80px;
+  width: 90px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  position: absolute;
+  right: -10px;
+}
+@media (max-width: 1050px) {
+  .Delete-Btn {
+    right: -5px;
+    width: 60px;
+  }
+}
+@media (max-width: 690px) {
+  .Delete-Btn {
+    width: 50px;
+    right: -12px;
+  }
 }
 .Delete-Btn:hover {
   -webkit-transform: scale(0.95);
@@ -5901,15 +5914,12 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translateX(120px);
-          transform: translateX(120px);
+  margin-left: 120px;
   width: 1280px;
   position: relative;
 }
 @media (max-width: 1050px) {
   #Rankings_Section {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
     width: 834px;
   }
 }
@@ -6047,16 +6057,11 @@ html {
           flex-direction: column;
   padding: 40px 0px;
   gap: 20px;
-  height: 1350px;
-}
-@media (max-width: 1050px) {
-  #Rankings_Section .Rankings {
-    height: 746px;
-  }
+  height: 100%;
 }
 @media (max-width: 690px) {
   #Rankings_Section .Rankings {
-    height: 660px;
+    padding: 0px 0px;
   }
 }
 #Rankings_Section .Rankings .Rankings-Header {
@@ -6070,23 +6075,19 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 46px;
+  height: 100%;
   padding: 12px 0px;
   gap: 30px;
-  border-radius: 20px;
-  border: 1px solid var(--BackGround-Secondary);
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header {
     margin-right: 100px;
-    width: 690px;
     gap: 10px;
   }
 }
 @media (max-width: 690px) {
   #Rankings_Section .Rankings .Rankings-Header {
     margin-right: 0px;
-    width: 315px;
   }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
@@ -6104,6 +6105,9 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0px 20px;
+  border-radius: 20px;
+  height: 60px;
+  border: 1px solid var(--BackGround-Secondary);
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
@@ -6287,15 +6291,13 @@ html {
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
-    height: 750px;
-    margin: auto;
-    padding: 120px 0px 240px 0px;
+    padding: 20px 0px 140px 0px;
     gap: 10px;
   }
 }
 @media (max-width: 690px) {
   #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
-    height: 690px;
+    padding: 10px 10px;
   }
 }
 #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item {
@@ -6315,6 +6317,7 @@ html {
   background-color: var(--BackGround-Secondary);
   border-radius: 20px;
   height: 80px;
+  position: relative;
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header .Ranking-Items .Ranking-Item {
