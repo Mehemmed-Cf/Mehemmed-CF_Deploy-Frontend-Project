@@ -2391,8 +2391,9 @@ html {
     height: 613px;
     gap: 40px;
     width: 315px;
-    -webkit-transform: translate(-80px, 260px);
-            transform: translate(-80px, 260px);
+    height: 100%;
+    -webkit-transform: translate(-80px, 200px);
+            transform: translate(-80px, 200px);
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button {
@@ -2533,8 +2534,8 @@ html {
 #TopRatedArtists_Section .Artist-Cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 30px;
+  height: 100% !important;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section .Artist-Cards {
@@ -2565,8 +2566,8 @@ html {
   #TopRatedArtists_Section .Artist-Cards {
     width: 315px;
     height: 110px;
+    gap: 0px;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
   }
   #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(3) {
     display: none;
@@ -2691,11 +2692,11 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Avatar img {
     margin-left: 30px;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
     width: 40px;
     height: 40px;
   }
@@ -2749,6 +2750,8 @@ html {
     width: 195px;
     height: 60px;
     gap: 5px;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 }
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info h1 {
@@ -2769,7 +2772,11 @@ html {
     font-style: normal;
     letter-spacing: normal;
     text-transform: capitalize;
-    width: 100px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
 }
 #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info {
@@ -2816,8 +2823,6 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Key {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
     font-family: Work Sans;
     font-size: 12px;
     font-weight: 400;
@@ -2838,8 +2843,8 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
-    -webkit-transform: translate(80px, -20px);
-            transform: translate(80px, -20px);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
     font-family: Work Sans;
     font-size: 12px;
     font-weight: 400;
@@ -3618,7 +3623,7 @@ html {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-image: url("../../../../client/Pages/assets/images/NFT-BigHighlight.png");
+  background-image: url("../../../assets/images/NFT-BigHighlight.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
