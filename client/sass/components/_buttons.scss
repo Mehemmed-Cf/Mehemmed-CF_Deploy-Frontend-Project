@@ -165,8 +165,9 @@ button {
   }
 
   @include for-size(phone) {
-    @include Button(46px, 0px 50px, 12px);
+    @include Button(47px, 0px 50px, 12px);
     width: 315px;
+    height: 47px !important;
     bottom: -80px;
     right: 200px;
   }

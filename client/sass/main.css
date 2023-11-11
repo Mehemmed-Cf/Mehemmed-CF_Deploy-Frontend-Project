@@ -1125,7 +1125,7 @@ button {
 }
 @media (max-width: 690px) {
   .Subscribe-Btn {
-    height: 46px;
+    height: 47px;
     padding: 0px 50px;
     background-color: 12px;
     gap: normal;
@@ -1134,6 +1134,7 @@ button {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     width: 315px;
+    height: 47px !important;
     bottom: -80px;
     right: 200px;
   }
