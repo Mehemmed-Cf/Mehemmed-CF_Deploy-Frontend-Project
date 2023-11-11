@@ -1135,7 +1135,7 @@ button {
     transition: 0.3s;
     width: 315px;
     height: 47px !important;
-    bottom: -80px;
+    bottom: -50px;
     right: 200px;
   }
 }
@@ -1460,7 +1460,6 @@ button {
   letter-spacing: normal;
   text-transform: capitalize;
   margin-top: 10px;
-  height: 20px;
   width: 430px;
 }
 @media (max-width: 690px) {
@@ -4659,6 +4658,7 @@ html {
 }
 @media (max-width: 690px) {
   #Login_Section {
+    padding: 20px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4703,6 +4703,7 @@ html {
           flex-direction: column;
   padding: 100px 0px;
   gap: 40px;
+  margin: auto;
 }
 @media (max-width: 1050px) {
   #Login_Section .Login-Form {
@@ -4738,6 +4739,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 690px) {
+  #Login_Section .Login-Form .HeadlineAndSubhead {
+    width: 315px;
+  }
 }
 #Login_Section .Login-Form .HeadlineAndSubhead .Headline {
   display: -webkit-box;
@@ -4824,7 +4830,6 @@ html {
 }
 @media (max-width: 1050px) {
   #Login_Section .Login-Form .Form {
-    width: 325px;
     margin-left: 40px;
   }
 }
@@ -4840,7 +4845,6 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 325px;
   }
 }
 #Login_Section .Login-Form .Form .Typeforms {
@@ -4861,6 +4865,12 @@ html {
   #Login_Section .Login-Form .Form .Typeforms {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
+  }
+}
+@media (max-width: 690px) {
+  #Login_Section .Login-Form .Form .Typeforms {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 #Login_Section .Login-Form .Form .Typeforms p {

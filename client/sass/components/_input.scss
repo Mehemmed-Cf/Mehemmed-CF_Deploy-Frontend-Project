@@ -5,7 +5,7 @@
   > p {
     @include text-formatter(Work Sans, 16px, 400, 140%);
     margin-top: 10px;
-    height: 20px;
+    // height: 20px;
     width: 430px;
 
     @include for-size(phone) {

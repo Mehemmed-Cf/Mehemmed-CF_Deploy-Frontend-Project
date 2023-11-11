@@ -68,6 +68,12 @@ function EmailValidation() {
         }).showToast();
       }
     });
+
+    document.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      errorMessage.textContent = "";
+    });
   });
 }
 
@@ -125,5 +131,8 @@ Logo.addEventListener("click", () => {
 });
 
 Marketplace_Link.addEventListener("click", () => {
-  window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
+    "_self"
+  );
 });

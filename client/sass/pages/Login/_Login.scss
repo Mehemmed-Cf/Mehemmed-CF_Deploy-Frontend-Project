@@ -8,6 +8,7 @@
   }
 
   @include for-size(phone) {
+    padding: 20px 0px;
     @include Flexed(flex, center, center, column);
   }
 
@@ -30,6 +31,7 @@
     @include Flex-ItemsAndPosition(flex, flex-start, column);
     padding: 100px 0px;
     gap: 40px;
+    margin: auto;
 
     @include for-size(tablet) {
       padding: 80px 0px;
@@ -45,6 +47,10 @@
     .HeadlineAndSubhead {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       gap: 20px;
+
+      @include for-size(phone) {
+        width: 315px;
+      }
 
       .Headline {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -82,13 +88,11 @@
       gap: 30px;
 
       @include for-size(tablet) {
-        width: 325px;
         margin-left: 40px;
       }
 
       @include for-size(phone) {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
-        width: 325px;
       }
 
       .Typeforms {
@@ -98,6 +102,10 @@
 
         @include for-size(tablet) {
           transform: translateX(-50px);
+        }
+
+        @include for-size(phone) {
+          transform: translateX(0px);
         }
 
         p {
