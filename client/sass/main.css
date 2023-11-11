@@ -1180,6 +1180,7 @@ button {
   color: var(--White);
   white-space: nowrap;
   margin-right: 70px;
+  position: relative;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 600;
@@ -1191,6 +1192,50 @@ button {
 .CreateAccount-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+.CreateAccount-Btn .Button-Loader {
+  display: none;
+  place-items: center;
+  position: absolute;
+  bottom: 15px;
+  right: 35px;
+}
+.CreateAccount-Btn .Button-Loader .lds-dual-ring {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.CreateAccount-Btn .Button-Loader .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .Login-Btn {
@@ -1218,6 +1263,7 @@ button {
   background-color: var(--CallToAction);
   color: var(--White);
   white-space: nowrap;
+  position: relative;
   font-family: Work Sans;
   font-size: 16px;
   font-weight: 600;
@@ -1229,6 +1275,40 @@ button {
 .Login-Btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+.Login-Btn .Button-Loader {
+  display: none;
+  place-items: center;
+  position: absolute;
+  bottom: 15px;
+  right: 35px;
+}
+.Login-Btn .Button-Loader .lds-dual-ring {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.Login-Btn .Button-Loader .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .Chain-Id-Btn {
@@ -4577,6 +4657,7 @@ html {
       -ms-flex-direction: initial;
           flex-direction: initial;
   gap: 60px;
+  position: relative;
 }
 @media (max-width: 1050px) {
   #Login_Section {
@@ -4803,6 +4884,55 @@ html {
   height: 40px;
   margin-left: 30px;
   width: 430px;
+}
+#Login_Section .Login-Form .Form .SendToCreateAccount {
+  display: grid;
+  place-items: center;
+  padding: 30px 0px;
+}
+#Login_Section .Login-Form .Form .SendToCreateAccount p {
+  font-family: Work Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#Login_Section .Login-Form .Form .SendToCreateAccount a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  height: 46px;
+  color: var(--CallToAction);
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 20px;
+  gap: 12px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#Login_Section .Login-Form .Form .SendToCreateAccount a:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 #Artist-Detail_Section {
@@ -6885,4 +7015,250 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 60px 0px 80px 0px;
+  gap: 30px;
+  background-color: var(--BackGround-Secondary);
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 469px;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .Image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  border-radius: 20px 20px 0px 0px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px 25px 30px;
+  gap: 25px;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--BackGround-Secondary);
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info > h1 {
+  font-family: Work Sans;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName .Avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName .Avatar img {
+  width: 24px;
+  height: 24px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Artist-Info .Artist-AvatarAndName h1 {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 50px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 0px;
+  gap: 8px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Price h1 {
+  color: var(--CaptionAndLabelText);
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Price p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid h1 {
+  color: var(--CaptionAndLabelText);
+  font-family: Space Mono;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card .NFT-Info .Additional-Info .Highest-Bid p {
+  font-family: Space Mono;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .Loader {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  -webkit-transform: translate(70px, 500px);
+          transform: translate(70px, 500px);
+}
+#MarketPlace_Section .MarketPlace .Loader #Loading-Info {
+  font-family: Space Mono;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .Loader .lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+#MarketPlace_Section .MarketPlace .Loader .lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+#MarketPlace_Section .MarketPlace .Loader .lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+#MarketPlace_Section .MarketPlace .Loader .lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+#MarketPlace_Section .MarketPlace .Loader .lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 }

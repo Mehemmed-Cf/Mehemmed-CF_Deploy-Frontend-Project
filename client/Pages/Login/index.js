@@ -6,7 +6,10 @@ const passwordInput = document.querySelector(".Password-Input");
 const userErrorMessage = document.querySelector(".User-Error-Message");
 const passwordErrorMessage = document.querySelector(".Password-Error-Message");
 
+const buttonLoader = document.querySelector(".Button-Loader");
+
 async function LoginUser(username, password) {
+  showButtonLoader(true);
   const response = await fetch("http://localhost:3000/api/login", {
     method: "POST",
     headers: {
@@ -32,6 +35,7 @@ async function LoginUser(username, password) {
         background: "green",
       },
     }).showToast();
+    showButtonLoader(false);
   } else {
     Toastify({
       text: " We are sorry , We could not log you in :(",
@@ -46,6 +50,7 @@ async function LoginUser(username, password) {
         background: "red",
       },
     }).showToast();
+    showButtonLoader(false);
   }
 }
 
@@ -58,4 +63,8 @@ function LoginValidation() {
 
     LoginUser(username, password);
   });
+}
+
+function showButtonLoader(show) {
+  buttonLoader.style.display = show ? "grid" : "none";
 }

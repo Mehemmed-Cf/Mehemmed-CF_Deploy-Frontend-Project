@@ -101,5 +101,155 @@
         }
       }
     }
+
+    .NFT-Cards_Section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 60px 0px 80px 0px;
+      gap: 30px;
+      background-color: var(--BackGround-Secondary);
+
+      .NFT-Card {
+        @include Flex-ItemsAndPosition(flex, center, column);
+        height: 469px;
+        border-radius: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+
+        .Image {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          gap: 10px;
+          border-radius: 20px 20px 0px 0px;
+        }
+
+        .NFT-Info {
+          @include Flex-ItemsAndPosition(flex, flex-start, column);
+          padding: 20px 30px 25px 30px;
+          gap: 25px;
+          width: 100%;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          background-color: var(--BackGround-Secondary);
+
+          .Artist-Info {
+            @include Flex-ItemsAndPosition(flex, flex-start, column);
+            gap: 5px;
+
+            > h1 {
+              @include text-formatter(Work Sans, 22px, 600, 140%);
+            }
+
+            .Artist-AvatarAndName {
+              display: flex;
+              align-items: flex-start;
+              gap: 12px;
+
+              .Avatar {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+
+                img {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+
+              h1 {
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+            }
+          }
+
+          .Additional-Info {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+
+            .Price {
+              @include Flex-ItemsAndPosition(flex, flex-start, column);
+              padding-right: 0px;
+              gap: 8px;
+
+              h1 {
+                color: var(--CaptionAndLabelText);
+                @include text-formatter(Space Mono, 12px, 400, 110%);
+              }
+
+              p {
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+            }
+
+            .Highest-Bid {
+              @include Flexed(flex, center, flex-end, column);
+              gap: 8px;
+
+              h1 {
+                color: var(--CaptionAndLabelText);
+                @include text-formatter(Space Mono, 12px, 400, 110%);
+              }
+
+              p {
+                @include text-formatter(Space Mono, 16px, 400, 140%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .Loader {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      transform: translate(70px, 500px);
+
+      #Loading-Info {
+        @include text-formatter(Space Mono, 20px, 500, 100%);
+      }
+
+      .lds-facebook {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 16px;
+        background: #fff;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      }
+      .lds-facebook div:nth-child(1) {
+        left: 8px;
+        animation-delay: -0.24s;
+      }
+      .lds-facebook div:nth-child(2) {
+        left: 32px;
+        animation-delay: -0.12s;
+      }
+      .lds-facebook div:nth-child(3) {
+        left: 56px;
+        animation-delay: 0;
+      }
+      @keyframes lds-facebook {
+        0% {
+          top: 8px;
+          height: 64px;
+        }
+        50%,
+        100% {
+          top: 24px;
+          height: 32px;
+        }
+      }
+    }
   }
 }

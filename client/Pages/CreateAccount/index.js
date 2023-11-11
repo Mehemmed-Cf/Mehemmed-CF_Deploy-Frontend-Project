@@ -20,6 +20,8 @@ const confirmPasswordErrorMessage = document.querySelector(
   ".ConfirmPassword-Error-Message"
 );
 
+const buttonLoader = document.querySelector(".Button-Loader");
+
 function UserNameValidation() {
   userNameInput.addEventListener("keyup", () => {
     setTimeout(() => {
@@ -191,6 +193,7 @@ function CheckAndSendToastForEmptyInputs() {
 }
 
 async function RegisterUser(username, email, password) {
+  showButtonLoader(true);
   const response = await fetch("http://localhost:3000/api/register", {
     method: "POST",
     headers: {
@@ -217,6 +220,7 @@ async function RegisterUser(username, email, password) {
         background: "green",
       },
     }).showToast();
+    showButtonLoader(false);
   } else {
     Toastify({
       text: "It seems like you have a problem with your registration please check Again ;(",
@@ -231,8 +235,11 @@ async function RegisterUser(username, email, password) {
         background: "red",
       },
     }).showToast();
+    showButtonLoader(false);
   }
 }
+
+AccountValidation();
 
 function AccountValidation() {
   ValidateInputs();
@@ -269,4 +276,6 @@ function AccountValidation() {
   });
 }
 
-AccountValidation();
+function showButtonLoader(show) {
+  buttonLoader.style.display = show ? "grid" : "none";
+}

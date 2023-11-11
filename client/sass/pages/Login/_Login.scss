@@ -1,6 +1,7 @@
 #Login_Section {
   @include Flex-ItemsAndPosition(flex, center);
   gap: 60px;
+  position: relative;
 
   @include for-size(tablet) {
     gap: 40px;
@@ -107,6 +108,33 @@
           height: 40px;
           margin-left: 30px;
           width: 430px;
+        }
+      }
+
+      .SendToCreateAccount {
+        display: grid;
+        place-items: center;
+        padding: 30px 0px;
+
+        p {
+          @include text-formatter(Work Sans, 20px, 600, 140%);
+        }
+
+        a {
+          @include Flexed(flex, center, center);
+          @include text-formatter(Work Sans, 16px, 600, 140%);
+          height: 46px;
+          color: var(--CallToAction);
+          text-align: center;
+          text-decoration: none;
+          padding: 0px 20px;
+          gap: 12px;
+          border-radius: 20px;
+          transition: 0.3s;
+
+          &:hover {
+            transform: scale(0.95);
+          }
         }
       }
     }
