@@ -94,9 +94,9 @@ function addCreatorItem(creator) {
 
   RankAndArtist.append(Ranking_Number, Artist_Card, Stats);
 
-  const Delete_Btn = document.createElement("button");
+  const Delete_Btn = document.createElement("img");
+  Delete_Btn.src = "../assets/icons/TrashIcon.svg";
   Delete_Btn.className = "Delete-Btn";
-  Delete_Btn.textContent = "Delete";
 
   Ranking_Item.append(RankAndArtist, Delete_Btn);
 

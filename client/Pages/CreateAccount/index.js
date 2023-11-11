@@ -205,25 +205,14 @@ async function RegisterUser(username, email, password) {
       password: password,
     }),
   });
+  const data = await response.json();
 
   if (response.status >= 200 && response.status <= 300) {
-    Toastify({
-      text: "Congratulations , Your Are Ready to see some Really good NFT's!!! ;)",
-      duration: 3000,
-      destination: "https://github.com/apvarun/toastify-js",
-      newWindow: true,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "green",
-      },
-    }).showToast();
+    window.open("http://127.0.0.1:5500/client/Pages/Home/index.html", "_self");
     showButtonLoader(false);
   } else {
     Toastify({
-      text: "It seems like you have a problem with your registration please check Again ;(",
+      text: data.error,
       duration: 3000,
       destination: "https://github.com/apvarun/toastify-js",
       newWindow: true,

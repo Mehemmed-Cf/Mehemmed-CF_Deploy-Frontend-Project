@@ -201,7 +201,8 @@
 
         @include for-size(tablet) {
           height: 750px;
-          padding: 20px 0px 140px 0px;
+          margin: auto;
+          padding: 120px 0px 240px 0px;
           gap: 10px;
         }
 

@@ -1102,6 +1102,7 @@ button {
   border: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  height: 61px !important;
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
@@ -1413,38 +1414,10 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: normal;
           flex-direction: normal;
-  height: 60px;
-  padding: 0px 30px;
-  background-color: 12px;
-  gap: normal;
-  border-radius: 20px;
-  border: none;
+  margin-left: -50px;
+  width: 80px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: transparent;
-  color: var(--White);
-  border: 2px solid var(--CallToAction);
-  white-space: nowrap;
-  margin-left: 30px;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 140%;
-  font-style: normal;
-  letter-spacing: normal;
-  text-transform: capitalize;
-}
-@media (max-width: 1050px) {
-  .Delete-Btn {
-    height: 40px;
-    width: 20px;
-    margin-left: 195px;
-  }
-}
-@media (max-width: 690px) {
-  .Delete-Btn {
-    margin-left: -10px;
-  }
 }
 .Delete-Btn:hover {
   -webkit-transform: scale(0.95);
@@ -4553,7 +4526,7 @@ html {
 @media (max-width: 1050px) {
   #CreateAccount_Section .CreateAccount-Form .Form {
     width: 325px;
-    margin-left: 40px;
+    margin-left: 60px;
   }
 }
 @media (max-width: 690px) {
@@ -4569,6 +4542,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 325px;
+    margin-left: 0;
   }
 }
 #CreateAccount_Section .CreateAccount-Form .Form .Typeforms {
@@ -4582,7 +4556,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 #CreateAccount_Section .CreateAccount-Form .Form .Typeforms p {
   font-family: Work Sans;
@@ -4592,7 +4566,7 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
-  height: 50px;
+  height: 20px;
   margin-left: 30px;
   width: 430px;
 }
@@ -4794,6 +4768,7 @@ html {
   width: 460px;
 }
 #Login_Section .Login-Form .HeadlineAndSubhead .Subhead p {
+  width: 330px;
   white-space: wrap;
   font-family: Work Sans;
   font-size: 22px;
@@ -4860,17 +4835,13 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
-  margin-left: 100px;
+  gap: 10px;
+  margin: auto;
 }
 @media (max-width: 1050px) {
   #Login_Section .Login-Form .Form .Typeforms {
-    margin-left: 0px;
-  }
-}
-@media (max-width: 690px) {
-  #Login_Section .Login-Form .Form .Typeforms {
-    margin-left: -50px;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
 }
 #Login_Section .Login-Form .Form .Typeforms p {
@@ -4881,7 +4852,7 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
-  height: 40px;
+  height: 20px;
   margin-left: 30px;
   width: 430px;
 }
@@ -6317,7 +6288,8 @@ html {
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header .Ranking-Items {
     height: 750px;
-    padding: 20px 0px 140px 0px;
+    margin: auto;
+    padding: 120px 0px 240px 0px;
     gap: 10px;
   }
 }

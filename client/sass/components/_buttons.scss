@@ -150,6 +150,7 @@ button {
 .Subscribe-Btn {
   @include Flexed(flex, center, center);
   @include Button(60px, 0px 50px, 12px);
+  height: 61px !important;
   background-color: var(--CallToAction);
   position: absolute;
   gap: 10px;
@@ -319,23 +320,9 @@ button {
 
 .Delete-Btn {
   @include Flexed(flex, center, center);
-  @include Button(60px, 0px 30px, 12px);
-  background-color: transparent;
-  color: var(--White);
-  border: 2px solid var(--CallToAction);
-  white-space: nowrap;
-  margin-left: 30px;
-  @include text-formatter(Work Sans, 16px, 600, 140%);
-
-  @include for-size(tablet) {
-    height: 40px;
-    width: 20px;
-    margin-left: 195px;
-  }
-
-  @include for-size(phone) {
-    margin-left: -10px;
-  }
+  margin-left: -50px;
+  width: 80px;
+  transition: 0.3s;
 
   &:hover {
     transform: scale(0.95);
