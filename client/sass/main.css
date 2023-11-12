@@ -1459,6 +1459,51 @@ button {
           transform: scale(0.95);
 }
 
+.SeeMore-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: normal;
+          flex-direction: normal;
+  height: 60px;
+  padding: 0px 30px;
+  background-color: 12px;
+  gap: normal;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 205px;
+  color: var(--White);
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid var(--CallToAction);
+  margin-bottom: 100px;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+.SeeMore-Btn img {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+.SeeMore-Btn:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .Subscribe-Form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1593,18 +1638,29 @@ button {
   width: 960px;
   gap: 20px;
   height: 60px;
-  border: 2px solid var(--BackGround-Secondary);
   border-radius: 20px;
+}
+@media (max-width: 1050px) {
+  .Search {
+    margin-left: 150px;
+    width: 590px;
+  }
+}
+@media (max-width: 690px) {
+  .Search {
+    margin-left: 170px;
+    width: 230px;
+  }
 }
 .Search input {
   width: 960px;
-  height: 22px;
+  height: 60px;
   padding: 16px 20px 16px 40px;
   gap: 12px;
   border-radius: 20px;
   background-color: var(--BackGround);
   color: var(--CaptionAndLabelText);
-  border: none;
+  border: 2px solid var(--BackGround-Secondary);
 }
 .Search img {
   cursor: pointer;
@@ -3645,10 +3701,10 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   background-image: url("../../../assets/images/NFT-BigHighlight.png");
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(162, 89, 255, 0)), to(#a259ff));
-  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
   background-repeat: no-repeat;
   background-size: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(162, 89, 255, 0)), to(#a259ff));
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
 }
 #NFTHighlight_Section .NFT-Info {
   display: -webkit-box;
@@ -5648,7 +5704,6 @@ html {
   grid-template-columns: repeat(3, 1fr);
   padding: 80px 300px;
   gap: 30px;
-  background-color: var(--BackGround);
 }
 @media (max-width: 1050px) {
   #Artist-Detail_Section .NFT-Cards-Section {
@@ -6805,8 +6860,23 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 80px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
   gap: 40px;
   margin-left: 250px;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead {
+    margin-left: 0px;
+    padding: 60px 0px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .Headline-Subhead {
+    padding: 40px 0px;
+  }
 }
 #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead {
   display: -webkit-box;
@@ -6820,6 +6890,17 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead {
+    width: 680px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead {
+    margin-right: 400px;
+    width: 315px;
+  }
 }
 #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header-Frame {
   display: -webkit-box;
@@ -6905,6 +6986,16 @@ html {
   border-radius: 20px;
   border: 1px solid var(--BackGround-Secondary);
 }
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header {
+    width: 680px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header {
+    width: 315px;
+  }
+}
 #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6912,28 +7003,24 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0px 20px;
 }
-#MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers .Search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 960px;
-  gap: 20px;
+@media (max-width: 1050px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers {
+    width: 680px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .Headline-Subhead .HeadlineAndSubhead .Header .Headers {
+    width: 315px;
+  }
 }
 #MarketPlace_Section .MarketPlace {
   display: -webkit-box;
@@ -7050,7 +7137,17 @@ html {
   grid-template-columns: repeat(3, 1fr);
   padding: 60px 0px 80px 0px;
   gap: 30px;
-  background-color: var(--BackGround-Secondary);
+  margin: auto;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .NFT-Cards_Section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .NFT-Cards_Section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 #MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card {
   display: -webkit-box;
@@ -7067,7 +7164,9 @@ html {
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  width: 330px;
   cursor: pointer;
+  z-index: 10;
 }
 #MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card:hover {
   -webkit-transform: scale(0.95);
@@ -7231,6 +7330,17 @@ html {
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+#MarketPlace_Section .MarketPlace .NoMore {
+  display: none;
+  margin-bottom: 40px;
+  font-family: Space Mono;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 120%;
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;

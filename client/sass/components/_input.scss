@@ -60,14 +60,24 @@
   width: 960px;
   gap: 20px;
   height: 60px;
-  border: 2px solid var(--BackGround-Secondary);
   border-radius: 20px;
 
+  @include for-size(tablet) {
+    margin-left: 150px;
+    width: 590px;
+  }
+
+  @include for-size(phone) {
+    margin-left: 170px;
+
+    width: 230px;
+  }
+
   input {
-    @include Input(960px, 22px, 16px 20px 16px 40px, 12px);
+    @include Input(960px, 60px, 16px 20px 16px 40px, 12px);
     background-color: var(--BackGround);
     color: var(--CaptionAndLabelText);
-    border: none;
+    border: 2px solid var(--BackGround-Secondary);
   }
 
   img {

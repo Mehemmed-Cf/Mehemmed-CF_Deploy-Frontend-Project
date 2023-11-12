@@ -365,7 +365,6 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 80px 300px;
     gap: 30px;
-    background-color: var(--BackGround);
 
     @include for-size(tablet) {
       grid-template-columns: repeat(2, 1fr);

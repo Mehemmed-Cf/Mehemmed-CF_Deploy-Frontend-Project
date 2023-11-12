@@ -2,7 +2,6 @@ let searchParams = new URLSearchParams(window.location.search);
 let paramsCreatorId = searchParams.get("id");
 let count = JSON.parse(localStorage.getItem("count")) ?? [];
 const loaderElement = document.querySelector(".Loader");
-
 const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
 
 const Follow_Btn = document.querySelector(".Follow-Btn");

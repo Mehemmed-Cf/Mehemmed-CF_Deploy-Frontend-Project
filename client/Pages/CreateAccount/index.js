@@ -208,7 +208,7 @@ async function RegisterUser(username, email, password) {
   const data = await response.json();
 
   if (response.status >= 200 && response.status <= 300) {
-    window.open("http://127.0.0.1:5500/client/Pages/Home/index.html", "_self");
+    window.open("http://127.0.0.1:5500/client/Pages/Login/index.html", "_self");
     showButtonLoader(false);
   } else {
     Toastify({

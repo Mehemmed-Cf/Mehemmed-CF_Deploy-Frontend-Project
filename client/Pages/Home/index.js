@@ -16,6 +16,11 @@ Shroomie_NFT.addEventListener("click", () => {
   );
 });
 
+const NFTCard = document.querySelector(".CollectionCard");
+NFTCard.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");
+});
+
 const SeeAll_Btn = document.querySelector(".SeeAll-Btn");
 SeeAll_Btn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");

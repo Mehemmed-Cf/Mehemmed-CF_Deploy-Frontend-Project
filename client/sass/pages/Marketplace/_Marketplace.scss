@@ -5,12 +5,32 @@
   .Headline-Subhead {
     @include Flex-ItemsAndPosition(flex, center, column);
     padding: 80px 0px;
+    justify-content: center;
+    margin: auto;
     gap: 40px;
     margin-left: 250px;
+
+    @include for-size(tablet) {
+      margin-left: 0px;
+      padding: 60px 0px;
+    }
+
+    @include for-size(phone) {
+      padding: 40px 0px;
+    }
 
     .HeadlineAndSubhead {
       @include Flex-ItemsAndPosition(flex, flex-start, column);
       gap: 30px;
+
+      @include for-size(tablet) {
+        width: 680px;
+      }
+
+      @include for-size(phone) {
+        margin-right: 400px;
+        width: 315px;
+      }
 
       .Header-Frame {
         @include Flex-ItemsAndPosition(flex, flex-start, column);
@@ -45,14 +65,24 @@
         border-radius: 20px;
         border: 1px solid var(--BackGround-Secondary);
 
+        @include for-size(tablet) {
+          width: 680px;
+        }
+
+        @include for-size(phone) {
+          width: 315px;
+        }
+
         .Headers {
-          @include Flexed(flex, space-between, center, row);
+          @include Flexed(flex, space-between, flex-start, row);
           padding: 0px 20px;
 
-          .Search {
-            @include Flex-ItemsAndPosition(flex, center, row);
-            width: 960px;
-            gap: 20px;
+          @include for-size(tablet) {
+            width: 680px;
+          }
+
+          @include for-size(phone) {
+            width: 315px;
           }
         }
       }
@@ -107,14 +137,24 @@
       grid-template-columns: repeat(3, 1fr);
       padding: 60px 0px 80px 0px;
       gap: 30px;
-      background-color: var(--BackGround-Secondary);
+      margin: auto;
+
+      @include for-size(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include for-size(phone) {
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       .NFT-Card {
         @include Flex-ItemsAndPosition(flex, center, column);
         height: 469px;
         border-radius: 20px;
         transition: 0.3s;
+        width: 330px;
         cursor: pointer;
+        z-index: 10;
 
         &:hover {
           transform: scale(0.95);
@@ -201,6 +241,11 @@
           }
         }
       }
+    }
+    .NoMore {
+      display: none;
+      margin-bottom: 40px;
+      @include text-formatter(Space Mono, 26px, 400, 120%);
     }
 
     .Loader {

@@ -1059,9 +1059,9 @@ html {
 #NFTHighlight_Section {
   @include Flexed(flex, flex-end, center, column);
   background-image: url("../../../assets/images/NFT-BigHighlight.png");
-  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
   background-repeat: no-repeat;
   background-size: 100%;
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
 
   .NFT-Info {
     @include Flexed(flex, center, flex-end, column);
