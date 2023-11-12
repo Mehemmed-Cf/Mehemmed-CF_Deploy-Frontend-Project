@@ -3687,6 +3687,7 @@ html {
 }
 
 #NFTHighlight_Section {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3700,11 +3701,20 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("../../../assets/images/NFT-BigHighlight.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(162, 89, 255, 0)), to(#a259ff));
   background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  background-position: center;
+  background-size: cover;
+}
+#NFTHighlight_Section .Background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #NFTHighlight_Section .NFT-Info {
   display: -webkit-box;
@@ -7049,6 +7059,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame {
+    width: 834px;
+  }
 }
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Line {
   width: 1520px;

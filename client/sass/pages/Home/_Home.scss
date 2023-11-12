@@ -1057,11 +1057,21 @@ html {
 }
 
 #NFTHighlight_Section {
+  position: relative;
   @include Flexed(flex, flex-end, center, column);
-  background-image: url("../../../assets/images/NFT-BigHighlight.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
   background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+  background-position: center;
+  background-size: cover;
+
+  .Background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+  }
 
   .NFT-Info {
     @include Flexed(flex, center, flex-end, column);

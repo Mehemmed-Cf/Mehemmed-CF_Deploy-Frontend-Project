@@ -96,6 +96,10 @@
       @include Flex-ItemsAndPosition(flex, center, column);
       gap: 10px;
 
+      @include for-size(tablet) {
+        width: 834px;
+      }
+
       .Line {
         width: 1520px;
         height: 1px;
