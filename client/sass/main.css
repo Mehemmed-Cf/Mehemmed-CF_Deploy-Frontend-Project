@@ -3753,8 +3753,8 @@ html {
   #NFTHighlight_Section .NFT-Info {
     display: block;
     padding: 120px 195px 40px 195px;
-    width: 315px;
-    height: 433px;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 #NFTHighlight_Section .NFT-Info .NFT-Frame {
@@ -7047,6 +7047,11 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace {
+    padding-left: 100px;
+  }
+}
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7065,10 +7070,25 @@ html {
     width: 834px;
   }
 }
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame {
+    width: 375px;
+  }
+}
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Line {
   width: 1520px;
   height: 1px;
   background-color: var(--BackGround-Secondary);
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Line {
+    width: 1134px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Line {
+    width: 800px;
+  }
 }
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame {
   display: -webkit-box;
@@ -7084,6 +7104,19 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: normal;
           flex-direction: normal;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 680px;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame {
+    width: 315px;
+  }
 }
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs {
   display: -webkit-box;
@@ -7111,7 +7144,7 @@ html {
   padding: 0px 30px;
   gap: 16px;
   text-align: center;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid white;
   font-family: Work Sans;
   font-size: 22px;
   font-weight: 600;
@@ -7119,6 +7152,22 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .NFTs-Tab {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .NFTs-Tab {
+    padding: 0px 10px;
+  }
 }
 #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .Collections-Tab {
   display: -webkit-box;
@@ -7147,6 +7196,22 @@ html {
   letter-spacing: normal;
   text-transform: capitalize;
 }
+@media (max-width: 1050px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .Collections-Tab {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 690px) {
+  #MarketPlace_Section .MarketPlace .MarketPlace-Frame .Frame .Tabs .Collections-Tab {
+    padding: 0px 10px;
+  }
+}
 #MarketPlace_Section .MarketPlace .NFT-Cards_Section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -7156,11 +7221,14 @@ html {
 }
 @media (max-width: 1050px) {
   #MarketPlace_Section .MarketPlace .NFT-Cards_Section {
+    width: 690px !important;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 690px) {
   #MarketPlace_Section .MarketPlace .NFT-Cards_Section {
+    width: 315px !important;
+    padding: 40px 0px;
     grid-template-columns: repeat(1, 1fr);
   }
 }

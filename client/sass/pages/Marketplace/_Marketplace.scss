@@ -92,6 +92,10 @@
   .MarketPlace {
     @include Flexed(flex, center, center, column);
 
+    @include for-size(phone) {
+      padding-left: 100px;
+    }
+
     .MarketPlace-Frame {
       @include Flex-ItemsAndPosition(flex, center, column);
       gap: 10px;
@@ -100,14 +104,35 @@
         width: 834px;
       }
 
+      @include for-size(phone) {
+        width: 375px;
+      }
+
       .Line {
         width: 1520px;
         height: 1px;
         background-color: var(--BackGround-Secondary);
+
+        @include for-size(tablet) {
+          width: 1134px;
+        }
+
+        @include for-size(phone) {
+          width: 800px;
+        }
       }
 
       .Frame {
         @include Flexed(flex, center, flex-start);
+
+        @include for-size(tablet) {
+          align-items: center;
+          width: 680px;
+        }
+
+        @include for-size(phone) {
+          width: 315px;
+        }
 
         .Tabs {
           display: flex;
@@ -119,8 +144,16 @@
             padding: 0px 30px;
             gap: 16px;
             text-align: center;
-            border-bottom: 1px solid;
+            border-bottom: 2px solid white;
             @include text-formatter(Work Sans, 22px, 600, 140%);
+
+            @include for-size(tablet) {
+              @include text-formatter(Work Sans, 16px, 600, 140%);
+            }
+
+            @include for-size(phone) {
+              padding: 0px 10px;
+            }
           }
 
           .Collections-Tab {
@@ -131,6 +164,14 @@
             text-align: center;
             color: var(--CaptionAndLabelText);
             @include text-formatter(Work Sans, 22px, 600, 140%);
+
+            @include for-size(tablet) {
+              @include text-formatter(Work Sans, 16px, 600, 140%);
+            }
+
+            @include for-size(phone) {
+              padding: 0px 10px;
+            }
           }
         }
       }
@@ -144,10 +185,13 @@
       margin: auto;
 
       @include for-size(tablet) {
+        width: 690px !important;
         grid-template-columns: repeat(2, 1fr);
       }
 
       @include for-size(phone) {
+        width: 315px !important;
+        padding: 40px 0px;
         grid-template-columns: repeat(1, 1fr);
       }
 

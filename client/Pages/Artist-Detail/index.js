@@ -151,6 +151,13 @@ function fillArtistNFTs(creator) {
     NFT_Card.append(Image, NFT_Info);
 
     NFT_Cards_Section.append(NFT_Card);
+
+    NFT_Card.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
+        "_self"
+      );
+    });
   });
 }
 
@@ -168,7 +175,7 @@ function fillArtistChainId(creator) {
   ChainId_Btn.appendChild(chainIDContent);
 
   ChainId_Btn.addEventListener("click", () => {
-    navigator.clipboard.writeText(chainIDContent.textContent);
+    navigator.clipboard.writeText(creator.chainId);
     Toastify({
       text: "Copy That Fella! ;)",
       duration: 3000,

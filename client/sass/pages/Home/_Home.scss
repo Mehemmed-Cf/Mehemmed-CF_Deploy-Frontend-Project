@@ -1075,7 +1075,6 @@ html {
 
   .NFT-Info {
     @include Flexed(flex, center, flex-end, column);
-    // padding: 100px;
     padding: 360px 195px 60px 195px;
 
     @include for-size(tablet) {
@@ -1085,8 +1084,7 @@ html {
     @include for-size(phone) {
       display: block;
       padding: 120px 195px 40px 195px;
-      width: 315px;
-      height: 433px;
+      transform: scale(0.7);
     }
 
     .NFT-Frame {
