@@ -1,7 +1,7 @@
 const USERNAME_REGEX = /^[a-zA-Z]{3,}$/;
 
 const EMAIL_REGEX =
-  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/i;
 
 const PASSWORD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
@@ -249,7 +249,7 @@ function AccountValidation() {
       RegisterUser(username, email, password);
     } else {
       Toastify({
-        text: "It seems like you have a problem with your registration please check Again ;(",
+        text: data.error,
         duration: 3000,
         destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,

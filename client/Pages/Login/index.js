@@ -21,6 +21,8 @@ async function LoginUser(username, password) {
     }),
   });
 
+  const data = await response.json();
+
   if (response.status >= 200 && response.status <= 300) {
     Toastify({
       text: "Congratulations , Your are Logged in successfully ;)",
@@ -38,7 +40,7 @@ async function LoginUser(username, password) {
     showButtonLoader(false);
   } else {
     Toastify({
-      text: " We are sorry , We could not log you in :(",
+      text: data.error,
       duration: 3000,
       destination: "https://github.com/apvarun/toastify-js",
       newWindow: true,

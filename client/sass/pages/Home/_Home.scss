@@ -1057,15 +1057,16 @@ html {
 }
 
 #NFTHighlight_Section {
-  @include Flex-ItemsAndPosition(flex, center, column);
-  justify-content: flex-end;
+  @include Flexed(flex, flex-end, center, column);
   background-image: url("../../../assets/images/NFT-BigHighlight.png");
+  background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
   background-repeat: no-repeat;
   background-size: 100%;
 
   .NFT-Info {
     @include Flexed(flex, center, flex-end, column);
-    padding: 100px;
+    // padding: 100px;
+    padding: 360px 195px 60px 195px;
 
     @include for-size(tablet) {
       @include Flexed(flex, center, flex-end, column);

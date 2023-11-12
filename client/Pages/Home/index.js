@@ -8,6 +8,19 @@ ViewRankings_Btn.addEventListener("click", () => {
   window.open("http://127.0.0.1:5500/client/Pages/Rankings/index.html");
 });
 
+const Shroomie_NFT = document.querySelector("#Shroomie-NFT");
+Shroomie_NFT.addEventListener("click", () => {
+  window.open(
+    `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=7`,
+    "_self"
+  );
+});
+
+const SeeAll_Btn = document.querySelector(".SeeAll-Btn");
+SeeAll_Btn.addEventListener("click", () => {
+  window.open("http://127.0.0.1:5500/client/Pages/Marketplace/index.html");
+});
+
 getDataFromServer();
 
 function getDataFromServer() {
