@@ -9,7 +9,7 @@
   }
 
   @include for-size(phone) {
-    transform: translateX(-100px);
+    transform: translateX(-50px);
     width: 375px;
   }
 

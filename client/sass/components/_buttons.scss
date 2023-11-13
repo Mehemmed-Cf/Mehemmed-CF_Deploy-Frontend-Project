@@ -80,6 +80,7 @@ button {
   gap: 10px;
 
   @include for-size(phone) {
+    width: 315px;
     margin-top: 20px;
     @include Flexed(flex, center, center);
     gap: 50px;

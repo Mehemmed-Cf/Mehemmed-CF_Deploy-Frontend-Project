@@ -400,23 +400,17 @@ html {
   padding: 80px 195px;
   gap: 60px;
   background-color: var(--BackGround);
-  position: relative;
 
   @include for-size(tablet) {
-    @include Flex-ItemsAndPosition(flex, center, column);
-    padding: 40px 195px;
+    padding: 200px 195px;
     gap: 40px;
   }
 
   @include for-size(phone) {
     display: block;
-    align-items: center;
-    flex-direction: column;
-    height: 613px;
     gap: 40px;
     width: 315px;
-    height: 100%;
-    transform: translate(-80px, 200px);
+    transform: translate(-80px, 250px);
   }
 
   .Section_Headline_And_Button {
@@ -493,15 +487,6 @@ html {
       gap: 30px;
       width: 690px;
 
-      .Artist-Card:nth-child(7) {
-        display: none;
-      }
-      .Artist-Card:nth-child(8) {
-        display: none;
-      }
-      .Artist-Card:nth-child(9) {
-        display: none;
-      }
       .Artist-Card:nth-child(10) {
         display: none;
       }
@@ -514,7 +499,7 @@ html {
     }
 
     @include for-size(phone) {
-      width: 315px;
+      width: 315px !important;
       height: 110px;
       gap: 0px;
 
@@ -558,7 +543,7 @@ html {
 
       @include for-size(phone) {
         @include Flexed(flex, center, flex-start, row);
-        width: 275px;
+        width: 315px;
         height: 60px;
         padding: 20px;
         gap: 20px;
@@ -646,7 +631,7 @@ html {
             @include text-formatter(Space Mono, 16px, 400, 140%);
 
             @include for-size(phone) {
-              transform: translateX(80px);
+              transform: translateX(125px);
               @include text-formatter(Work Sans, 12px, 400, 110%);
             }
           }
@@ -765,6 +750,7 @@ html {
     }
 
     @include for-size(phone) {
+      transform: translate(20px, 70px);
       margin-top: 100px;
       width: 315px;
     }

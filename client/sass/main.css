@@ -148,6 +148,10 @@ Ranking {
   --Green: #00ac4f;
 }
 
+body {
+  position: relative;
+}
+
 .Navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +216,7 @@ Ranking {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  top: 0;
   right: 0 !important;
 }
 .Navigation .Navigation_Menu .NavigationLinksAndButton {
@@ -241,7 +246,7 @@ Ranking {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    right: -210px;
+    right: -410px;
     height: 100vh;
     border: 2px solid var(--CallToAction);
     border-radius: 20px;
@@ -938,6 +943,7 @@ button {
 }
 @media (max-width: 690px) {
   .ViewRankings-Btn {
+    width: 315px;
     margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2437,40 +2443,20 @@ html {
   padding: 80px 195px;
   gap: 60px;
   background-color: var(--BackGround);
-  position: relative;
 }
 @media (max-width: 1050px) {
   #TopRatedArtists_Section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 40px 195px;
+    padding: 200px 195px;
     gap: 40px;
   }
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section {
     display: block;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 613px;
     gap: 40px;
     width: 315px;
-    height: 100%;
-    -webkit-transform: translate(-80px, 200px);
-            transform: translate(-80px, 200px);
+    -webkit-transform: translate(-80px, 250px);
+            transform: translate(-80px, 250px);
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button {
@@ -2620,15 +2606,6 @@ html {
     gap: 30px;
     width: 690px;
   }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(7) {
-    display: none;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(8) {
-    display: none;
-  }
-  #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(9) {
-    display: none;
-  }
   #TopRatedArtists_Section .Artist-Cards .Artist-Card:nth-child(10) {
     display: none;
   }
@@ -2641,7 +2618,7 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards {
-    width: 315px;
+    width: 315px !important;
     height: 110px;
     gap: 0px;
     grid-template-columns: repeat(1, 1fr);
@@ -2716,7 +2693,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 275px;
+    width: 315px;
     height: 60px;
     padding: 20px;
     gap: 20px;
@@ -2920,8 +2897,8 @@ html {
 }
 @media (max-width: 690px) {
   #TopRatedArtists_Section .Artist-Cards .Artist-Card .Artist-Info .Sales-Info .Sales-Info_Value {
-    -webkit-transform: translateX(80px);
-            transform: translateX(80px);
+    -webkit-transform: translateX(125px);
+            transform: translateX(125px);
     font-family: Work Sans;
     font-size: 12px;
     font-weight: 400;
@@ -3094,6 +3071,8 @@ html {
 }
 @media (max-width: 690px) {
   #BrowseCategories_Section .Section-Headline {
+    -webkit-transform: translate(20px, 70px);
+            transform: translate(20px, 70px);
     margin-top: 100px;
     width: 315px;
   }
@@ -6030,8 +6009,8 @@ html {
 }
 @media (max-width: 690px) {
   #Rankings_Section {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
     width: 375px;
   }
 }

@@ -66,6 +66,20 @@ function EmailValidation() {
             background: "green",
           },
         }).showToast();
+      } else {
+        Toastify({
+          text: "Wrong Email Format ;(",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
+          style: {
+            background: "red",
+          },
+        }).showToast();
       }
     });
 

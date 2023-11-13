@@ -107,10 +107,25 @@ function addCreatorItem(creator) {
   }
 
   Artist_Card.addEventListener("click", () => {
-    window.open(
-      `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=${creator.id}`,
-      "_self"
-    );
+    // window.open(
+    //   `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=${creator.id}`,
+    //   "_self"
+    // );
+
+    Ranking_Items.forEach((item1, item2) => {
+      Ranking_Items.sort(() => {
+        const name1 = item1.name.toLowerCase();
+        const name2 = item2.name.toLowerCase();
+
+        if (name1 > name2) {
+          return 1;
+        } else if (name1 < name2) {
+          return -1;
+        } else {
+          return 0;
+        }
+      });
+    });
   });
 
   Delete_Btn.addEventListener("click", () => {

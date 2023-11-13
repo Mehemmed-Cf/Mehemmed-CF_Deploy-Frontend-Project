@@ -1,3 +1,7 @@
+body {
+  position: relative;
+}
+
 .Navigation {
   @include Flexed(flex, space-around, center);
   padding: 20px 50px;
@@ -32,6 +36,7 @@
 
     .Navbar-Open {
       display: flex !important;
+      top: 0;
       right: 0 !important;
     }
 
@@ -46,7 +51,7 @@
         z-index: 10;
         position: fixed;
         flex-direction: column;
-        right: -210px;
+        right: -410px;
         height: 100vh;
         border: 2px solid var(--CallToAction);
         border-radius: 20px;
