@@ -996,9 +996,14 @@ html {
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            transition: 0.3s;
 
             p {
               @include text-formatter(Work Sans, 16px, 400, 140%);
+            }
+
+            &:hover {
+              transform: scale(0.95);
             }
           }
         }

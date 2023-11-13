@@ -2,8 +2,52 @@ const Rankings = document.querySelector("#Rankings");
 const ConnectAWallet = document.querySelector("#ConnectAWallet");
 const loaderElement = document.querySelector(".Loader");
 
-const ViewRankings_Btn = document.querySelector(".ViewRankings-Btn");
+const GetStarted_Btn = document.querySelector(".GetStarted-Btn");
+GetStarted_Btn.addEventListener("click", () => {
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/CreateAccount/index.html",
+    "_self"
+  );
+});
 
+const HomeNFT = document.querySelector(".HighlightedNFT-Img");
+HomeNFT.addEventListener("click", () => {
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
+    "_self"
+  );
+});
+
+const CollectionCards = document.querySelectorAll(".CollectionCard");
+CollectionCards.forEach((CollectionCard) => {
+  CollectionCard.addEventListener("click", () => {
+    window.open(
+      "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
+      "_self"
+    );
+  });
+});
+
+const MrFox = document.querySelector("#MrFox");
+const BeKind2Robots = document.querySelector("#BeKind2Robots");
+
+MrFox.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=6",
+    "_self"
+  );
+});
+
+BeKind2Robots.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=8",
+    "_self"
+  );
+});
+
+const ViewRankings_Btn = document.querySelector(".ViewRankings-Btn");
 ViewRankings_Btn.addEventListener("click", () => {
   window.open(
     "http://127.0.0.1:5500/client/Pages/Rankings/index.html",
@@ -11,24 +55,64 @@ ViewRankings_Btn.addEventListener("click", () => {
   );
 });
 
-const Shroomie_NFT = document.querySelector("#Shroomie-NFT");
-Shroomie_NFT.addEventListener("click", () => {
-  window.open(
-    `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=7`,
-    "_self"
-  );
-});
-
-const NFTCard = document.querySelector(".CollectionCard");
-NFTCard.addEventListener("click", () => {
+const SeeAll_Btn = document.querySelector(".SeeAll-Btn");
+SeeAll_Btn.addEventListener("click", () => {
   window.open(
     "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
     "_self"
   );
 });
 
-const SeeAll_Btn = document.querySelector(".SeeAll-Btn");
-SeeAll_Btn.addEventListener("click", () => {
+const NFTCards = document.querySelectorAll(".NFTCard");
+NFTCards.forEach((NFTCard) => {
+  NFTCard.addEventListener("click", () => {
+    window.open(
+      "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
+      "_self"
+    );
+  });
+});
+
+const MoonDancer = document.querySelector("#MoonDancer");
+MoonDancer.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=10",
+    "_self"
+  );
+});
+
+const NebulaKid = document.querySelector("#NebulaKid");
+NebulaKid.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=10",
+    "_self"
+  );
+});
+
+const Spaceone = document.querySelector("#Spaceone");
+Spaceone.addEventListener("click", (e) => {
+  e.stopPropagation();
+  window.open(
+    "http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=10",
+    "_self"
+  );
+});
+
+const Shroomies = document.querySelectorAll("#Shroomie");
+Shroomies.forEach((Shroomie) => {
+  Shroomie.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.open(
+      `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=7`,
+      "_self"
+    );
+  });
+});
+
+const SeeNFT_Btn = document.querySelector(".SeeNFT-Btn");
+SeeNFT_Btn.addEventListener("click", () => {
   window.open(
     "http://127.0.0.1:5500/client/Pages/Marketplace/index.html",
     "_self"

@@ -3577,6 +3577,8 @@ html {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 12px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info .Artist-AvatarAndName p {
   font-family: Work Sans;
@@ -3586,6 +3588,10 @@ html {
   font-style: normal;
   letter-spacing: normal;
   text-transform: capitalize;
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Artist-Info .Artist-AvatarAndName:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFT-Info .Additional-Info {
   display: -webkit-box;
