@@ -1,5 +1,10 @@
 const Ranking_Items = document.querySelector(".Ranking-Items");
 const loaderElement = document.querySelector(".Loader");
+const CreatorId = document.querySelector("#CreatorId");
+const CreatorName = document.querySelector("#CreatorName");
+const CreatorChange = document.querySelector(".Change-Header");
+const CreatorNFTs_Sold = document.querySelector(".NFTs-Sold-Header");
+const CreatorVolume = document.querySelector(".Volume-Header");
 
 getDataForCreators();
 
@@ -12,11 +17,14 @@ function getDataForCreators() {
     .then((creator) => {
       fillItemRanking(creator);
     });
+
   showLoader(false);
 }
 
 function fillItemRanking(data) {
   if (!data) return;
+
+  emptyRanking();
 
   data.forEach((creator) => addCreatorItem(creator));
 }
@@ -113,7 +121,6 @@ function addCreatorItem(creator) {
     );
 
     Ranking_Items.array.forEach((item) => {});
-    sort(sortItemsByName(item1, item2));
   });
 
   Delete_Btn.addEventListener("click", () => {
@@ -121,20 +128,7 @@ function addCreatorItem(creator) {
   });
 }
 
-function sortItemsByName(item1, item2) {
-  const name1 =
-    item1.RankAndArtist.Artist_Card.Artist_Info.Artist_Name.toLowerCase();
-  const name2 =
-    item2.RankAndArtist.Artist_Card.Artist_Info.Artist_Name.toLowerCase();
-
-  if (name1 > name2) {
-    return 1;
-  } else if (name1 < name2) {
-    return -1;
-  } else {
-    return 0;
-  }
-}
+function sortItemsByName(item1, item2) {}
 
 function deleteCreatorItem(creator, Item) {
   if (
@@ -162,6 +156,113 @@ function deleteCreatorItem(creator, Item) {
         }).showToast();
       }
     });
+  }
+}
+
+CreatorId.addEventListener("click", () => {
+  showLoader(true);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      creator.sort((a, b) => {
+        const idA = a.id;
+        const idB = b.id;
+
+        return idA - idB;
+      });
+      fillItemRanking(creator);
+    });
+
+  showLoader(false);
+});
+
+CreatorName.addEventListener("click", () => {
+  showLoader(true);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      creator.sort((a, b) => {
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+      fillItemRanking(creator);
+    });
+
+  showLoader(false);
+});
+
+CreatorChange.addEventListener("click", () => {
+  showLoader(true);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      creator.sort((a, b) => {
+        const ChangeA = a.totalSale.value;
+        const ChangeB = b.totalSale.value;
+
+        return ChangeB - ChangeA;
+      });
+      fillItemRanking(creator);
+    });
+
+  showLoader(false);
+});
+
+CreatorNFTs_Sold.addEventListener("click", () => {
+  showLoader(true);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      creator.sort((a, b) => {
+        const NFTs_SoldA = a.nftSold;
+        const NFTs_SoldB = b.nftSold;
+
+        return NFTs_SoldB - NFTs_SoldA;
+      });
+      fillItemRanking(creator);
+    });
+
+  showLoader(false);
+});
+
+CreatorVolume.addEventListener("click", () => {
+  showLoader(true);
+  fetch(`http://localhost:3000/api/creators`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((creator) => {
+      creator.sort((a, b) => {
+        const VolumeA = a.volume;
+        const VolumeB = b.volume;
+
+        return VolumeB - VolumeA;
+      });
+      fillItemRanking(creator);
+    });
+
+  showLoader(false);
+});
+
+function emptyRanking() {
+  while (Ranking_Items.firstChild) {
+    Ranking_Items.removeChild(Ranking_Items.firstChild);
   }
 }
 

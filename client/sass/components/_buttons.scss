@@ -387,3 +387,24 @@ button {
     transform: scale(0.95);
   }
 }
+
+.SortByName-Btn {
+  @include Flexed(flex, center, center);
+  @include Button(60px, 0px 30px, 12px);
+  width: 205px;
+  color: var(--White);
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid var(--CallToAction);
+  @include text-formatter(Work Sans, 16px, 600, 140%);
+
+  img {
+    color: white;
+    width: 20px !important;
+    margin-right: 20px;
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}

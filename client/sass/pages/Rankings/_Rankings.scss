@@ -81,7 +81,7 @@
     }
 
     .Rankings-Header {
-      @include Flex-ItemsAndPosition(flex, center, column);
+      @include Flex-ItemsAndPosition(flex, flex-start, column);
       height: 100%;
       padding: 12px 0px;
       gap: 30px;
@@ -132,6 +132,7 @@
 
           h1 {
             text-align: center;
+            cursor: pointer;
             color: var(--CaptionAndLabelText);
             @include text-formatter(Space Mono, 16px, 400, 140%);
 
@@ -149,6 +150,7 @@
             @include Flex-ItemsAndPosition(flex, flex-start, column);
             width: 160px;
             gap: 10px;
+            cursor: pointer;
             color: var(--CaptionAndLabelText);
             @include text-formatter(Space Mono, 16px, 400, 140%);
 
@@ -165,6 +167,7 @@
             @include Flex-ItemsAndPosition(flex, flex-start, column);
             width: 160px;
             gap: 10px;
+            cursor: pointer;
             color: var(--CaptionAndLabelText);
             @include text-formatter(Space Mono, 16px, 400, 140%);
 
@@ -176,6 +179,7 @@
             @include Flex-ItemsAndPosition(flex, flex-start, column);
             width: 160px;
             gap: 10px;
+            cursor: pointer;
             color: var(--CaptionAndLabelText);
             @include text-formatter(Space Mono, 16px, 400, 140%);
 
