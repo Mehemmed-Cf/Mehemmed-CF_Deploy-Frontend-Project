@@ -1,57 +1,7 @@
 let searchParams = new URLSearchParams(window.location.search);
 let paramsCreatorId = searchParams.get("id");
-let count = JSON.parse(localStorage.getItem("count")) ?? [];
 const loaderElement = document.querySelector(".Loader");
 const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
-
-const Follow_Btn = document.querySelector(".Follow-Btn");
-const PlusIcon = document.querySelector(".Plus");
-const FollowIcon = document.querySelector(".Follow");
-
-if (count > 0) {
-  PlusIcon.style.display = "none";
-  FollowIcon.style.display = "initial";
-} else if (count == 0) {
-  PlusIcon.style.display = "initial";
-  FollowIcon.style.display = "none";
-}
-
-Follow_Btn.addEventListener("click", () => {
-  if (count == 0) {
-    PlusIcon.style.display = "none";
-    FollowIcon.style.display = "initial";
-    Toastify({
-      text: "Follow That Fella! ;)",
-      duration: 3000,
-      destination: "https://github.com/apvarun/toastify-js",
-      newWindow: true,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "green",
-      },
-    }).showToast();
-  } else {
-    Toastify({
-      text: "I understand that you love this guy too much but you can only follow once",
-      duration: 3000,
-      destination: "https://github.com/apvarun/toastify-js",
-      newWindow: true,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "grey",
-      },
-    }).showToast();
-  }
-
-  count = 1;
-  localStorage.setItem("count", JSON.stringify(count));
-});
 
 getDataForCreators();
 
@@ -73,7 +23,7 @@ const NFT_Cards_Section = document.querySelector(".NFT-Cards-Section");
 
 function fillArtistInfo(creator) {
   fillArtistAvatar(creator);
-  fillArtistChainId(creator);
+  fillArtistChainIdAndFollow(creator);
   fillArtistName(creator);
   fillArtistStats(creator);
   fillArtistBio(creator);
@@ -169,7 +119,7 @@ function fillArtistAvatar(creator) {
   Avatar.appendChild(ProfileIcon);
 }
 
-function fillArtistChainId(creator) {
+function fillArtistChainIdAndFollow(creator) {
   const chainIDContent = document.createElement("p");
   chainIDContent.textContent = creator.chainId;
   ChainId_Btn.appendChild(chainIDContent);
@@ -189,6 +139,60 @@ function fillArtistChainId(creator) {
         background: "green",
       },
     }).showToast();
+  });
+
+  const Follow_Btn = document.querySelector(".Follow-Btn");
+  const PlusIcon = document.querySelector(".Plus");
+  const FollowIcon = document.querySelector(".Follow");
+  let count =
+    JSON.parse(localStorage.getItem(`${creator.name}'s follow count`)) ?? [];
+
+  if (count > 0) {
+    PlusIcon.style.display = "none";
+    FollowIcon.style.display = "initial";
+  } else if (count == 0) {
+    PlusIcon.style.display = "initial";
+    FollowIcon.style.display = "none";
+  }
+
+  Follow_Btn.addEventListener("click", () => {
+    if (count == 0) {
+      PlusIcon.style.display = "none";
+      FollowIcon.style.display = "initial";
+      Toastify({
+        text: "Follow That Fella! ;)",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "green",
+        },
+      }).showToast();
+
+      count = +1;
+      localStorage.setItem(
+        `${creator.name}'s follow count`,
+        JSON.stringify(count)
+      );
+    } else {
+      Toastify({
+        text: "I understand that you love this guy too much but you can only follow once",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "grey",
+        },
+      }).showToast();
+    }
   });
 }
 

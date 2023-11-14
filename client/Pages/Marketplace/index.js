@@ -2,6 +2,8 @@ const NFT_Cards_Section = document.querySelector(".NFT-Cards_Section");
 const loaderElement = document.querySelector(".Loader");
 const SeeMore_Btn = document.querySelector(".SeeMore-Btn");
 const NoMore_Message = document.querySelector(".NoMore");
+const Search_Input = document.querySelector(".Search-Input");
+const SearchIcon = document.querySelector("#SearchIcon");
 let skipCount = 0;
 let data = null;
 
@@ -102,9 +104,32 @@ function fillNFTMarketplace(data) {
   });
 }
 
+fetchSearch();
+
+async function fetchSearch() {
+  const search = Search_Input.value.trim();
+
+  const response = await fetch("http://localhost:3000/api/nfts", {
+    method: "POST",
+    headers: {
+      "CONTENT-TYPE": "application/json",
+    },
+    body: JSON.stringify({
+      searchStr: search,
+    }),
+  });
+
+  if (response.status >= 200 && response.status <= 300) {
+  }
+}
+
 function showLoader(show) {
   loaderElement.style.display = show ? "grid" : "none";
 }
+
+SearchIcon.addEventListener("click", () => {
+  const search = Search_Input.value.trim();
+});
 
 SeeMore_Btn.addEventListener("click", () => {
   if (data.hasMore == true) {
