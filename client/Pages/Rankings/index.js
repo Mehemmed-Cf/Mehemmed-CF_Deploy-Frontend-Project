@@ -16,6 +16,11 @@ function getDataForCreators() {
     .then((res) => res.json())
     .then((creator) => {
       fillItemRanking(creator);
+      CreatorId.addEventListener("click", () => sortById(creator));
+      CreatorName.addEventListener("click", () => sortByName(creator));
+      CreatorChange.addEventListener("click", () => sortByChange(creator));
+      CreatorNFTs_Sold.addEventListener("click", () => sortByNFTsSold(creator));
+      CreatorVolume.addEventListener("click", () => sortByVolume(creator));
     });
 
   showLoader(false);
@@ -128,8 +133,6 @@ function addCreatorItem(creator) {
   });
 }
 
-function sortItemsByName(item1, item2) {}
-
 function deleteCreatorItem(creator, Item) {
   if (
     confirm(
@@ -159,106 +162,71 @@ function deleteCreatorItem(creator, Item) {
   }
 }
 
-CreatorId.addEventListener("click", () => {
+function sortById(creator) {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      creator.sort((a, b) => {
-        const idA = a.id;
-        const idB = b.id;
+  creator.sort((a, b) => {
+    const idA = a.id;
+    const idB = b.id;
 
-        return idA - idB;
-      });
-      fillItemRanking(creator);
-    });
-
+    return idA - idB;
+  });
+  fillItemRanking(creator);
   showLoader(false);
-});
+}
 
-CreatorName.addEventListener("click", () => {
+function sortByName(creator) {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      creator.sort((a, b) => {
-        const nameA = a.name.toLowerCase();
-        const nameB = b.name.toLowerCase();
+  creator.sort((a, b) => {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
 
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-        return 0;
-      });
-      fillItemRanking(creator);
-    });
-
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
+  fillItemRanking(creator);
   showLoader(false);
-});
+}
 
-CreatorChange.addEventListener("click", () => {
+function sortByChange(creator) {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      creator.sort((a, b) => {
-        const ChangeA = a.totalSale.value;
-        const ChangeB = b.totalSale.value;
+  creator.sort((a, b) => {
+    const ChangeA = a.totalSale.value;
+    const ChangeB = b.totalSale.value;
 
-        return ChangeB - ChangeA;
-      });
-      fillItemRanking(creator);
-    });
-
+    return ChangeB - ChangeA;
+  });
+  fillItemRanking(creator);
   showLoader(false);
-});
+}
 
-CreatorNFTs_Sold.addEventListener("click", () => {
+function sortByNFTsSold(creator) {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      creator.sort((a, b) => {
-        const NFTs_SoldA = a.nftSold;
-        const NFTs_SoldB = b.nftSold;
+  creator.sort((a, b) => {
+    const NFTs_SoldA = a.nftSold;
+    const NFTs_SoldB = b.nftSold;
 
-        return NFTs_SoldB - NFTs_SoldA;
-      });
-      fillItemRanking(creator);
-    });
-
+    return NFTs_SoldB - NFTs_SoldA;
+  });
+  fillItemRanking(creator);
   showLoader(false);
-});
+}
 
-CreatorVolume.addEventListener("click", () => {
+function sortByVolume(creator) {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators`, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((creator) => {
-      creator.sort((a, b) => {
-        const VolumeA = a.volume;
-        const VolumeB = b.volume;
+  creator.sort((a, b) => {
+    const VolumeA = a.volume;
+    const VolumeB = b.volume;
 
-        return VolumeB - VolumeA;
-      });
-      fillItemRanking(creator);
-    });
-
+    return VolumeB - VolumeA;
+  });
+  fillItemRanking(creator);
   showLoader(false);
-});
+}
 
 function emptyRanking() {
   while (Ranking_Items.firstChild) {
