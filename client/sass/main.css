@@ -247,7 +247,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     right: -410px;
-    height: 100vh;
     border: 2px solid var(--CallToAction);
     border-radius: 20px;
     background-color: var(--BackGround);
@@ -6181,8 +6180,6 @@ html {
 }
 @media (max-width: 690px) {
   #Rankings_Section {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
     width: 375px;
   }
 }
@@ -6339,13 +6336,13 @@ html {
 }
 @media (max-width: 1050px) {
   #Rankings_Section .Rankings .Rankings-Header {
-    margin-right: 100px;
+    margin-right: -200px;
     gap: 10px;
   }
 }
 @media (max-width: 690px) {
   #Rankings_Section .Rankings .Rankings-Header {
-    margin-right: 0px;
+    margin-right: -700px;
   }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
@@ -6376,6 +6373,7 @@ html {
   #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers {
     width: 315px !important;
     padding: 0px 10px;
+    margin-left: 10px;
   }
 }
 #Rankings_Section .Rankings .Rankings-Header .Rankings-Headers .RankAndArtist {
@@ -7404,7 +7402,6 @@ html {
   transition: 0.3s;
   width: 330px;
   cursor: pointer;
-  z-index: 10;
 }
 #MarketPlace_Section .MarketPlace .NFT-Cards_Section .NFT-Card:hover {
   -webkit-transform: scale(0.95);

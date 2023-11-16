@@ -9,7 +9,6 @@
   }
 
   @include for-size(phone) {
-    transform: translateX(-50px);
     width: 375px;
   }
 
@@ -87,12 +86,12 @@
       gap: 30px;
 
       @include for-size(tablet) {
-        margin-right: 100px;
+        margin-right: -200px;
         gap: 10px;
       }
 
       @include for-size(phone) {
-        margin-right: 0px;
+        margin-right: -700px;
       }
 
       .Rankings-Headers {
@@ -109,6 +108,7 @@
         @include for-size(phone) {
           width: 315px !important;
           padding: 0px 10px;
+          margin-left: 10px;
         }
 
         .RankAndArtist {

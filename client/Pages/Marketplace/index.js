@@ -118,12 +118,16 @@ async function Search(search) {
 
   const SearchData = await response.json();
 
+  if (SearchData.nfts.length == 0) {
+    NoMore_Message.style.display = "initial";
+    NoMore_Message.textContent = "No NFTs ;(";
+  }
+
   if (response.hasMore == true) {
+    NoMore_Message.style.display = "none";
     SeeMore_Btn.style.display = "initial";
   } else {
     SeeMore_Btn.style.display = "none";
-    NoMore_Message.style.display = "initial";
-    NoMore_Message.textContent = "No NFTs found ;(";
   }
 
   emptyMarketplace();

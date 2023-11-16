@@ -32,6 +32,10 @@ function fillArtistInfo(creator) {
 
 function fillArtistNFTs(creator) {
   creator.nfts.forEach((nft) => {
+    const NoNFT_Message = document.createElement("p");
+    NoNFT_Message.style.display = "none";
+    NoNFT_Message.textContent = "This user has no NFTs";
+
     const NFT_Card = document.createElement("div");
     NFT_Card.className = "NFT-Card";
 
@@ -100,7 +104,7 @@ function fillArtistNFTs(creator) {
 
     NFT_Card.append(Image, NFT_Info);
 
-    NFT_Cards_Section.append(NFT_Card);
+    NFT_Cards_Section.append(NFT_Card, NoNFT_Message);
 
     NFT_Card.addEventListener("click", () => {
       window.open(
