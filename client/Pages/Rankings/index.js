@@ -15,12 +15,12 @@ function getDataForCreators() {
   })
     .then((res) => res.json())
     .then((creator) => {
-      fillItemRanking(creator);
       CreatorId.addEventListener("click", () => sortById(creator));
       CreatorName.addEventListener("click", () => sortByName(creator));
       CreatorChange.addEventListener("click", () => sortByChange(creator));
       CreatorNFTs_Sold.addEventListener("click", () => sortByNFTsSold(creator));
       CreatorVolume.addEventListener("click", () => sortByVolume(creator));
+      fillItemRanking(creator);
     });
 
   showLoader(false);
@@ -124,8 +124,6 @@ function addCreatorItem(creator) {
       `http://127.0.0.1:5500/client/Pages/Artist-Detail/index.html?id=${creator.id}`,
       "_self"
     );
-
-    Ranking_Items.array.forEach((item) => {});
   });
 
   Delete_Btn.addEventListener("click", () => {
@@ -139,6 +137,7 @@ function deleteCreatorItem(creator, Item) {
       `Are you sure you want to delete the creator with the id ${creator.id}`
     )
   ) {
+    showLoader(true);
     fetch(`http://localhost:3000/api/creators/${creator.id}`, {
       method: "DELETE",
     }).then((response) => {
@@ -147,7 +146,6 @@ function deleteCreatorItem(creator, Item) {
         Toastify({
           text: "You Just threw a big pile of effort into the trash! ;)",
           duration: 3000,
-          destination: "https://github.com/apvarun/toastify-js",
           newWindow: true,
           close: true,
           gravity: "top",
@@ -159,11 +157,11 @@ function deleteCreatorItem(creator, Item) {
         }).showToast();
       }
     });
+    showLoader(false);
   }
 }
 
 function sortById(creator) {
-  showLoader(true);
   creator.sort((a, b) => {
     const idA = a.id;
     const idB = b.id;
@@ -171,11 +169,9 @@ function sortById(creator) {
     return idA - idB;
   });
   fillItemRanking(creator);
-  showLoader(false);
 }
 
 function sortByName(creator) {
-  showLoader(true);
   creator.sort((a, b) => {
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
@@ -189,11 +185,9 @@ function sortByName(creator) {
     return 0;
   });
   fillItemRanking(creator);
-  showLoader(false);
 }
 
 function sortByChange(creator) {
-  showLoader(true);
   creator.sort((a, b) => {
     const ChangeA = a.totalSale.value;
     const ChangeB = b.totalSale.value;
@@ -201,11 +195,9 @@ function sortByChange(creator) {
     return ChangeB - ChangeA;
   });
   fillItemRanking(creator);
-  showLoader(false);
 }
 
 function sortByNFTsSold(creator) {
-  showLoader(true);
   creator.sort((a, b) => {
     const NFTs_SoldA = a.nftSold;
     const NFTs_SoldB = b.nftSold;
@@ -213,11 +205,9 @@ function sortByNFTsSold(creator) {
     return NFTs_SoldB - NFTs_SoldA;
   });
   fillItemRanking(creator);
-  showLoader(false);
 }
 
 function sortByVolume(creator) {
-  showLoader(true);
   creator.sort((a, b) => {
     const VolumeA = a.volume;
     const VolumeB = b.volume;
@@ -225,7 +215,6 @@ function sortByVolume(creator) {
     return VolumeB - VolumeA;
   });
   fillItemRanking(creator);
-  showLoader(false);
 }
 
 function emptyRanking() {

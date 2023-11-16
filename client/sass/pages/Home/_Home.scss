@@ -891,6 +891,7 @@ html {
       display: block;
       align-items: flex-start;
       width: 315px;
+      margin-left: 50px;
     }
 
     .Section-Headline {
@@ -933,9 +934,7 @@ html {
       width: 690px;
       align-items: flex-start;
       gap: 30px;
-    }
 
-    @include for-size(tablet) {
       .NFTCard:last-child {
         display: none;
       }
@@ -944,9 +943,7 @@ html {
     @include for-size(phone) {
       display: block;
       width: 315px;
-    }
 
-    @include for-size(phone) {
       .NFTCard:last-child {
         display: initial;
       }
@@ -967,6 +964,10 @@ html {
 
       &:hover {
         transform: scale(0.95);
+      }
+
+      .NFTCard:nth-child(3) {
+        margin-right: 30px;
       }
 
       .Image {
@@ -1227,6 +1228,7 @@ html {
     }
 
     @include for-size(phone) {
+      margin-left: 70px;
       width: 315px;
     }
 

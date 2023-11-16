@@ -4,9 +4,7 @@ const LoaderIcon = document.querySelector(".LoaderIcon");
 const SeeMore_Btn = document.querySelector(".SeeMore-Btn");
 const NoMore_Message = document.querySelector(".NoMore");
 const Search_Input = document.querySelector(".Search-Input");
-const SearchIcon = document.querySelector("#SearchIcon");
 let skipCount = 0;
-let data = null;
 
 getDataForNFTs();
 
@@ -24,7 +22,6 @@ async function getDataForNFTs() {
   });
 
   data = await response.json();
-  console.log(data);
 
   fillNFTMarketplace(data);
 
@@ -105,12 +102,8 @@ function fillNFTMarketplace(data) {
   });
 }
 
-fetchSearch();
-
-async function fetchSearch() {
-  showIconLoader(true);
-
-  const search = Search_Input.value.trim();
+async function Search(search) {
+  showLoader(true);
 
   const response = await fetch("http://localhost:3000/api/nfts", {
     method: "POST",
@@ -118,30 +111,34 @@ async function fetchSearch() {
       "CONTENT-TYPE": "application/json",
     },
     body: JSON.stringify({
+      pageSize: 3,
       searchStr: search,
     }),
   });
 
   const SearchData = await response.json();
-  console.log(SearchData);
 
-  if (response.status >= 200 && response.status <= 300) {
+  if (response.hasMore == true) {
+    SeeMore_Btn.style.display = "initial";
+  } else {
+    SeeMore_Btn.style.display = "none";
+    NoMore_Message.style.display = "initial";
+    NoMore_Message.textContent = "No NFTs found ;(";
   }
 
-  showIconLoader(false);
+  emptyMarketplace();
+
+  fillNFTMarketplace(SearchData);
+
+  showLoader(false);
 }
 
-function showLoader(show) {
-  loaderElement.style.display = show ? "grid" : "none";
-}
-
-function showIconLoader(show) {
-  LoaderIcon.style.display = show ? "grid" : "none";
-}
-
-SearchIcon.addEventListener("click", () => {
-  showIconLoader(true);
+Search_Input.addEventListener("keypress", () => {
   const search = Search_Input.value.trim();
+
+  if (search == "") return;
+
+  Search(search);
 });
 
 SeeMore_Btn.addEventListener("click", () => {
@@ -169,8 +166,14 @@ SeeMore_Btn.addEventListener("click", () => {
 
     showLoader(false);
   }
-
-  if (data.newData == false) {
-    console.log("18");
-  }
 });
+
+function emptyMarketplace() {
+  while (NFT_Cards_Section.firstChild) {
+    NFT_Cards_Section.removeChild(NFT_Cards_Section.firstChild);
+  }
+}
+
+function showLoader(show) {
+  loaderElement.style.display = show ? "grid" : "none";
+}

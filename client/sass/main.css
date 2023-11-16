@@ -3544,6 +3544,7 @@ html {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 315px;
+    margin-left: 50px;
   }
 }
 #DiscoverNFTs_Section .Section-HeadlineAndButton .Section-Headline {
@@ -3635,8 +3636,6 @@ html {
             align-items: flex-start;
     gap: 30px;
   }
-}
-@media (max-width: 1050px) {
   #DiscoverNFTs_Section .NFTCards-Row .NFTCard:last-child {
     display: none;
   }
@@ -3646,8 +3645,6 @@ html {
     display: block;
     width: 315px;
   }
-}
-@media (max-width: 690px) {
   #DiscoverNFTs_Section .NFTCards-Row .NFTCard:last-child {
     display: initial;
   }
@@ -3679,6 +3676,9 @@ html {
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+#DiscoverNFTs_Section .NFTCards-Row .NFTCard .NFTCard:nth-child(3) {
+  margin-right: 30px;
 }
 #DiscoverNFTs_Section .NFTCards-Row .NFTCard .Image {
   display: -webkit-box;
@@ -4239,6 +4239,7 @@ html {
 }
 @media (max-width: 690px) {
   #HowItWorks_Section .Section-Headline {
+    margin-left: 70px;
     width: 315px;
   }
 }
