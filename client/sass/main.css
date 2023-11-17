@@ -6073,8 +6073,8 @@ html {
   display: grid;
   place-items: center;
   position: absolute;
-  -webkit-transform: translate(770px, 100px);
-          transform: translate(770px, 100px);
+  -webkit-transform: translate(650px, 400px);
+          transform: translate(650px, 400px);
 }
 #Artist-Detail_Section .Loader #Loading-Info {
   font-family: Space Mono;
@@ -7584,8 +7584,8 @@ html {
   display: grid;
   place-items: center;
   position: absolute;
-  -webkit-transform: translate(70px, 500px);
-          transform: translate(70px, 500px);
+  -webkit-transform: translate(0px, -200px);
+          transform: translate(0px, -200px);
 }
 #MarketPlace_Section .MarketPlace .Loader #Loading-Info {
   font-family: Space Mono;

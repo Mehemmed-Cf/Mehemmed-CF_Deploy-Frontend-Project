@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const { creators, nfts, users } = data;
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const EMAIL_REGEX =
   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;

@@ -478,7 +478,7 @@
     display: grid;
     place-items: center;
     position: absolute;
-    transform: translate(770px, 100px);
+    transform: translate(650px, 400px);
 
     #Loading-Info {
       @include text-formatter(Space Mono, 20px, 500, 100%);
