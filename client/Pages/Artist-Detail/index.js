@@ -5,17 +5,28 @@ const ChainId_Btn = document.querySelector(".Chain-Id-Btn");
 
 getDataForCreators();
 
-function getDataForCreators() {
+async function getDataForCreators() {
   showLoader(true);
-  fetch(`http://localhost:3000/api/creators/${paramsCreatorId}`, {
-    method: "GET",
-  })
+  const response = await fetch(
+    `http://localhost:3000/api/creators/${paramsCreatorId}`,
+    {
+      method: "GET",
+    }
+  )
     .then((res) => res.json())
     .then((creator) => {
+      showLoader(false);
+
+      if (creator.error) {
+        window.open(
+          "http://127.0.0.1:5500/client/Pages/Not-Found/index.html",
+          "_self"
+        );
+      }
+
       fillArtistInfo(creator);
       fillArtistNFTs(creator);
     });
-  showLoader(false);
 }
 
 const Artist_Info = document.querySelector(".Artist-Info");
