@@ -2619,8 +2619,8 @@ html {
     display: block;
     gap: 40px;
     width: 315px;
-    -webkit-transform: translate(-80px, 250px);
-            transform: translate(-80px, 250px);
+    -webkit-transform: translate(0px, 250px);
+            transform: translate(0px, 250px);
   }
 }
 #TopRatedArtists_Section .Section_Headline_And_Button {
