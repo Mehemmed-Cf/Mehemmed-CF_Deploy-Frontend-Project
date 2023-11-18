@@ -193,7 +193,6 @@ function CheckAndSendToastForEmptyInputs() {
 }
 
 async function RegisterUser(username, email, password) {
-  showButtonLoader(true);
   const response = await fetch("http://localhost:3000/api/register", {
     method: "POST",
     headers: {
@@ -208,8 +207,7 @@ async function RegisterUser(username, email, password) {
   const data = await response.json();
 
   if (response.status >= 200 && response.status <= 300) {
-    window.open("http://127.0.0.1:5500/client/Pages/Login/index.html", "_self");
-    showButtonLoader(false);
+    // window.open("http://127.0.0.1:5500/client/Pages/Login/index.html", "_self");
   } else {
     Toastify({
       text: data.error,
@@ -224,7 +222,6 @@ async function RegisterUser(username, email, password) {
         background: "red",
       },
     }).showToast();
-    showButtonLoader(false);
   }
 }
 
@@ -234,6 +231,7 @@ function AccountValidation() {
   ValidateInputs();
 
   CreateAccountBtn.addEventListener("click", () => {
+    showButtonLoader(true);
     CheckAndSendToastForEmptyInputs();
 
     if (
@@ -262,6 +260,8 @@ function AccountValidation() {
         },
       }).showToast();
     }
+
+    showButtonLoader(false);
   });
 }
 

@@ -9,7 +9,6 @@ const passwordErrorMessage = document.querySelector(".Password-Error-Message");
 const buttonLoader = document.querySelector(".Button-Loader");
 
 async function LoginUser(username, password) {
-  showButtonLoader(true);
   const response = await fetch("http://localhost:3000/api/login", {
     method: "POST",
     headers: {
@@ -25,7 +24,6 @@ async function LoginUser(username, password) {
 
   if (response.status >= 200 && response.status <= 300) {
     window.open("http://127.0.0.1:5500/client/Pages/Home/index.html", "_self");
-    showButtonLoader(false);
   } else {
     Toastify({
       text: data.error,
@@ -40,7 +38,6 @@ async function LoginUser(username, password) {
         background: "red",
       },
     }).showToast();
-    showButtonLoader(false);
   }
 }
 
@@ -48,10 +45,14 @@ LoginValidation();
 
 function LoginValidation() {
   login_Btn.addEventListener("click", () => {
+    showButtonLoader(true);
+
     username = userNameInput.value;
     password = passwordInput.value;
 
     LoginUser(username, password);
+
+    showButtonLoader(false);
   });
 }
 
